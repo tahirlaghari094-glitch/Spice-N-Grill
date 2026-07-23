@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Search Console Verification Tag -->
+    <meta name="google-site-verification" content="3sEKCoLT8UQ2tGs_njHnhB4eF5AIXaofs1fdXFXuMW0" />
+    
+    <!-- SEO & Branding Meta Tags -->
+    <title>MT.Dev - Full-Stack Developer & Game Dev</title>
+    <meta name="title" content="MT.Dev - Full-Stack Developer & Game Dev">
+    <meta name="description" content="MT.Dev offers top-tier Web Development, Mobile Apps, and 2D/3D Game Development services.">
+    
+    <!-- Favicon (icon.png) -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showPage(pageId) {
+            const pages = ['home', 'services', 'about', 'contact'];
+            pages.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    if (id === pageId) {
+                        el.classList.remove('hidden');
+                    } else {
+                        el.classList.add('hidden');
+                    }
+                }
+            });
+            // Mobile menu close after selection
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-white font-sans selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
+                    <img src="icon.png" alt="MT.Dev Logo" class="w-8 h-8 object-contain rounded-md" onerror="this.style.display='none'">
+                    <div class="text-2xl font-black tracking-wider text-indigo-500">
+                        MT<span class="text-indigo-400">.DEV</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation Links -->
+                <ul class="hidden md:flex space-x-8 text-slate-300 font-medium">
+                    <li><button onclick="showPage('home')" class="hover:text-indigo-400 transition">Home</button></li>
+                    <li><button onclick="showPage('services')" class="hover:text-indigo-400 transition">Services</button></li>
+                    <li><button onclick="showPage('about')" class="hover:text-indigo-400 transition">About</button></li>
+                    <li><button onclick="showPage('contact')" class="hover:text-indigo-400 transition">Contact</button></li>
+                </ul>
+
+                <!-- Desktop Call & Hire Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:03123735457" 
+                       class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-xl font-semibold transition border border-slate-700 flex items-center gap-2 text-sm">
+                        📞 <span>Call Now</span>
+                    </a>
+
+                    <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20want%20to%20hire%20you%20for%20a%20project." 
+                       target="_blank" 
+                       class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-semibold transition shadow-lg shadow-indigo-600/30 text-sm">
+                        Hire Me 🚀
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center gap-2">
+                    <a href="tel:03123735457" class="sm:hidden bg-slate-800 p-2.5 rounded-xl text-slate-200 border border-slate-700">📞</a>
+                    <button onclick="toggleMobileMenu()" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg bg-slate-900 border border-slate-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <button onclick="showPage('home')" class="block w-full text-left py-2 px-3 text-slate-300 hover:bg-slate-900 rounded-lg">Home</button>
+            <button onclick="showPage('services')" class="block w-full text-left py-2 px-3 text-slate-300 hover:bg-slate-900 rounded-lg">Services</button>
+            <button onclick="showPage('about')" class="block w-full text-left py-2 px-3 text-slate-300 hover:bg-slate-900 rounded-lg">About</button>
+            <button onclick="showPage('contact')" class="block w-full text-left py-2 px-3 text-slate-300 hover:bg-slate-900 rounded-lg">Contact</button>
+            <div class="pt-2 border-t border-slate-800 flex flex-col gap-2">
+                <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20want%20to%20hire%20you%20for%20a%20project." 
+                   target="_blank" 
+                   class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-xl font-semibold transition text-sm">
+                    Hire Me 🚀
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 min-h-screen">
+        
+        <!-- HOME SECTION -->
+        <section id="home" class="flex flex-col items-center justify-center pt-8 md:pt-12 pb-16 px-4 max-w-6xl mx-auto">
+            <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 px-4 py-2 rounded-full mb-6 shadow-inner text-center">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                <span class="text-indigo-300 text-xs sm:text-sm font-medium">Available for High-End Projects & Freelance Work</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-center text-slate-100 leading-tight mb-6 max-w-4xl">
+                Transforming Your Ideas Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-400 to-emerald-400">High-Performance</span> Software
+            </h1>
+
+            <p class="text-slate-400 text-base md:text-xl text-center mb-8 max-w-2xl leading-relaxed">
+                Welcome to <strong class="text-white font-semibold">MT.Dev</strong>. We design & develop modern Websites, Mobile Apps, and 2D/3D Games with speed and precision.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mb-12">
+                <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20want%20to%20start%20a%20new%20project." 
+                   target="_blank" 
+                   class="w-full sm:w-auto text-center bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white px-8 py-4 rounded-2xl font-bold text-base md:text-lg transition shadow-xl shadow-indigo-600/25 flex items-center justify-center gap-2">
+                    Start a Project 💬
+                </a>
+                <button onclick="showPage('about')" class="w-full sm:w-auto text-center bg-slate-900 border border-slate-700 hover:bg-slate-800 text-slate-200 px-8 py-4 rounded-2xl font-bold text-base md:text-lg transition">
+                    Learn More About MT.Dev →
+                </button>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-900/50 border border-slate-800 p-4 sm:p-6 rounded-3xl backdrop-blur">
+                <div class="text-center p-2 sm:p-4">
+                    <h3 class="text-2xl sm:text-4xl font-black text-indigo-400">5+</h3>
+                    <p class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Years Experience</p>
+                </div>
+                <div class="text-center p-2 sm:p-4 border-l border-slate-800">
+                    <h3 class="text-2xl sm:text-4xl font-black text-cyan-400">50+</h3>
+                    <p class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Projects Completed</p>
+                </div>
+                <div class="text-center p-2 sm:p-4 border-l md:border-l border-slate-800">
+                    <h3 class="text-2xl sm:text-4xl font-black text-emerald-400">100%</h3>
+                    <p class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Client Satisfaction</p>
+                </div>
+                <div class="text-center p-2 sm:p-4 border-l border-slate-800">
+                    <h3 class="text-2xl sm:text-4xl font-black text-purple-400">24/7</h3>
+                    <p class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Dedicated Support</p>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 w-full mt-8 sm:mt-12">
+                <div onclick="showPage('services')" class="cursor-pointer bg-slate-900/40 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="text-3xl mb-3">🌐</div>
+                    <h4 class="font-bold text-lg mb-1">Web Development</h4>
+                    <p class="text-slate-400 text-xs">Fast, responsive & scalable Python/JS web apps.</p>
+                </div>
+                <div onclick="showPage('services')" class="cursor-pointer bg-slate-900/40 border border-slate-800 p-6 rounded-2xl hover:border-emerald-500/50 transition">
+                    <div class="text-3xl mb-3">📱</div>
+                    <h4 class="font-bold text-lg mb-1">Mobile Apps</h4>
+                    <p class="text-slate-400 text-xs">Cross-platform Android & iOS apps with smooth UI.</p>
+                </div>
+                <div onclick="showPage('services')" class="cursor-pointer bg-slate-900/40 border border-slate-800 p-6 rounded-2xl hover:border-purple-500/50 transition sm:col-span-2 md:col-span-1">
+                    <div class="text-3xl mb-3">🎮</div>
+                    <h4 class="font-bold text-lg mb-1">Game Development</h4>
+                    <p class="text-slate-400 text-xs">Engaging 2D & 3D games with fluid controls.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="hidden max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+            <div class="text-center mb-10 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">MT.Dev Professional <span class="text-indigo-500">Services</span></h2>
+                <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">Select a service below to directly start a project discussion with MT.Dev on WhatsApp.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-indigo-500/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6">🌐</div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Web Development</h3>
+                        <p class="text-slate-400 leading-relaxed text-xs sm:text-sm mb-6">Custom websites, e-commerce platforms, SaaS web applications, and backends.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li>✔ Modern UI / UX Design</li>
+                            <li>✔ Fast Loading Speed</li>
+                            <li>✔ SEO Optimized & Mobile Friendly</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20am%20interested%20in%20your%20Web%20Development%20service." target="_blank" class="w-full text-center bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white border border-indigo-500/30 font-semibold py-3 rounded-xl transition text-sm">Get This Service 💬</a>
+                </div>
+
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6">📱</div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">App Development</h3>
+                        <p class="text-slate-400 leading-relaxed text-xs sm:text-sm mb-6">Cross-platform iOS & Android mobile apps with smooth navigation and UI.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li>✔ Android & iOS Support</li>
+                            <li>✔ Smooth Performance</li>
+                            <li>✔ Backend API Integration</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20am%20interested%20in%20your%20App%20Development%20service." target="_blank" class="w-full text-center bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/30 font-semibold py-3 rounded-xl transition text-sm">Get This Service 💬</a>
+                </div>
+
+                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6">🎮</div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Game Development</h3>
+                        <p class="text-slate-400 leading-relaxed text-xs sm:text-sm mb-6">2D and 3D games with engaging mechanics and smooth controls.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li>✔ Custom Gameplay Mechanics</li>
+                            <li>✔ 2D & 3D Interactive Graphics</li>
+                            <li>✔ Mobile & Web Playable</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20am%20interested%20in%20your%20Game%20Development%20service." target="_blank" class="w-full text-center bg-purple-600/20 hover:bg-purple-600 text-purple-300 hover:text-white border border-purple-500/30 font-semibold py-3 rounded-xl transition text-sm">Get This Service 💬</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="hidden max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+            <div class="text-center mb-10 sm:mb-14">
+                <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest bg-indigo-500/10 px-4 py-1.5 rounded-full border border-indigo-500/20">Behind The Code</span>
+                <h2 class="text-3xl sm:text-5xl font-black mt-3">About <span class="text-indigo-500">MT.Dev</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mt-2 text-sm sm:text-base">Passionate development studio focused on building clean code and delightful user experiences.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center mb-16">
+                <div class="space-y-6 bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-3xl backdrop-blur">
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-100">Full-Stack Software Engineering</h3>
+                    <p class="text-slate-400 leading-relaxed text-xs sm:text-sm">At <strong class="text-white">MT.Dev</strong>, we specialize in web architecture, mobile apps, and game development.</p>
+
+                    <div class="space-y-4 pt-2">
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Python & Backend</span>
+                                <span class="text-indigo-400">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2"><div class="bg-indigo-500 h-2 rounded-full w-[95%]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Frontend (React, Tailwind)</span>
+                                <span class="text-cyan-400">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2"><div class="bg-cyan-400 h-2 rounded-full w-[90%]"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold mb-1">
+                                <span>Mobile App Development</span>
+                                <span class="text-emerald-400">88%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2"><div class="bg-emerald-400 h-2 rounded-full w-[88%]"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-100 mb-4 sm:mb-6">How MT.Dev Works</h3>
+                    <div class="flex gap-4 p-4 sm:p-5 bg-slate-900/60 border border-slate-800 rounded-2xl">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-500/10 text-indigo-400 font-bold rounded-xl flex items-center justify-center shrink-0 text-lg sm:text-xl">01</div>
+                        <div>
+                            <h4 class="font-bold text-slate-200 text-sm sm:text-base">Requirement & Planning</h4>
+                            <p class="text-slate-400 text-xs mt-1">Understanding client goals and project milestones.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-4 sm:p-5 bg-slate-900/60 border border-slate-800 rounded-2xl">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 text-cyan-400 font-bold rounded-xl flex items-center justify-center shrink-0 text-lg sm:text-xl">02</div>
+                        <div>
+                            <h4 class="font-bold text-slate-200 text-sm sm:text-base">Design & Development</h4>
+                            <p class="text-slate-400 text-xs mt-1">Building modern UI and robust code.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="hidden max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Let's Build Something <span class="text-indigo-500">Great</span></h2>
+            <p class="text-slate-400 mb-8 sm:mb-12 text-sm sm:text-base">Connect with MT.Dev via Call, WhatsApp, or Email.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                <a href="tel:03123735457" class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center hover:border-indigo-500 transition">
+                    <div class="text-3xl sm:text-4xl mb-3">📞</div>
+                    <p class="text-xs text-slate-500">Direct Call</p>
+                    <p class="font-bold text-slate-200 mt-1 text-sm sm:text-base">03123735457</p>
+                </a>
+                <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20want%20to%20discuss%20a%20new%20project." target="_blank" class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center hover:border-emerald-500 transition">
+                    <div class="text-3xl sm:text-4xl mb-3">💬</div>
+                    <p class="text-xs text-slate-500">WhatsApp Chat</p>
+                    <p class="font-bold text-slate-200 mt-1 text-sm sm:text-base">03123735457</p>
+                </a>
+                <a href="mailto:lagharitahir08@gmail.com" class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center hover:border-purple-500 transition">
+                    <div class="text-3xl sm:text-4xl mb-3">📧</div>
+                    <p class="text-xs text-slate-500">Email MT.Dev</p>
+                    <p class="font-bold text-slate-200 mt-1 text-xs sm:text-sm break-all">lagharitahir08@gmail.com</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-900 py-8 text-center text-slate-600 text-xs sm:text-sm">
+        <p>© 2026 MT.Dev. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
