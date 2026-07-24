@@ -7,13 +7,13 @@
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="3sEKCoLT8UQ2tGs_njHnhB4eF5AIXaofs1fdXFXuMW0" />
 
-    <!-- SEO & Search Engine Keywords for Live Search -->
+    <!-- SEO & Search Engine Keywords -->
     <title>Spice N Grill | Premium Dining, Grill & Fast Food</title>
     <meta name="description" content="Spice N Grill - Authentic Pakistani BBQ, Karahi, Burgers, Pasta & Drinks. Managed by Muhammad Tahir. Place your online order now!">
     <meta name="keywords" content="Spice N Grill, Spice & Grill, Spice and Grill, Grill N Spice, Spice Grill Restaurant, Muhammad Tahir Food, BBQ and Karahi">
     <meta name="author" content="Muhammad Tahir">
 
-    <!-- Custom Favicon (Same directory icon.png) -->
+    <!-- Custom Favicon -->
     <link rel="icon" type="image/png" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png">
 
@@ -54,60 +54,65 @@
             display: flex;
             flex-direction: column;
             transition: background 0.3s, color 0.3s;
+            overflow-x: hidden;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; width: 100%; }
 
         /* --- NAVBAR --- */
         header {
             position: fixed; top: 0; width: 100%; z-index: 1000;
             background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--green-primary); padding: 15px 0;
+            border-bottom: 2px solid var(--green-primary); padding: 12px 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         body.dark-mode header { background: rgba(18, 24, 22, 0.95); }
 
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: var(--font-title); font-size: 1.8rem; font-weight: 900; color: var(--green-primary); text-decoration: none; cursor: pointer; }
+        nav { display: flex; justify-content: space-between; align-items: center; position: relative; }
+        .logo { font-family: var(--font-title); font-size: 1.5rem; font-weight: 900; color: var(--green-primary); text-decoration: none; cursor: pointer; }
         .logo span { color: var(--gold-accent); }
 
-        .nav-links { display: flex; list-style: none; gap: 10px; align-items: center; }
+        .nav-links { display: flex; list-style: none; gap: 8px; align-items: center; transition: all 0.3s ease; }
         .nav-links a {
-            color: var(--text-dark); text-decoration: none; font-size: 0.82rem; font-weight: 600;
-            text-transform: uppercase; letter-spacing: 0.8px; padding: 8px 14px;
-            border-radius: 20px; transition: all 0.3s ease; cursor: pointer;
+            color: var(--text-dark); text-decoration: none; font-size: 0.8rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.8px; padding: 8px 12px;
+            border-radius: 20px; transition: all 0.3s ease; cursor: pointer; display: block;
         }
         .nav-links a:hover, .nav-links a.active {
             color: #fff; background: var(--green-primary);
         }
 
+        .header-actions { display: flex; gap: 8px; align-items: center; }
+
         .btn-green {
-            padding: 10px 22px; background: var(--green-primary); color: #fff;
-            font-weight: 600; border-radius: 30px; text-decoration: none; font-size: 0.85rem;
+            padding: 8px 16px; background: var(--green-primary); color: #fff;
+            font-weight: 600; border-radius: 30px; text-decoration: none; font-size: 0.8rem;
             box-shadow: 0 4px 12px rgba(3, 72, 51, 0.2); transition: 0.3s; border: none; cursor: pointer;
-            display: inline-flex; align-items: center; gap: 8px;
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;
         }
         .btn-green:hover { background: var(--green-light); transform: translateY(-2px); }
 
         .btn-gold {
-            padding: 8px 16px; background: var(--gold-accent); color: #000;
+            padding: 8px 14px; background: var(--gold-accent); color: #000;
             font-weight: 700; border-radius: 20px; text-decoration: none; font-size: 0.8rem;
             transition: 0.3s; border: none; cursor: pointer;
-            display: inline-flex; align-items: center; gap: 6px;
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;
         }
         .btn-gold:hover { background: #b89628; color: #fff; transform: translateY(-2px); }
 
+        .menu-toggle { display: none; font-size: 1.4rem; cursor: pointer; color: var(--green-primary); background: none; border: none; }
+
         /* --- TOAST NOTIFICATIONS --- */
         #toast-container {
-            position: fixed; top: 90px; right: 20px; z-index: 10000;
-            display: flex; flex-direction: column; gap: 10px; max-width: 350px; width: 100%;
+            position: fixed; top: 80px; right: 15px; z-index: 10000;
+            display: flex; flex-direction: column; gap: 10px; max-width: 320px; width: calc(100% - 30px);
             pointer-events: none;
         }
         .toast-msg {
             pointer-events: auto; background: var(--green-primary); color: #fff;
-            padding: 14px 20px; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            padding: 12px 16px; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.25);
             display: flex; align-items: center; justify-content: space-between;
-            font-size: 0.9rem; border-left: 5px solid var(--gold-accent);
+            font-size: 0.85rem; border-left: 5px solid var(--gold-accent);
             animation: slideInRight 0.3s forwards;
         }
         @keyframes slideInRight {
@@ -118,8 +123,8 @@
         /* --- SECTIONS --- */
         .page-section {
             display: none;
-            padding-top: 120px;
-            padding-bottom: 80px;
+            padding-top: 100px;
+            padding-bottom: 60px;
             min-height: calc(100vh - 80px);
             animation: fadeIn 0.4s ease-in-out;
         }
@@ -134,64 +139,66 @@
         .hero-card {
             background: linear-gradient(rgba(3, 72, 51, 0.85), rgba(3, 72, 51, 0.92)), 
                         url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: #fff; border-radius: 20px; padding: 90px 40px; text-align: center;
+            color: #fff; border-radius: 20px; padding: 60px 20px; text-align: center;
             box-shadow: 0 15px 35px rgba(3, 72, 51, 0.15);
         }
-        .hero-card h1 { font-family: var(--font-title); font-size: 3.5rem; margin-bottom: 15px; }
-        .hero-card p { max-width: 650px; margin: 0 auto 30px; font-size: 1.1rem; opacity: 0.9; }
+        .hero-card h1 { font-family: var(--font-title); font-size: 2.8rem; margin-bottom: 15px; word-break: break-word; }
+        .hero-card p { max-width: 650px; margin: 0 auto 25px; font-size: 1rem; opacity: 0.9; }
 
         .white-card {
             background: var(--card-white); border: 1px solid var(--border-color);
-            border-radius: 16px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border-radius: 16px; padding: 25px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
 
         /* MENU CONTROLS & GRID */
-        .menu-controls { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; justify-content: space-between; }
-        .search-box { padding: 12px 20px; border: 1px solid var(--border-color); border-radius: 25px; width: 300px; outline: none; background: var(--card-white); color: var(--text-dark); }
+        .menu-controls { display: flex; gap: 15px; margin-bottom: 25px; flex-direction: column; }
+        .search-box { padding: 12px 18px; border: 1px solid var(--border-color); border-radius: 25px; width: 100%; outline: none; background: var(--card-white); color: var(--text-dark); }
         .search-box:focus { border-color: var(--green-primary); }
 
-        .category-btns { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; }
+        .category-btns { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; -webkit-overflow-scrolling: touch; }
+        .category-btns::-webkit-scrollbar { height: 4px; }
+        .category-btns::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
         .cat-btn {
-            padding: 8px 18px; border: 1px solid var(--border-color); background: var(--card-white);
-            color: var(--text-dark); border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; white-space: nowrap;
+            padding: 8px 16px; border: 1px solid var(--border-color); background: var(--card-white);
+            color: var(--text-dark); border-radius: 20px; cursor: pointer; font-size: 0.8rem; font-weight: 600; white-space: nowrap;
         }
         .cat-btn.active, .cat-btn:hover { background: var(--green-primary); color: #fff; border-color: var(--green-primary); }
 
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
         .menu-item {
             background: var(--card-white); border: 1px solid var(--border-color); border-radius: 12px;
             overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; position: relative;
         }
         .menu-item:hover { border-color: var(--green-primary); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-        .menu-item img { width: 100%; height: 180px; object-fit: cover; }
-        .menu-item-details { padding: 18px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; }
-        .menu-item h3 { font-size: 1.05rem; font-weight: 700; color: var(--green-primary); margin-bottom: 5px; }
-        .menu-item .cat-tag { font-size: 0.75rem; color: var(--gold-accent); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; display: block; }
-        .menu-price { font-size: 1.1rem; font-weight: 800; color: var(--text-dark); margin-bottom: 12px; }
+        .menu-item img { width: 100%; height: 160px; object-fit: cover; }
+        .menu-item-details { padding: 15px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; }
+        .menu-item h3 { font-size: 1rem; font-weight: 700; color: var(--green-primary); margin-bottom: 5px; }
+        .menu-item .cat-tag { font-size: 0.7rem; color: var(--gold-accent); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; display: block; }
+        .menu-price { font-size: 1.05rem; font-weight: 800; color: var(--text-dark); margin-bottom: 12px; }
 
-        .action-btn-group { display: flex; gap: 8px; margin-top: 10px; }
+        .action-btn-group { display: flex; gap: 6px; margin-top: 10px; }
 
         .hot-badge {
             position: absolute; top: 10px; left: 10px; background: #e11d48; color: #fff;
-            padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            padding: 4px 8px; border-radius: 12px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
         }
 
         /* FORM ELEMENTS */
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--green-primary); font-size: 0.9rem; }
-        .form-control { width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; outline: none; background: var(--card-white); color: var(--text-dark); }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: var(--green-primary); font-size: 0.85rem; }
+        .form-control { width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; outline: none; background: var(--card-white); color: var(--text-dark); font-size: 0.9rem; }
         .form-control:focus { border-color: var(--green-primary); }
 
         /* MODALS */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px);
-            display: none; justify-content: center; align-items: center; z-index: 9999;
+            display: none; justify-content: center; align-items: center; z-index: 9999; padding: 15px;
         }
         .modal-box { 
-            background: var(--card-white); padding: 30px; border-radius: 16px; 
-            width: 90%; max-width: 520px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            animation: popupAnim 0.3s ease-out; position: relative; max-height: 90vh; overflow-y: auto;
+            background: var(--card-white); padding: 25px 20px; border-radius: 16px; 
+            width: 100%; max-width: 500px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: popupAnim 0.3s ease-out; position: relative; max-height: 85vh; overflow-y: auto;
         }
         @keyframes popupAnim {
             from { transform: scale(0.8); opacity: 0; }
@@ -200,42 +207,73 @@
 
         /* FLOATING ACTION BUTTONS */
         .floating-action-btn {
-            position: fixed; bottom: 25px; width: 55px; height: 55px; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); z-index: 1500; cursor: pointer; text-decoration: none; border: none;
+            position: fixed; bottom: 20px; width: 50px; height: 50px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); z-index: 1500; cursor: pointer; text-decoration: none; border: none;
         }
-        .whatsapp-float { right: 25px; background: #25d366; color: #fff; }
-        .cart-float { right: 90px; background: var(--gold-accent); color: #000; }
+        .whatsapp-float { right: 20px; background: #25d366; color: #fff; }
+        .cart-float { right: 80px; background: var(--gold-accent); color: #000; }
         .cart-badge {
             position: absolute; top: -5px; right: -5px; background: #dc2626; color: #fff;
-            font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;
+            font-size: 0.7rem; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;
         }
 
-        footer { background: var(--green-primary); color: #fff; padding: 25px 0; text-align: center; font-size: 0.9rem; margin-top: auto; }
+        footer { background: var(--green-primary); color: #fff; padding: 20px 0; text-align: center; font-size: 0.85rem; margin-top: auto; }
 
-        .review-card { background: var(--bg-white); padding: 20px; border-radius: 12px; border-left: 4px solid var(--gold-accent); margin-bottom: 15px; }
+        .review-card { background: var(--bg-white); padding: 15px; border-radius: 12px; border-left: 4px solid var(--gold-accent); margin-bottom: 12px; }
 
         .file-upload-btn {
             border: 2px dashed var(--green-primary);
-            padding: 12px; text-align: center; border-radius: 8px; cursor: pointer;
-            background: var(--green-accent); color: var(--green-primary); font-weight: 600; font-size: 0.85rem;
+            padding: 10px; text-align: center; border-radius: 8px; cursor: pointer;
+            background: var(--green-accent); color: var(--green-primary); font-weight: 600; font-size: 0.8rem;
         }
 
         /* BADGES */
         .badge {
-            padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; display: inline-block;
+            padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; display: inline-block;
         }
         .badge-pending { background: #fef3c7; color: #d97706; }
         .badge-preparing { background: #e0f2fe; color: #0284c7; }
         .badge-delivered { background: #dcfce7; color: #15803d; }
 
         .custom-checkbox {
-            width: 18px; height: 18px; accent-color: var(--green-primary); cursor: pointer;
+            width: 16px; height: 16px; accent-color: var(--green-primary); cursor: pointer;
         }
 
+        /* RESPONSIVE TABLE STYLES FOR MOBILE */
+        .responsive-table-wrapper { width: 100%; overflow-x: auto; }
+        .responsive-table { width: 100%; border-collapse: collapse; text-align: left; }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero-card h1 { font-size: 2.2rem; }
-            .search-box { width: 100%; }
+            .menu-toggle { display: block; }
+            
+            .nav-links {
+                position: absolute; top: 100%; left: 0; width: 100%; background: var(--card-white);
+                flex-direction: column; padding: 15px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                display: none; border-bottom: 2px solid var(--green-primary);
+            }
+            .nav-links.show { display: flex; }
+            .nav-links a { width: 90%; text-align: center; padding: 10px 0; }
+
+            .hero-card h1 { font-size: 2rem; }
+            .hero-card p { font-size: 0.9rem; }
+
+            .menu-controls { flex-direction: column; }
+            
+            /* Responsive Cards View for Mobile Tables */
+            .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td {
+                display: block; width: 100%;
+            }
+            .responsive-table thead { display: none; }
+            .responsive-table tr {
+                margin-bottom: 15px; background: var(--card-white); border: 1px solid var(--border-color); border-radius: 10px; padding: 12px;
+            }
+            .responsive-table td {
+                text-align: right; padding: 8px 0; position: relative; padding-left: 50%; border-bottom: 1px dashed var(--border-color);
+            }
+            .responsive-table td:last-child { border-bottom: none; }
+            .responsive-table td::before {
+                content: attr(data-label); position: absolute; left: 0; width: 45%; text-align: left; font-weight: bold; color: var(--green-primary); font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -249,7 +287,8 @@
         <div class="container">
             <nav>
                 <a class="logo" onclick="showPage('home')">SPICE N <span>GRILL</span></a>
-                <ul class="nav-links">
+                
+                <ul class="nav-links" id="nav-links">
                     <li><a id="nav-home" class="active" onclick="showPage('home')">Home</a></li>
                     <li><a id="nav-about" onclick="showPage('about')">About Us</a></li>
                     <li><a id="nav-menu" onclick="showPage('menu')">Our Menu</a></li>
@@ -258,15 +297,17 @@
                     <li><a id="nav-reviews" onclick="showPage('reviews')">Reviews</a></li>
                     <li><a id="nav-contact" onclick="showPage('contact')">Contact</a></li>
                 </ul>
-                <div style="display: flex; gap: 8px; align-items: center;">
-                    <button class="btn-green" style="background: transparent; color: var(--text-dark); border: 1px solid var(--border-color); padding: 8px 12px;" onclick="toggleDarkMode()">
+
+                <div class="header-actions">
+                    <button class="btn-green" style="background: transparent; color: var(--text-dark); border: 1px solid var(--border-color); padding: 8px;" onclick="toggleDarkMode()">
                         <i class="fas fa-moon"></i>
                     </button>
                     <!-- User Auth Button -->
                     <span id="user-auth-btn-area">
-                        <button class="btn-green" onclick="openCustomerAuthModal()"><i class="fas fa-user"></i> Login / Register</button>
+                        <button class="btn-green" onclick="openCustomerAuthModal()"><i class="fas fa-user"></i> Login</button>
                     </span>
-                    <button class="btn-green" style="background: var(--gold-accent); color: #000;" onclick="handleAdminClick()"><i class="fas fa-lock"></i> Admin</button>
+                    <button class="btn-green" style="background: var(--gold-accent); color: #000;" onclick="handleAdminClick()"><i class="fas fa-lock"></i></button>
+                    <button class="menu-toggle" onclick="toggleNavMenu()"><i class="fas fa-bars"></i></button>
                 </div>
             </nav>
         </div>
@@ -285,12 +326,12 @@
     <section id="page-home" class="page-section active-page">
         <div class="container">
             <div class="hero-card">
-                <p style="color: var(--gold-accent); font-weight: 700; letter-spacing: 2px;">AUTHENTIC PAKISTANI & GRILL SPECIALITIES</p>
+                <p style="color: var(--gold-accent); font-weight: 700; letter-spacing: 1px; font-size: 0.85rem;">AUTHENTIC PAKISTANI & GRILL SPECIALITIES</p>
                 <h1>Spice N Grill</h1>
                 <p>Taste the finest barbecues, sizzling karahi, fast food, and drinks in town. Managed by <strong>Muhammad Tahir</strong>.</p>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <button class="btn-green" style="padding: 12px 30px;" onclick="showPage('menu')">Explore Delicious Menu</button>
-                    <button class="btn-green" style="background: transparent; border: 2px solid #fff; padding: 12px 30px;" onclick="showPage('reservation')">Book Table</button>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn-green" style="padding: 12px 25px;" onclick="showPage('menu')">Explore Menu</button>
+                    <button class="btn-green" style="background: transparent; border: 2px solid #fff; padding: 12px 25px;" onclick="showPage('reservation')">Book Table</button>
                 </div>
             </div>
         </div>
@@ -300,14 +341,14 @@
     <section id="page-about" class="page-section">
         <div class="container">
             <div class="white-card" style="max-width: 850px; margin: 0 auto;">
-                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 2.2rem; margin-bottom: 15px;">Welcome to Spice N Grill</h2>
-                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 1.8rem; margin-bottom: 12px;">Welcome to Spice N Grill</h2>
+                <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; font-size: 0.9rem;">
                     Spice N Grill brings you a delightful fusion of rich traditional Pakistani spices, smokey grills, Italian pasta, and modern fast food. We focus on cleanliness, quality ingredients, and VIP customer satisfaction.
                 </p>
-                <div style="background: var(--green-accent); padding: 20px; border-radius: 12px; border-left: 5px solid var(--green-primary); color: #000;">
-                    <h3 style="color: var(--green-primary);">Owner & Founder</h3>
-                    <p style="margin-top: 5px; font-weight: 700;">Muhammad Tahir</p>
-                    <p style="color: #4b5563; font-size: 0.9rem;">Email: lagharitahir08@gmail.com | Mobile: 03123735457</p>
+                <div style="background: var(--green-accent); padding: 15px; border-radius: 12px; border-left: 5px solid var(--green-primary); color: #000;">
+                    <h3 style="color: var(--green-primary); font-size: 1.1rem;">Owner & Founder</h3>
+                    <p style="margin-top: 5px; font-weight: 700; font-size: 0.95rem;">Muhammad Tahir</p>
+                    <p style="color: #4b5563; font-size: 0.85rem;">Email: lagharitahir08@gmail.com | Mobile: 03123735457</p>
                 </div>
             </div>
         </div>
@@ -316,24 +357,24 @@
     <!-- PAGE 3: MENU -->
     <section id="page-menu" class="page-section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 25px;">
-                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 2.4rem;">Spice N Grill Menu</h2>
-                <p style="color: var(--text-muted)">Order freshly cooked dishes directly to your table or home</p>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 2rem;">Spice N Grill Menu</h2>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">Order freshly cooked dishes directly to your table or home</p>
             </div>
 
             <!-- Login Prompt if Not Authenticated -->
-            <div id="menu-locked-prompt" class="white-card" style="text-align: center; max-width: 500px; margin: 0 auto; display: none;">
-                <i class="fas fa-lock" style="font-size: 50px; color: var(--gold-accent); margin-bottom: 15px;"></i>
-                <h3 style="color: var(--green-primary); margin-bottom: 10px;">Login Required</h3>
-                <p style="color: var(--text-muted); margin-bottom: 20px;">Please login or create an account with your Email & Password to view our full menu and place orders.</p>
-                <button class="btn-green" style="padding: 12px 30px;" onclick="openCustomerAuthModal()">Login / Sign Up Now</button>
+            <div id="menu-locked-prompt" class="white-card" style="text-align: center; max-width: 450px; margin: 0 auto; display: none;">
+                <i class="fas fa-lock" style="font-size: 40px; color: var(--gold-accent); margin-bottom: 12px;"></i>
+                <h3 style="color: var(--green-primary); margin-bottom: 8px;">Login Required</h3>
+                <p style="color: var(--text-muted); margin-bottom: 18px; font-size: 0.85rem;">Please login or create an account with your Email & Password to view our full menu and place orders.</p>
+                <button class="btn-green" style="padding: 10px 25px;" onclick="openCustomerAuthModal()">Login / Sign Up Now</button>
             </div>
 
             <div id="menu-content-area">
                 <div class="menu-controls">
                     <input type="text" id="search-input" class="search-box" placeholder="Search dish name..." onkeyup="filterMenuItems()">
                     <div class="category-btns">
-                        <button class="cat-btn active" onclick="filterCategory('All')">All Categories</button>
+                        <button class="cat-btn active" onclick="filterCategory('All')">All</button>
                         <button class="cat-btn" onclick="filterCategory('Barbecue & Grill')">BBQ & Grill</button>
                         <button class="cat-btn" onclick="filterCategory('Karahi & Handi')">Karahi & Handi</button>
                         <button class="cat-btn" onclick="filterCategory('Fast Food & Burgers')">Fast Food</button>
@@ -354,8 +395,8 @@
     <section id="page-my-orders" class="page-section">
         <div class="container">
             <div class="white-card" style="max-width: 850px; margin: 0 auto;">
-                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 2.2rem; margin-bottom: 15px;"><i class="fas fa-receipt"></i> Your Order History & Status</h2>
-                <p style="color: var(--text-muted); margin-bottom: 25px;">Track your live orders and view past receipts.</p>
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 1.8rem; margin-bottom: 10px;"><i class="fas fa-receipt"></i> Order History</h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.85rem;">Track your live orders and view past receipts.</p>
 
                 <div id="customer-orders-list">
                     <!-- Populated dynamically -->
@@ -367,9 +408,9 @@
     <!-- PAGE 5: RESERVATION -->
     <section id="page-reservation" class="page-section">
         <div class="container">
-            <div class="white-card" style="max-width: 550px; margin: 0 auto;">
-                <h2 style="font-family: var(--font-title); color: var(--green-primary); text-align: center; margin-bottom: 10px;">Book A Table</h2>
-                <p style="text-align: center; color: var(--gold-accent); font-weight: bold; margin-bottom: 20px;">
+            <div class="white-card" style="max-width: 500px; margin: 0 auto;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); text-align: center; margin-bottom: 8px;">Book A Table</h2>
+                <p style="text-align: center; color: var(--gold-accent); font-weight: bold; margin-bottom: 18px; font-size: 0.9rem;">
                     Reservation Holding Fee: Rs. <span id="res-price-display">500</span>
                 </p>
                 <form id="bookingForm">
@@ -389,7 +430,7 @@
                         <label>Date & Time</label>
                         <input type="datetime-local" id="bk-time" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn-green" style="width: 100%; padding: 14px; justify-content: center; background: #25d366;">
+                    <button type="submit" class="btn-green" style="width: 100%; padding: 12px; background: #25d366;">
                         <i class="fab fa-whatsapp"></i> Reserve Table via WhatsApp
                     </button>
                 </form>
@@ -400,8 +441,8 @@
     <!-- PAGE 6: REVIEWS -->
     <section id="page-reviews" class="page-section">
         <div class="container">
-            <div class="white-card" style="max-width: 750px; margin: 0 auto;">
-                <h2 style="font-family: var(--font-title); color: var(--green-primary); text-align: center; margin-bottom: 20px;">Customer Reviews</h2>
+            <div class="white-card" style="max-width: 700px; margin: 0 auto;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); text-align: center; margin-bottom: 18px; font-size: 1.8rem;">Customer Reviews</h2>
                 
                 <div id="reviews-list">
                     <div class="review-card">
@@ -409,14 +450,14 @@
                             <strong>Ali Raza</strong>
                             <span style="color: var(--gold-accent);"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                         </div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Best Chicken Karahi and BBQ in city! Excellent service by Spice N Grill team.</p>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Best Chicken Karahi and BBQ in city! Excellent service by Spice N Grill team.</p>
                     </div>
                 </div>
 
-                <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border-color);">
+                <hr style="margin: 18px 0; border: none; border-top: 1px solid var(--border-color);">
 
-                <h3>Leave a Review</h3>
-                <div style="margin-top: 15px;">
+                <h3 style="font-size: 1.1rem; color: var(--green-primary);">Leave a Review</h3>
+                <div style="margin-top: 12px;">
                     <input type="text" id="rev-name" class="form-control" placeholder="Your Name" style="margin-bottom: 10px;">
                     <textarea id="rev-msg" class="form-control" placeholder="Your Feedback..." rows="3" style="margin-bottom: 10px;"></textarea>
                     <button class="btn-green" onclick="addReview()">Submit Review</button>
@@ -428,19 +469,19 @@
     <!-- PAGE 7: CONTACT -->
     <section id="page-contact" class="page-section">
         <div class="container">
-            <div class="white-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-                <h2 style="font-family: var(--font-title); color: var(--green-primary); margin-bottom: 10px;">Contact Management</h2>
-                <p style="color: var(--text-muted); margin-bottom: 25px;">Direct Owner Contact & Support</p>
+            <div class="white-card" style="max-width: 500px; margin: 0 auto; text-align: center;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); margin-bottom: 8px;">Contact Us</h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.85rem;">Direct Owner Contact & Support</p>
                 
-                <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-                    <a href="tel:03123735457" style="color: var(--text-dark); text-decoration: none; font-size: 1.1rem; font-weight: 600;">
-                        <i class="fas fa-phone-alt" style="color: var(--green-primary); margin-right: 10px;"></i> 03123735457
+                <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                    <a href="tel:03123735457" style="color: var(--text-dark); text-decoration: none; font-size: 1rem; font-weight: 600;">
+                        <i class="fas fa-phone-alt" style="color: var(--green-primary); margin-right: 8px;"></i> 03123735457
                     </a>
-                    <a href="https://wa.me/923123735457" target="_blank" style="color: var(--text-dark); text-decoration: none; font-size: 1.1rem; font-weight: 600;">
-                        <i class="fab fa-whatsapp" style="color: #25d366; margin-right: 10px;"></i> Chat on WhatsApp
+                    <a href="https://wa.me/923123735457" target="_blank" style="color: var(--text-dark); text-decoration: none; font-size: 1rem; font-weight: 600;">
+                        <i class="fab fa-whatsapp" style="color: #25d366; margin-right: 8px;"></i> Chat on WhatsApp
                     </a>
-                    <a href="mailto:lagharitahir08@gmail.com" style="color: var(--text-dark); text-decoration: none; font-size: 1.1rem; font-weight: 600;">
-                        <i class="fas fa-envelope" style="color: var(--green-primary); margin-right: 10px;"></i> lagharitahir08@gmail.com
+                    <a href="mailto:lagharitahir08@gmail.com" style="color: var(--text-dark); text-decoration: none; font-size: 0.95rem; font-weight: 600; word-break: break-all;">
+                        <i class="fas fa-envelope" style="color: var(--green-primary); margin-right: 8px;"></i> lagharitahir08@gmail.com
                     </a>
                 </div>
             </div>
@@ -451,19 +492,19 @@
     <section id="page-admin" class="page-section">
         <div class="container">
             <div class="white-card">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                    <h2 style="font-family: var(--font-title); color: var(--green-primary);">Admin Dashboard (Muhammad Tahir)</h2>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                    <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 1.5rem;">Admin Dashboard</h2>
                     <button class="btn-green" style="background: #dc2626;" onclick="logoutAdmin()">Logout</button>
                 </div>
 
                 <!-- ADMIN ORDER MANAGEMENT -->
-                <div style="background: var(--bg-white); padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-                    <h3 style="margin-bottom: 15px; color: var(--green-primary);"><i class="fas fa-tasks"></i> Manage Customer Orders</h3>
-                    <div style="overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <div style="background: var(--bg-white); padding: 15px; border-radius: 12px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 12px; color: var(--green-primary); font-size: 1.1rem;"><i class="fas fa-tasks"></i> Customer Orders</h3>
+                    <div class="responsive-table-wrapper">
+                        <table class="responsive-table">
                             <thead>
                                 <tr style="background: var(--green-primary); color: #fff;">
-                                    <th style="padding: 10px;">Order ID</th>
+                                    <th style="padding: 10px;">ID</th>
                                     <th style="padding: 10px;">Customer</th>
                                     <th style="padding: 10px;">Details</th>
                                     <th style="padding: 10px;">Type</th>
@@ -480,18 +521,18 @@
                 </div>
 
                 <!-- Manage Reservation Price -->
-                <div style="background: var(--bg-white); padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-                    <h3 style="margin-bottom: 10px; color: var(--green-primary);">Manage Table Reservation Price</h3>
-                    <div style="display: flex; gap: 10px; max-width: 400px;">
-                        <input type="number" id="adm-res-price" class="form-control" placeholder="Reservation Price (PKR)" value="500">
+                <div style="background: var(--bg-white); padding: 15px; border-radius: 12px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 8px; color: var(--green-primary); font-size: 1.1rem;">Table Reservation Price</h3>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <input type="number" id="adm-res-price" class="form-control" placeholder="Price (PKR)" value="500" style="flex:1; min-width:150px;">
                         <button class="btn-green" onclick="updateReservationPrice()">Save Price</button>
                     </div>
                 </div>
 
                 <!-- Add New Item Form -->
-                <div style="background: var(--bg-white); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
-                    <h3 style="margin-bottom: 15px; color: var(--green-primary);">Add New Menu Item</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; align-items: center;">
+                <div style="background: var(--bg-white); padding: 15px; border-radius: 12px; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 12px; color: var(--green-primary); font-size: 1.1rem;">Add New Menu Item</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; align-items: center;">
                         <input type="text" id="adm-name" class="form-control" placeholder="Item Name">
                         <input type="number" id="adm-price" class="form-control" placeholder="Price (PKR)">
                         <select id="adm-cat" class="form-control">
@@ -510,21 +551,21 @@
                         </div>
                     </div>
                     <div id="new-img-preview-container" style="margin-top: 10px; display: none;">
-                        <img id="new-img-preview" src="" style="height: 80px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <img id="new-img-preview" src="" style="height: 60px; border-radius: 6px; border: 1px solid var(--border-color);">
                     </div>
-                    <button class="btn-green" style="margin-top: 15px;" onclick="addNewMenuItem()">Upload & Add Item</button>
+                    <button class="btn-green" style="margin-top: 12px; width: 100%; justify-content: center;" onclick="addNewMenuItem()">Upload & Add Item</button>
                 </div>
 
-                <h3>Full Item Management (Edit All Details)</h3>
-                <div style="max-height: 450px; overflow-y: auto; margin-top: 15px;">
-                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                <h3 style="font-size: 1.1rem; color: var(--green-primary); margin-bottom: 10px;">Full Menu Items</h3>
+                <div class="responsive-table-wrapper" style="max-height: 400px; overflow-y: auto;">
+                    <table class="responsive-table">
                         <thead>
                             <tr style="background: var(--green-primary); color: #fff;">
                                 <th style="padding: 10px;">ID</th>
                                 <th style="padding: 10px;">Image</th>
-                                <th style="padding: 10px;">Item Name</th>
+                                <th style="padding: 10px;">Name</th>
                                 <th style="padding: 10px;">Category</th>
-                                <th style="padding: 10px;">Price (PKR)</th>
+                                <th style="padding: 10px;">Price</th>
                                 <th style="padding: 10px;">Action</th>
                             </tr>
                         </thead>
@@ -540,7 +581,7 @@
     <!-- CUSTOMER AUTH MODAL -->
     <div id="customerAuthModal" class="modal-overlay">
         <div class="modal-box">
-            <h3 id="auth-modal-title" style="color: var(--green-primary); margin-bottom: 10px; text-align: center;">Customer Login</h3>
+            <h3 id="auth-modal-title" style="color: var(--green-primary); margin-bottom: 12px; text-align: center;">Customer Login</h3>
             <form id="customerAuthForm">
                 <div class="form-group" id="name-field-group" style="display: none;">
                     <label>Full Name</label>
@@ -554,22 +595,22 @@
                     <label>Password</label>
                     <input type="password" id="auth-password" class="form-control" placeholder="Enter Password" required>
                 </div>
-                <button type="submit" id="auth-submit-btn" class="btn-green" style="width: 100%; justify-content: center; padding: 12px; margin-bottom: 15px;">Login</button>
+                <button type="submit" id="auth-submit-btn" class="btn-green" style="width: 100%; justify-content: center; padding: 12px; margin-bottom: 12px;">Login</button>
                 <div style="text-align: center;">
-                    <a id="auth-toggle-link" onclick="toggleAuthMode()" style="color: var(--gold-accent); text-decoration: underline; font-size: 0.85rem; cursor: pointer;">Don't have an account? Sign Up</a>
+                    <a id="auth-toggle-link" onclick="toggleAuthMode()" style="color: var(--gold-accent); text-decoration: underline; font-size: 0.8rem; cursor: pointer;">Don't have an account? Sign Up</a>
                 </div>
             </form>
-            <button class="btn-green" style="position: absolute; top: 15px; right: 15px; background: transparent; color: var(--text-dark); padding: 5px 10px;" onclick="closeCustomerAuthModal()"><i class="fas fa-times"></i></button>
+            <button class="btn-green" style="position: absolute; top: 12px; right: 12px; background: transparent; color: var(--text-dark); padding: 5px 8px;" onclick="closeCustomerAuthModal()"><i class="fas fa-times"></i></button>
         </div>
     </div>
 
     <!-- ADMIN PASSWORD MODAL -->
     <div id="adminModal" class="modal-overlay">
         <div class="modal-box" style="text-align: center;">
-            <h3 style="color: var(--green-primary); margin-bottom: 10px;">Admin Access Only</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Enter Admin Passcode</p>
+            <h3 style="color: var(--green-primary); margin-bottom: 8px;">Admin Access</h3>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px;">Enter Passcode</p>
             <input type="password" id="adminPassInput" class="form-control" placeholder="Enter Passcode" style="text-align: center; margin-bottom: 15px;">
-            <div style="display: flex; gap: 10px;">
+            <div style="display: flex; gap: 8px;">
                 <button class="btn-green" style="width: 100%; justify-content: center;" onclick="verifyAdminPass()">Login</button>
                 <button class="btn-green" style="width: 100%; background: #6b7280; justify-content: center;" onclick="closeAdminModal()">Cancel</button>
             </div>
@@ -579,7 +620,7 @@
     <!-- EDIT ITEM MODAL -->
     <div id="editItemModal" class="modal-overlay">
         <div class="modal-box">
-            <h3 style="color: var(--green-primary); margin-bottom: 15px;"><i class="fas fa-edit"></i> Edit Menu Item Details</h3>
+            <h3 style="color: var(--green-primary); margin-bottom: 12px; font-size: 1.1rem;"><i class="fas fa-edit"></i> Edit Menu Item</h3>
             <input type="hidden" id="edit-item-id">
             
             <div class="form-group">
@@ -607,49 +648,49 @@
             <div class="form-group">
                 <label>Update Image</label>
                 <label for="edit-file-input" class="file-upload-btn" style="display: block;">
-                    <i class="fas fa-upload"></i> Change Image From Gallery
+                    <i class="fas fa-upload"></i> Change Image
                 </label>
                 <input type="file" id="edit-file-input" accept="image/*" style="display: none;" onchange="previewEditImage(this)">
             </div>
             
             <div style="text-align: center; margin-bottom: 15px;">
-                <img id="edit-img-preview" src="" style="max-height: 100px; border-radius: 8px; border: 1px solid var(--border-color);">
+                <img id="edit-img-preview" src="" style="max-height: 80px; border-radius: 6px; border: 1px solid var(--border-color);">
             </div>
 
-            <div style="display: flex; gap: 10px;">
-                <button class="btn-green" style="width: 100%; justify-content: center;" onclick="saveFullUpdatedItem()">Save All Changes</button>
+            <div style="display: flex; gap: 8px;">
+                <button class="btn-green" style="width: 100%; justify-content: center;" onclick="saveFullUpdatedItem()">Save Changes</button>
                 <button class="btn-green" style="width: 100%; background: #6b7280; justify-content: center;" onclick="closeEditItemModal()">Cancel</button>
             </div>
         </div>
     </div>
 
-    <!-- CART MODAL (WITH ITEM SELECTION CHECKBOXES) -->
+    <!-- CART MODAL -->
     <div id="cartModal" class="modal-overlay">
         <div class="modal-box">
-            <h3 style="color: var(--green-primary); margin-bottom: 15px;"><i class="fas fa-shopping-cart"></i> Your Food Cart</h3>
+            <h3 style="color: var(--green-primary); margin-bottom: 12px; font-size: 1.1rem;"><i class="fas fa-shopping-cart"></i> Food Cart</h3>
             
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.85rem;">
-                <label style="cursor: pointer; font-weight: 600;"><input type="checkbox" id="select-all-cart" class="custom-checkbox" checked onchange="toggleSelectAllCart(this)"> Select All Items</label>
-                <span style="color: var(--text-muted);" id="cart-selected-count">0 items selected</span>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 0.8rem;">
+                <label style="cursor: pointer; font-weight: 600;"><input type="checkbox" id="select-all-cart" class="custom-checkbox" checked onchange="toggleSelectAllCart(this)"> Select All</label>
+                <span style="color: var(--text-muted);" id="cart-selected-count">0 selected</span>
             </div>
 
-            <div id="cart-items-container" style="max-height: 250px; overflow-y: auto; margin-bottom: 15px;">
+            <div id="cart-items-container" style="max-height: 200px; overflow-y: auto; margin-bottom: 12px;">
                 <!-- Filled dynamically -->
             </div>
 
-            <div style="background: var(--bg-white); padding: 12px; border-radius: 8px; margin-bottom: 15px;">
-                <div style="display: flex; gap: 8px; margin-bottom: 10px;">
-                    <input type="text" id="promo-code-input" class="form-control" placeholder="Promo Code (Try: TAHIR10)" style="padding: 8px;">
-                    <button class="btn-green" style="padding: 8px 15px; font-size: 0.8rem;" onclick="applyPromoCode()">Apply</button>
+            <div style="background: var(--bg-white); padding: 10px; border-radius: 8px; margin-bottom: 12px;">
+                <div style="display: flex; gap: 6px; margin-bottom: 8px;">
+                    <input type="text" id="promo-code-input" class="form-control" placeholder="Promo (Try: TAHIR10)" style="padding: 6px 10px; font-size: 0.8rem;">
+                    <button class="btn-green" style="padding: 6px 12px; font-size: 0.75rem;" onclick="applyPromoCode()">Apply</button>
                 </div>
-                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.05rem;">
-                    <span>Selected Items Bill:</span>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 0.95rem;">
+                    <span>Subtotal:</span>
                     <span>Rs. <span id="cart-subtotal-display">0</span></span>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Delivery Option</label>
+                <label>Delivery Type</label>
                 <select id="cart-delivery-type" class="form-control">
                     <option value="Home Delivery">Home Delivery</option>
                     <option value="Self Pickup / Takeaway">Self Pickup / Takeaway</option>
@@ -657,12 +698,12 @@
             </div>
 
             <div class="form-group">
-                <label>Full Address / Table No.</label>
-                <textarea id="cart-address" class="form-control" placeholder="Enter delivery address or table number" rows="2"></textarea>
+                <label>Address / Table No.</label>
+                <textarea id="cart-address" class="form-control" placeholder="Delivery address or table number" rows="2"></textarea>
             </div>
 
-            <div style="display: flex; gap: 10px;">
-                <button class="btn-green" style="width: 100%; justify-content: center;" onclick="checkoutCart()"><i class="fab fa-whatsapp"></i> Checkout Selected Items</button>
+            <div style="display: flex; gap: 8px;">
+                <button class="btn-green" style="width: 100%; justify-content: center; background: #25d366;" onclick="checkoutCart()"><i class="fab fa-whatsapp"></i> Checkout</button>
                 <button class="btn-green" style="background: #6b7280; justify-content: center;" onclick="closeCartModal()">Close</button>
             </div>
         </div>
@@ -735,6 +776,10 @@
             "Special Ice Cream": "Desserts"
         };
 
+        function toggleNavMenu() {
+            document.getElementById('nav-links').classList.toggle('show');
+        }
+
         function showToast(message) {
             const container = document.getElementById('toast-container');
             const toast = document.createElement('div');
@@ -768,7 +813,7 @@
             });
         }
 
-        /* --- RENDER MENU GRID WITH "ADD TO CART" & "ORDER NOW" --- */
+        /* --- RENDER MENU GRID --- */
         function renderMenuGrid(items) {
             const container = document.getElementById('menu-grid-container');
             container.innerHTML = '';
@@ -787,10 +832,10 @@
                                 <div class="menu-price">Rs. ${item.price}</div>
                                 <div class="action-btn-group">
                                     <button class="btn-green" style="padding:6px 10px; font-size:0.75rem; flex:1;" onclick="addToCart(${item.id})">
-                                        <i class="fas fa-cart-plus"></i> Add to Cart
+                                        <i class="fas fa-cart-plus"></i> Add
                                     </button>
                                     <button class="btn-gold" style="padding:6px 10px; font-size:0.75rem; flex:1;" onclick="orderNowSingleItem(${item.id})">
-                                        <i class="fas fa-bolt"></i> Order Now
+                                        <i class="fas fa-bolt"></i> Order
                                     </button>
                                 </div>
                             </div>
@@ -803,7 +848,7 @@
         /* --- CART LOGIC --- */
         function addToCart(id, silent = false) {
             if (!currentUser) {
-                showToast('Please login to order or add items to your cart.');
+                showToast('Please login to add items to cart.');
                 openCustomerAuthModal();
                 return false;
             }
@@ -822,11 +867,9 @@
             return false;
         }
 
-        /* DIRECT "ORDER NOW" OPTION */
         function orderNowSingleItem(id) {
             let success = addToCart(id, true);
             if(success) {
-                // Select only this item in cart for quick checkout
                 shoppingCart.forEach(i => i.selected = (i.id === id));
                 openCartModal();
             }
@@ -839,7 +882,7 @@
 
         function openCartModal() {
             if (!currentUser) {
-                showToast('Please login to view your cart.');
+                showToast('Please login to view cart.');
                 openCustomerAuthModal();
                 return;
             }
@@ -852,9 +895,9 @@
         function renderCartItems() {
             const container = document.getElementById('cart-items-container');
             if(shoppingCart.length === 0) {
-                container.innerHTML = `<p style="text-align:center; color:var(--text-muted);">Your cart is empty.</p>`;
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted); font-size:0.85rem;">Your cart is empty.</p>`;
                 document.getElementById('cart-subtotal-display').innerText = '0';
-                document.getElementById('cart-selected-count').innerText = '0 items selected';
+                document.getElementById('cart-selected-count').innerText = '0 selected';
                 return;
             }
 
@@ -869,19 +912,19 @@
                 }
 
                 container.innerHTML += `
-                    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom:1px solid var(--border-color);">
-                        <div style="display:flex; align-items:center; gap:10px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid var(--border-color);">
+                        <div style="display:flex; align-items:center; gap:8px;">
                             <input type="checkbox" class="custom-checkbox" ${item.selected ? 'checked' : ''} onchange="toggleItemSelection(${index}, this.checked)">
                             <div>
-                                <strong>${item.name}</strong><br>
-                                <small style="color:var(--text-muted);">Rs. ${item.price} x ${item.qty}</small>
+                                <strong style="font-size:0.85rem;">${item.name}</strong><br>
+                                <small style="color:var(--text-muted); font-size:0.75rem;">Rs. ${item.price} x ${item.qty}</small>
                             </div>
                         </div>
-                        <div style="display:flex; align-items:center; gap:8px;">
-                            <button onclick="changeCartQty(${index}, -1)" style="padding:2px 8px; border:1px solid var(--border-color); background:var(--card-white); border-radius:4px;">-</button>
-                            <span>${item.qty}</span>
-                            <button onclick="changeCartQty(${index}, 1)" style="padding:2px 8px; border:1px solid var(--border-color); background:var(--card-white); border-radius:4px;">+</button>
-                            <button onclick="removeFromCart(${index})" style="color:#dc2626; border:none; background:none; margin-left:5px;"><i class="fas fa-trash"></i></button>
+                        <div style="display:flex; align-items:center; gap:6px;">
+                            <button onclick="changeCartQty(${index}, -1)" style="padding:2px 6px; border:1px solid var(--border-color); background:var(--card-white); border-radius:4px;">-</button>
+                            <span style="font-size:0.85rem;">${item.qty}</span>
+                            <button onclick="changeCartQty(${index}, 1)" style="padding:2px 6px; border:1px solid var(--border-color); background:var(--card-white); border-radius:4px;">+</button>
+                            <button onclick="removeFromCart(${index})" style="color:#dc2626; border:none; background:none; margin-left:4px;"><i class="fas fa-trash"></i></button>
                         </div>
                     </div>
                 `;
@@ -892,9 +935,8 @@
             }
 
             document.getElementById('cart-subtotal-display').innerText = Math.round(total);
-            document.getElementById('cart-selected-count').innerText = `${selectedCount} items selected`;
+            document.getElementById('cart-selected-count').innerText = `${selectedCount} selected`;
             
-            // Check if all selected
             let allSelected = shoppingCart.length > 0 && shoppingCart.every(i => i.selected);
             document.getElementById('select-all-cart').checked = allSelected;
         }
@@ -929,7 +971,7 @@
             let code = document.getElementById('promo-code-input').value.trim().toUpperCase();
             if(code === 'TAHIR10') {
                 appliedDiscountPercent = 10;
-                showToast('Promo Code Applied! 10% Discount given.');
+                showToast('Promo Code Applied! 10% Discount.');
                 renderCartItems();
             } else {
                 showToast('Invalid Promo Code!');
@@ -940,14 +982,14 @@
             let selectedItems = shoppingCart.filter(i => i.selected);
 
             if(selectedItems.length === 0) {
-                showToast('Please select at least one item to checkout.');
+                showToast('Select at least one item.');
                 return;
             }
 
             let address = document.getElementById('cart-address').value.trim();
             let delType = document.getElementById('cart-delivery-type').value;
             if(!address) {
-                showToast('Please enter delivery address or table number.');
+                showToast('Please enter address or table number.');
                 return;
             }
 
@@ -973,11 +1015,9 @@
 
             closeCartModal();
 
-            // WhatsApp Integration
             let waMsg = `Hello Spice N Grill,%0A%0A*NEW ORDER - ${orderId}*%0A- *Customer:* ${currentUser.name || currentUser.email}%0A- *Items:* ${itemsSummary}%0A- *Delivery Type:* ${delType}%0A- *Address/Table:* ${address}%0A- *Total Bill:* Rs. ${totalBill}`;
             window.open(`https://wa.me/923123735457?text=${waMsg}`, '_blank');
 
-            // Remove only selected items from shoppingCart
             shoppingCart = shoppingCart.filter(i => !i.selected);
             appliedDiscountPercent = 0;
             updateCartBadge();
@@ -995,15 +1035,15 @@
 
             if (currentUser) {
                 authArea.innerHTML = `
-                    <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="font-size:0.85rem; font-weight:600;"><i class="fas fa-user-circle"></i> ${currentUser.name || currentUser.email}</span>
-                        <button class="btn-green" style="background:#dc2626; padding:6px 12px; font-size:0.75rem;" onclick="logoutCustomer()"><i class="fas fa-sign-out-alt"></i></button>
+                    <div style="display:flex; align-items:center; gap:6px;">
+                        <span style="font-size:0.75rem; font-weight:600; max-width:80px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"><i class="fas fa-user-circle"></i> ${currentUser.name || currentUser.email}</span>
+                        <button class="btn-green" style="background:#dc2626; padding:6px 10px; font-size:0.7rem;" onclick="logoutCustomer()"><i class="fas fa-sign-out-alt"></i></button>
                     </div>
                 `;
                 menuContent.style.display = 'block';
                 menuLocked.style.display = 'none';
             } else {
-                authArea.innerHTML = `<button class="btn-green" onclick="openCustomerAuthModal()"><i class="fas fa-user"></i> Login / Register</button>`;
+                authArea.innerHTML = `<button class="btn-green" onclick="openCustomerAuthModal()"><i class="fas fa-user"></i> Login</button>`;
                 menuContent.style.display = 'none';
                 menuLocked.style.display = 'block';
             }
@@ -1029,7 +1069,7 @@
             if (authMode === 'signup') {
                 if (!name) { showToast('Please enter your full name'); return; }
                 if (registeredUsers.some(u => u.email === email)) {
-                    showToast('An account with this email already exists!');
+                    showToast('Account with this email already exists!');
                     return;
                 }
                 let newUser = { name, email, password };
@@ -1037,13 +1077,13 @@
                 localStorage.setItem('spice_users', JSON.stringify(registeredUsers));
                 currentUser = newUser;
                 localStorage.setItem('spice_currentUser', JSON.stringify(currentUser));
-                showToast(`Welcome, ${name}! Account created successfully.`);
+                showToast(`Welcome, ${name}! Account created.`);
             } else {
                 let found = registeredUsers.find(u => u.email === email && u.password === password);
                 if (found) {
                     currentUser = found;
                     localStorage.setItem('spice_currentUser', JSON.stringify(currentUser));
-                    showToast(`Logged in successfully as ${currentUser.name || currentUser.email}`);
+                    showToast(`Logged in successfully!`);
                 } else {
                     showToast('Invalid Email or Password!');
                     return;
@@ -1066,14 +1106,14 @@
         function renderCustomerOrders() {
             const container = document.getElementById('customer-orders-list');
             if (!currentUser) {
-                container.innerHTML = `<p style="text-align:center; color:var(--text-muted);">Please login to view your orders.</p>`;
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted); font-size:0.85rem;">Please login to view orders.</p>`;
                 return;
             }
 
             let myOrders = ordersList.filter(o => o.customerEmail === currentUser.email);
 
             if (myOrders.length === 0) {
-                container.innerHTML = `<p style="text-align:center; color:var(--text-muted);">You haven't placed any orders yet.</p>`;
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted); font-size:0.85rem;">No orders placed yet.</p>`;
                 return;
             }
 
@@ -1081,14 +1121,14 @@
             myOrders.forEach(o => {
                 let badgeClass = o.status === 'Delivered' ? 'badge-delivered' : 'badge-preparing';
                 container.innerHTML += `
-                    <div style="background:var(--bg-white); border:1px solid var(--border-color); border-radius:12px; padding:18px; margin-bottom:15px;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                            <strong style="color:var(--green-primary); font-size:1.05rem;">${o.item}</strong>
+                    <div style="background:var(--bg-white); border:1px solid var(--border-color); border-radius:12px; padding:15px; margin-bottom:12px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                            <strong style="color:var(--green-primary); font-size:0.95rem;">${o.item}</strong>
                             <span class="badge ${badgeClass}">${o.status}</span>
                         </div>
-                        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:5px;">Order ID: ${o.id} | Date: ${o.time}</p>
-                        <p style="font-size:0.9rem; font-weight:600;">Total Amount: Rs. ${o.totalPrice}</p>
-                        <p style="font-size:0.85rem; color:var(--text-dark); margin-top:5px;"><i class="fas fa-map-marker-alt" style="color:var(--gold-accent);"></i> ${o.address} (${o.deliveryType || 'Delivery'})</p>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:4px;">ID: ${o.id} | ${o.time}</p>
+                        <p style="font-size:0.85rem; font-weight:600;">Total: Rs. ${o.totalPrice}</p>
+                        <p style="font-size:0.8rem; color:var(--text-dark); margin-top:4px;"><i class="fas fa-map-marker-alt" style="color:var(--gold-accent);"></i> ${o.address} (${o.deliveryType || 'Delivery'})</p>
                     </div>
                 `;
             });
@@ -1108,16 +1148,16 @@
                 let badgeClass = o.status === 'Delivered' ? 'badge-delivered' : 'badge-preparing';
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid var(--border-color);">
-                        <td style="padding: 10px; font-weight:bold;">${o.id}</td>
-                        <td style="padding: 10px;">${o.name}</td>
-                        <td style="padding: 10px;">${o.item}<br><small style="color:var(--text-muted);">${o.address}</small></td>
-                        <td style="padding: 10px; font-size:0.8rem;">${o.deliveryType || 'Delivery'}</td>
-                        <td style="padding: 10px; font-weight:bold;">Rs. ${o.totalPrice}</td>
-                        <td style="padding: 10px;"><span class="badge ${badgeClass}">${o.status}</span></td>
-                        <td style="padding: 10px;">
+                        <td data-label="ID" style="padding: 10px; font-weight:bold;">${o.id}</td>
+                        <td data-label="Customer" style="padding: 10px;">${o.name}</td>
+                        <td data-label="Details" style="padding: 10px;">${o.item}<br><small style="color:var(--text-muted);">${o.address}</small></td>
+                        <td data-label="Type" style="padding: 10px; font-size:0.8rem;">${o.deliveryType || 'Delivery'}</td>
+                        <td data-label="Total" style="padding: 10px; font-weight:bold;">Rs. ${o.totalPrice}</td>
+                        <td data-label="Status" style="padding: 10px;"><span class="badge ${badgeClass}">${o.status}</span></td>
+                        <td data-label="Action" style="padding: 10px;">
                             ${o.status !== 'Delivered' ? 
-                                `<button onclick="markOrderDelivered('${o.id}')" class="btn-green" style="padding:5px 10px; font-size:0.75rem; background:#16a34a;"><i class="fas fa-check"></i> Mark Delivered</button>` : 
-                                `<span style="color:#16a34a; font-weight:bold; font-size:0.8rem;"><i class="fas fa-check-double"></i> Completed</span>`
+                                `<button onclick="markOrderDelivered('${o.id}')" class="btn-green" style="padding:4px 8px; font-size:0.7rem; background:#16a34a;"><i class="fas fa-check"></i> Delivered</button>` : 
+                                `<span style="color:#16a34a; font-weight:bold; font-size:0.75rem;"><i class="fas fa-check-double"></i> Completed</span>`
                             }
                         </td>
                     </tr>
@@ -1130,7 +1170,7 @@
             if (order) {
                 order.status = 'Delivered';
                 localStorage.setItem('spice_orders', JSON.stringify(ordersList));
-                showToast(`Order ${orderId} marked as Delivered!`);
+                showToast(`Order ${orderId} marked Delivered!`);
                 renderAdminOrdersTable();
                 renderCustomerOrders();
             }
@@ -1143,16 +1183,18 @@
             menuDatabase.forEach(item => {
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid var(--border-color);">
-                        <td style="padding: 10px;">${item.id}</td>
-                        <td style="padding: 10px;">
-                            <img src="${item.image}" style="width: 50px; height: 40px; border-radius: 6px; object-fit: cover;">
+                        <td data-label="ID" style="padding: 10px;">${item.id}</td>
+                        <td data-label="Image" style="padding: 10px;">
+                            <img src="${item.image}" style="width: 45px; height: 35px; border-radius: 6px; object-fit: cover;">
                         </td>
-                        <td style="padding: 10px;"><strong>${item.name}</strong></td>
-                        <td style="padding: 10px;">${item.category}</td>
-                        <td style="padding: 10px; font-weight:bold;">Rs. ${item.price}</td>
-                        <td style="padding: 10px; display: flex; gap: 5px;">
-                            <button onclick="openEditItemModal(${item.id})" style="background:var(--gold-accent); color:#000; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; font-size:0.75rem; font-weight:600;"><i class="fas fa-edit"></i> Edit All Details</button>
-                            <button onclick="deleteItem(${item.id})" style="background:#dc2626; color:#fff; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; font-size:0.75rem;"><i class="fas fa-trash"></i></button>
+                        <td data-label="Name" style="padding: 10px;"><strong>${item.name}</strong></td>
+                        <td data-label="Category" style="padding: 10px;">${item.category}</td>
+                        <td data-label="Price" style="padding: 10px; font-weight:bold;">Rs. ${item.price}</td>
+                        <td data-label="Action" style="padding: 10px;">
+                            <div style="display: flex; gap: 5px; justify-content: flex-end;">
+                                <button onclick="openEditItemModal(${item.id})" style="background:var(--gold-accent); color:#000; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:0.7rem; font-weight:600;"><i class="fas fa-edit"></i> Edit</button>
+                                <button onclick="deleteItem(${item.id})" style="background:#dc2626; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer; font-size:0.7rem;"><i class="fas fa-trash"></i></button>
+                            </div>
                         </td>
                     </tr>
                 `;
@@ -1189,7 +1231,7 @@
                     item.category = newCat;
                     item.image = selectedEditBase64Image || item.image;
 
-                    showToast('Item details updated successfully!');
+                    showToast('Item details updated!');
                     closeEditItemModal();
                     renderAdminTable();
                     renderMenuGrid(menuDatabase);
@@ -1252,6 +1294,9 @@
 
             if(pageId === 'my-orders') renderCustomerOrders();
 
+            // Mobile menu hide on click
+            document.getElementById('nav-links').classList.remove('show');
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -1311,7 +1356,7 @@
                     image: img,
                     isHot: true
                 });
-                showToast('New Item Added Successfully!');
+                showToast('New Item Added!');
                 renderAdminTable();
                 renderMenuGrid(menuDatabase);
                 
@@ -1329,7 +1374,7 @@
             if(p) {
                 currentReservationPrice = p;
                 document.getElementById('res-price-display').innerText = p;
-                showToast('Reservation Price updated successfully!');
+                showToast('Reservation Price updated!');
             }
         }
 
@@ -1344,7 +1389,7 @@
                             <strong>${name}</strong>
                             <span style="color: var(--gold-accent);"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                         </div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">${msg}</p>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">${msg}</p>
                     </div>
                 ` + list.innerHTML;
                 document.getElementById('rev-name').value = '';
