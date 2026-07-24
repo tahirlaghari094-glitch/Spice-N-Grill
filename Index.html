@@ -3,1458 +3,1372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="3sEKCoLT8UQ2tGs_njHnhB4eF5AIXaofs1fdXFXuMW0" />
     
-    <title>Beacon Heights Schooling System & Academy | Becon Heights Mirpurkhas</title>
-    
-    <meta name="description" content="Beacon Heights (Becon Heights) Schooling System & Academy in Mirpurkhas. Session 2026-2027 Admissions Open! First 50 Admissions Free with Free Uniform and 50% Off in Evening Tuition.">
-    <meta name="keywords" content="Beacon Heights, Becon Heights, Beacon Heights School Mirpurkhas, Becon Heights Academy, Schooling System Mirpurkhas, Admissions 2026-2027">
-    <meta name="author" content="Beacon Heights Schooling System">
+    <!-- SEO & Search Engine Keywords for Live Search -->
+    <title>Spice N Grill | Premium Dining, Grill & Fast Food</title>
+    <meta name="description" content="Spice N Grill - Authentic Pakistani BBQ, Karahi, Burgers, Pasta & Drinks. Managed by Muhammad Tahir. Place your online order now!">
+    <meta name="keywords" content="Spice N Grill, Spice & Grill, Spice and Grill, Grill N Spice, Spice Grill Restaurant, Muhammad Tahir Food, BBQ and Karahi">
+    <meta name="author" content="Muhammad Tahir">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="icon.png" sizes="192x192">
+    <!-- Custom Favicon (Same directory icon.png) -->
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <!-- FontAwesome Icons -->
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Beacon Heights Schooling System & Academy",
-      "alternateName": "Becon Heights Mirpurkhas",
-      "url": "https://beacon-heights-mirpurkhas.netlify.app/",
-      "logo": "https://beacon-heights-mirpurkhas.netlify.app/icon.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+92-312-3525881",
-        "contactType": "admissions"
-      }
-    }
-    </script>
 
     <style>
         :root {
-            --primary-color: #0b3c5d;
-            --secondary-color: #328cc1;
-            --accent-color: #e74c3c;
-            --gold-color: #f1c40f;
-            --light-bg: #f8f9fa;
-            --dark-text: #212529;
+            --green-primary: #034833;
+            --green-light: #086b4e;
+            --green-accent: #e8f5e9;
+            --gold-accent: #d4af37;
+            --bg-white: #f8f9fa;
+            --card-white: #ffffff;
+            --text-dark: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
+        body.dark-mode {
+            --bg-white: #121816;
+            --card-white: #1e2623;
+            --text-dark: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #2e3a35;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            color: var(--dark-text);
-            line-height: 1.6;
-            background-color: #fff;
-            overflow-x: hidden;
-        }
-
-        /* Top Announcement Bar */
-        .offer-bar {
-            background: linear-gradient(90deg, #c0392b, #e74c3c);
-            color: #fff;
-            text-align: center;
-            padding: 8px 15px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            position: relative;
-            z-index: 1001;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .offer-bar span {
-            background: var(--gold-color);
-            color: #000;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-left: 5px;
-            animation: blink 1.5s infinite;
-            cursor: pointer;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        /* Header Navigation */
-        header {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            font-family: var(--font-body);
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.8rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Logo Styling */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-        }
-
-        .logo-img {
-            width: 45px;
-            height: 45px;
-            object-fit: contain;
-            border-radius: 5px;
-        }
-
-        .logo-text {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            line-height: 1.2;
-        }
-
-        .logo-text span { color: var(--secondary-color); }
-        .logo-text small { display: block; font-size: 0.7rem; color: #666; font-weight: normal; }
-
-        /* Navigation Menu Centered & Bold */
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-grow: 1;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-links li button {
-            background: none;
-            border: none;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--dark-text);
-            cursor: pointer;
-            padding: 0.5rem 0.8rem;
-            transition: 0.3s;
-        }
-
-        .nav-links li button:hover, 
-        .nav-links li button.active {
-            color: var(--secondary-color);
-            border-bottom: 3px solid var(--secondary-color);
-        }
-
-        .btn-apply {
-            background: var(--accent-color);
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 0.85rem;
-            transition: 0.3s;
-        }
-
-        .btn-apply:hover {
-            background: #a93226;
-        }
-
-        .btn-admin-nav {
-            background: #2c3e50;
-            color: #fff;
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            border: none;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        .hamburger {
-            display: none;
             flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
+            transition: background 0.3s, color 0.3s;
         }
 
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: var(--primary-color);
-            border-radius: 2px;
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
+
+        /* --- NAVBAR --- */
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--green-primary); padding: 15px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        body.dark-mode header { background: rgba(18, 24, 22, 0.95); }
+
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-title); font-size: 1.8rem; font-weight: 900; color: var(--green-primary); text-decoration: none; cursor: pointer; }
+        .logo span { color: var(--gold-accent); }
+
+        .nav-links { display: flex; list-style: none; gap: 10px; align-items: center; }
+        .nav-links a {
+            color: var(--text-dark); text-decoration: none; font-size: 0.82rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.8px; padding: 8px 14px;
+            border-radius: 20px; transition: all 0.3s ease; cursor: pointer;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #fff; background: var(--green-primary);
         }
 
-        /* Page Content Logic */
-        .page {
+        .btn-green {
+            padding: 10px 22px; background: var(--green-primary); color: #fff;
+            font-weight: 600; border-radius: 30px; text-decoration: none; font-size: 0.85rem;
+            box-shadow: 0 4px 12px rgba(3, 72, 51, 0.2); transition: 0.3s; border: none; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-green:hover { background: var(--green-light); transform: translateY(-2px); }
+
+        .btn-gold {
+            padding: 8px 16px; background: var(--gold-accent); color: #000;
+            font-weight: 700; border-radius: 20px; text-decoration: none; font-size: 0.8rem;
+            transition: 0.3s; border: none; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 6px;
+        }
+        .btn-gold:hover { background: #b89628; color: #fff; transform: translateY(-2px); }
+
+        /* --- TOAST NOTIFICATIONS --- */
+        #toast-container {
+            position: fixed; top: 90px; right: 20px; z-index: 10000;
+            display: flex; flex-direction: column; gap: 10px; max-width: 350px; width: 100%;
+            pointer-events: none;
+        }
+        .toast-msg {
+            pointer-events: auto; background: var(--green-primary); color: #fff;
+            padding: 14px 20px; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            display: flex; align-items: center; justify-content: space-between;
+            font-size: 0.9rem; border-left: 5px solid var(--gold-accent);
+            animation: slideInRight 0.3s forwards;
+        }
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* --- SECTIONS --- */
+        .page-section {
             display: none;
+            padding-top: 120px;
+            padding-bottom: 80px;
+            min-height: calc(100vh - 80px);
             animation: fadeIn 0.4s ease-in-out;
         }
-
-        .page.active-page { display: block; }
+        .page-section.active-page { display: block; }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(11, 60, 93, 0.88), rgba(11, 60, 93, 0.88)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding: 70px 20px;
+        /* HERO SECTION */
+        .hero-card {
+            background: linear-gradient(rgba(3, 72, 51, 0.85), rgba(3, 72, 51, 0.92)), 
+                        url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: #fff; border-radius: 20px; padding: 90px 40px; text-align: center;
+            box-shadow: 0 15px 35px rgba(3, 72, 51, 0.15);
+        }
+        .hero-card h1 { font-family: var(--font-title); font-size: 3.5rem; margin-bottom: 15px; }
+        .hero-card p { max-width: 650px; margin: 0 auto 30px; font-size: 1.1rem; opacity: 0.9; }
+
+        .white-card {
+            background: var(--card-white); border: 1px solid var(--border-color);
+            border-radius: 16px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
 
-        .hero h1 { 
-            font-size: clamp(1.8rem, 4vw, 2.8rem); 
-            margin-bottom: 0.8rem; 
+        /* MENU CONTROLS & GRID */
+        .menu-controls { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; justify-content: space-between; }
+        .search-box { padding: 12px 20px; border: 1px solid var(--border-color); border-radius: 25px; width: 300px; outline: none; background: var(--card-white); color: var(--text-dark); }
+        .search-box:focus { border-color: var(--green-primary); }
+
+        .category-btns { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; }
+        .cat-btn {
+            padding: 8px 18px; border: 1px solid var(--border-color); background: var(--card-white);
+            color: var(--text-dark); border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 600; white-space: nowrap;
+        }
+        .cat-btn.active, .cat-btn:hover { background: var(--green-primary); color: #fff; border-color: var(--green-primary); }
+
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .menu-item {
+            background: var(--card-white); border: 1px solid var(--border-color); border-radius: 12px;
+            overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; position: relative;
+        }
+        .menu-item:hover { border-color: var(--green-primary); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+        .menu-item img { width: 100%; height: 180px; object-fit: cover; }
+        .menu-item-details { padding: 18px; display: flex; flex-direction: column; height: 100%; justify-content: space-between; }
+        .menu-item h3 { font-size: 1.05rem; font-weight: 700; color: var(--green-primary); margin-bottom: 5px; }
+        .menu-item .cat-tag { font-size: 0.75rem; color: var(--gold-accent); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; display: block; }
+        .menu-price { font-size: 1.1rem; font-weight: 800; color: var(--text-dark); margin-bottom: 12px; }
+
+        .action-btn-group { display: flex; gap: 8px; margin-top: 10px; }
+
+        .hot-badge {
+            position: absolute; top: 10px; left: 10px; background: #e11d48; color: #fff;
+            padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
         }
 
-        .hero p { 
-            font-size: clamp(0.95rem, 2vw, 1.2rem); 
-            max-width: 750px; 
-            margin: 0 auto 1.5rem; 
-        }
+        /* FORM ELEMENTS */
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--green-primary); font-size: 0.9rem; }
+        .form-control { width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 8px; outline: none; background: var(--card-white); color: var(--text-dark); }
+        .form-control:focus { border-color: var(--green-primary); }
 
-        .offer-badge {
-            background: var(--gold-color);
-            color: #000;
-            display: inline-block;
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
+        /* MODALS */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px);
+            display: none; justify-content: center; align-items: center; z-index: 9999;
         }
-
-        .page-header {
-            background: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            padding: 35px 20px;
-            position: relative;
+        .modal-box { 
+            background: var(--card-white); padding: 30px; border-radius: 16px; 
+            width: 90%; max-width: 520px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: popupAnim 0.3s ease-out; position: relative; max-height: 90vh; overflow-y: auto;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 35px 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 5px solid var(--secondary-color);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.6rem;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Course Cards Styling */
-        .course-badge {
-            display: inline-block;
-            background: #e1f5fe;
-            color: #0288d1;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-            align-self: flex-start;
-        }
-
-        .course-badge.highsec {
-            background: #ede7f6;
-            color: #512da8;
-        }
-
-        .course-badge.academy {
-            background: #fff3e0;
-            color: #e65100;
-        }
-
-        .course-badge.skill {
-            background: #e8f5e9;
-            color: #2e7d32;
-        }
-
-        .course-list {
-            list-style: none;
-            margin: 10px 0;
-        }
-
-        .course-list li {
-            padding: 4px 0;
-            border-bottom: 1px dashed #ddd;
-            font-size: 0.9rem;
-        }
-
-        .course-list li i {
-            color: var(--secondary-color);
-            margin-right: 6px;
-        }
-
-        .fee-box {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            padding: 10px;
-            border-radius: 6px;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        .fee-amount {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-
-        .fee-original {
-            text-decoration: line-through;
-            color: #888;
-            font-size: 0.85rem;
-            margin-right: 5px;
-        }
-
-        /* Form Styling */
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--light-bg);
-            padding: 1.8rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .form-group { margin-bottom: 1rem; }
-        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.9rem; }
-        .form-group label .req { color: red; }
-        .form-group input, 
-        .form-group select, 
-        .form-group textarea {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 0.95rem;
-        }
-
-        .selected-course-display {
-            background: #eef7fc;
-            border: 1px solid #328cc1;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            font-weight: bold;
-            color: #0b3c5d;
-        }
-
-        .doc-note-box {
-            display: none;
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 12px 15px;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .doc-note-box i {
-            font-size: 1.3rem;
-            color: #856404;
-        }
-
-        .btn-submit {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            width: 100%;
-            font-size: 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        /* Admin Specific Styling */
-        .admin-card {
-            background: #fff;
-            border: 2px solid var(--primary-color);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-
-        .btn-save-admin {
-            background: #27ae60;
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .btn-delete-admin {
-            background: #c0392b;
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            margin-top: 10px;
-            width: 100%;
-        }
-
-        .btn-logout-header {
-            background: #e74c3c;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: 0.2s;
-        }
-
-        .btn-logout-header:hover {
-            background: #c0392b;
-        }
-
-        /* Floating WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            border-radius: 50px;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: transform 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* Contact Details Highlight */
-        .contact-box {
-            background: #eef7fc;
-            border: 1px solid #b3d7ff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .phone-link {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin: 5px;
-            font-weight: bold;
-        }
-
-        .map-container {
-            margin-top: 1.5rem;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 20px 15px;
-            margin-top: 30px;
-            font-size: 0.88rem;
-        }
-
-        /* OFFICIAL CUSTOM SCREEN POPUP MODAL STYLING */
-        .official-modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
-            z-index: 9999;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .official-modal-box {
-            background: #ffffff;
-            width: 90%;
-            max-width: 420px;
-            border-radius: 12px;
-            padding: 25px 20px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            animation: popIn 0.3s ease-out;
-            position: relative;
-        }
-
-        @keyframes popIn {
+        @keyframes popupAnim {
             from { transform: scale(0.8); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
 
-        .official-modal-icon {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
-            color: var(--primary-color);
+        /* FLOATING ACTION BUTTONS */
+        .floating-action-btn {
+            position: fixed; bottom: 25px; width: 55px; height: 55px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); z-index: 1500; cursor: pointer; text-decoration: none; border: none;
+        }
+        .whatsapp-float { right: 25px; background: #25d366; color: #fff; }
+        .cart-float { right: 90px; background: var(--gold-accent); color: #000; }
+        .cart-badge {
+            position: absolute; top: -5px; right: -5px; background: #dc2626; color: #fff;
+            font-size: 0.75rem; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;
         }
 
-        .official-modal-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 8px;
+        footer { background: var(--green-primary); color: #fff; padding: 25px 0; text-align: center; font-size: 0.9rem; margin-top: auto; }
+
+        .review-card { background: var(--bg-white); padding: 20px; border-radius: 12px; border-left: 4px solid var(--gold-accent); margin-bottom: 15px; }
+
+        .file-upload-btn {
+            border: 2px dashed var(--green-primary);
+            padding: 12px; text-align: center; border-radius: 8px; cursor: pointer;
+            background: var(--green-accent); color: var(--green-primary); font-weight: 600; font-size: 0.85rem;
         }
 
-        .official-modal-msg {
-            font-size: 0.95rem;
-            color: #444;
-            margin-bottom: 20px;
-            line-height: 1.4;
+        /* BADGES */
+        .badge {
+            padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; display: inline-block;
+        }
+        .badge-pending { background: #fef3c7; color: #d97706; }
+        .badge-preparing { background: #e0f2fe; color: #0284c7; }
+        .badge-delivered { background: #dcfce7; color: #15803d; }
+
+        .custom-checkbox {
+            width: 18px; height: 18px; accent-color: var(--green-primary); cursor: pointer;
         }
 
-        .official-modal-btn {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .official-modal-btn:hover {
-            background: var(--secondary-color);
-        }
-
-        .official-modal-btn.danger-btn {
-            background: #c0392b;
-            margin-left: 10px;
-        }
-
-        @media screen and (max-width: 900px) {
-            .hamburger { display: flex; }
-            .nav-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                align-items: stretch;
-                padding: 1.2rem;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-                display: none;
-            }
-            .nav-menu.mobile-active { display: flex; }
-            .nav-links { flex-direction: column; width: 100%; gap: 0; }
-            .nav-links li button { width: 100%; padding: 0.7rem; border-bottom: 1px solid #eee; font-size: 1.05rem; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero-card h1 { font-size: 2.2rem; }
+            .search-box { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Special Offer Announcement Bar -->
-    <div class="offer-bar" id="display-offer-bar">
-        🎉 <strong id="display-offer-text">SPECIAL OFFER (Session 2026-2027): First 50 Admissions FREE! + Free Uniform + 50% OFF Evening Tuition!</strong> <span onclick="switchPage('courses')">View Courses & Apply</span>
-    </div>
+    <!-- NOTIFICATION CONTAINER -->
+    <div id="toast-container"></div>
 
     <!-- Header Navigation -->
     <header>
-        <div class="navbar">
-            <div class="logo-container" onclick="switchPage('home')">
-                <img src="icon.png" alt="Beacon Heights Logo" class="logo-img" onerror="this.style.display='none'">
-                <div class="logo-text">
-                    BEACON <span>HEIGHTS</span>
-                    <small>Schooling System & Academy</small>
-                </div>
-            </div>
-
-            <div class="nav-menu" id="navMenu">
+        <div class="container">
+            <nav>
+                <a class="logo" onclick="showPage('home')">SPICE N <span>GRILL</span></a>
                 <ul class="nav-links">
-                    <li><button id="nav-home" class="active" onclick="switchPage('home')">Home</button></li>
-                    <li><button id="nav-about" onclick="switchPage('about')">About Us</button></li>
-                    <li><button id="nav-courses" onclick="switchPage('courses')">Courses & Fees</button></li>
-                    <li><button id="nav-facilities" onclick="switchPage('facilities')">Facilities</button></li>
-                    <li><button id="nav-contact" onclick="switchPage('contact')">Contact</button></li>
-                    <li><button id="nav-admin" class="btn-admin-nav" onclick="switchPage('admin')"><i class="fa-solid fa-lock"></i> Admin</button></li>
+                    <li><a id="nav-home" class="active" onclick="showPage('home')">Home</a></li>
+                    <li><a id="nav-about" onclick="showPage('about')">About Us</a></li>
+                    <li><a id="nav-menu" onclick="showPage('menu')">Our Menu</a></li>
+                    <li><a id="nav-my-orders" onclick="showPage('my-orders')"><i class="fas fa-shopping-bag"></i> My Orders</a></li>
+                    <li><a id="nav-reservation" onclick="showPage('reservation')">Reservation</a></li>
+                    <li><a id="nav-reviews" onclick="showPage('reviews')">Reviews</a></li>
+                    <li><a id="nav-contact" onclick="showPage('contact')">Contact</a></li>
                 </ul>
-            </div>
-
-            <div class="hamburger" onclick="toggleMobileMenu()">
-                <span></span><span></span><span></span>
-            </div>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <button class="btn-green" style="background: transparent; color: var(--text-dark); border: 1px solid var(--border-color); padding: 8px 12px;" onclick="toggleDarkMode()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <!-- User Auth Button -->
+                    <span id="user-auth-btn-area">
+                        <button class="btn-green" onclick="openCustomerAuthModal()"><i class="fas fa-user"></i> Login / Register</button>
+                    </span>
+                    <button class="btn-green" style="background: var(--gold-accent); color: #000;" onclick="handleAdminClick()"><i class="fas fa-lock"></i> Admin</button>
+                </div>
+            </nav>
         </div>
     </header>
 
+    <!-- Floating WhatsApp & Cart -->
+    <a href="https://wa.me/923123735457?text=Hello%20Spice%20N%20Grill,%20I%20want%20to%20reserve%20a%20table." class="floating-action-btn whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button class="floating-action-btn cart-float" onclick="openCartModal()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count-badge" class="cart-badge">0</span>
+    </button>
+
     <!-- PAGE 1: HOME -->
-    <div id="page-home" class="page active-page">
-        <section class="hero">
-            <div class="offer-badge">🔥 Admissions Open 2026 - 2027</div>
-            <h1>Beacon Heights Schooling System & Academy</h1>
-            <p>Quality education from Primary to Matric & Expert Evening Academy Coaching in Mirpurkhas.</p>
-            <div style="margin-top: 15px;">
-                <button class="btn-apply" style="background: var(--gold-color); color: #000; font-size: 1rem; padding: 0.8rem 1.8rem; margin-right: 10px;" onclick="switchPage('courses')">View Courses & Enroll</button>
-                <a href="tel:03123525881" id="display-hero-phone" style="background: #fff; color: var(--primary-color); padding: 0.75rem 1.2rem; text-decoration: none; display: inline-block; border-radius: 5px; font-weight: bold;">📞 Call: 03123525881</a>
-            </div>
-        </section>
-
+    <section id="page-home" class="page-section active-page">
         <div class="container">
-            <div class="contact-box">
-                <h2 style="color: var(--accent-color); margin-bottom: 10px;">🎁 Special Limited Time Discount</h2>
-                <p style="font-size: 1.1rem; font-weight: 600;" id="display-discount-box">First 50 Student Admissions are 100% FREE with FREE School Uniform and 50% Flat Discount on Evening Academy Tuition Fee!</p>
-            </div>
-
-            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1.5rem;">Why Choose Beacon Heights?</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> Free Admission Offer</h3>
-                    <p>First 50 lucky admissions will get 100% Free Admission along with a Free School Uniform set.</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fa-solid fa-book-open"></i> Evening Academy 50% Off</h3>
-                    <p>Special tuition coaching for Class 8, Matric & Inter students with experienced faculty at 50% discounted fees.</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fa-solid fa-location-dot"></i> Prime Location</h3>
-                    <p>Located safely in Satellite Town, Mirpurkhas near Marhaba Hall & Doctor Rana Rathore Street.</p>
+            <div class="hero-card">
+                <p style="color: var(--gold-accent); font-weight: 700; letter-spacing: 2px;">AUTHENTIC PAKISTANI & GRILL SPECIALITIES</p>
+                <h1>Spice N Grill</h1>
+                <p>Taste the finest barbecues, sizzling karahi, fast food, and drinks in town. Managed by <strong>Muhammad Tahir</strong>.</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn-green" style="padding: 12px 30px;" onclick="showPage('menu')">Explore Delicious Menu</button>
+                    <button class="btn-green" style="background: transparent; border: 2px solid #fff; padding: 12px 30px;" onclick="showPage('reservation')">Book Table</button>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- PAGE 2: COURSES & FEE STRUCTURE -->
-    <div id="page-courses" class="page">
-        <section class="page-header">
-            <h1>All Classes, Coaching & Professional Courses</h1>
-            <p>Select your desired class or course below to proceed with admission.</p>
-        </section>
-
+    <!-- PAGE 2: ABOUT US -->
+    <section id="page-about" class="page-section">
         <div class="container">
-            <!-- SECTION 1: MORNING SCHOOLING SYSTEM -->
-            <h2 style="color: var(--primary-color); border-bottom: 3px solid var(--secondary-color); padding-bottom: 8px; margin-bottom: 1.5rem;"><i class="fa-solid fa-school"></i> Schooling System</h2>
-            <div class="grid" style="margin-bottom: 2rem;" id="container-schooling">
-                <!-- Dynamic or default items rendered here -->
-            </div>
-
-            <!-- SECTION 2: HIGHER SECONDARY SCHOOLING -->
-            <h2 style="color: var(--primary-color); border-bottom: 3px solid #512da8; padding-bottom: 8px; margin-bottom: 1.5rem;"><i class="fa-solid fa-graduation-cap"></i> Higher Secondary Classes</h2>
-            <div class="grid" style="margin-bottom: 3rem;" id="container-highsec">
-                <!-- Dynamic or default items rendered here -->
-            </div>
-
-            <!-- SECTION 3: EVENING ACADEMY COACHING -->
-            <h2 style="color: var(--primary-color); border-bottom: 3px solid var(--accent-color); padding-bottom: 8px; margin-bottom: 1.5rem;"><i class="fa-solid fa-book-open"></i> Evening Academy Coaching (50% OFF)</h2>
-            <div class="grid" style="margin-bottom: 3rem;" id="container-academy">
-                <!-- Dynamic or default items rendered here -->
-            </div>
-
-            <!-- SECTION 4: PROFESSIONAL SKILL COURSES -->
-            <h2 style="color: var(--primary-color); border-bottom: 3px solid #2e7d32; padding-bottom: 8px; margin-bottom: 1.5rem;"><i class="fa-solid fa-laptop-code"></i> Professional IT & Language Courses</h2>
-            <div class="grid" id="container-skills">
-                <!-- Dynamic or default items rendered here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- PAGE 3: ABOUT US -->
-    <div id="page-about" class="page">
-        <section class="page-header">
-            <h1>About Beacon Heights</h1>
-            <p>Delivering high academic standards & ethical values in Mirpurkhas</p>
-        </section>
-
-        <div class="container">
-            <div class="grid">
-                <div class="card">
-                    <h3>Our Mission</h3>
-                    <p>To nurture young minds into successful professionals through modern teaching, individual care, and high moral standards.</p>
-                </div>
-                <div class="card">
-                    <h3>Our Vision</h3>
-                    <p>To be the leading schooling and academy network in Mirpurkhas producing top board rankers and future leaders.</p>
+            <div class="white-card" style="max-width: 850px; margin: 0 auto;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 2.2rem; margin-bottom: 15px;">Welcome to Spice N Grill</h2>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+                    Spice N Grill brings you a delightful fusion of rich traditional Pakistani spices, smokey grills, Italian pasta, and modern fast food. We focus on cleanliness, quality ingredients, and VIP customer satisfaction.
+                </p>
+                <div style="background: var(--green-accent); padding: 20px; border-radius: 12px; border-left: 5px solid var(--green-primary); color: #000;">
+                    <h3 style="color: var(--green-primary);">Owner & Founder</h3>
+                    <p style="margin-top: 5px; font-weight: 700;">Muhammad Tahir</p>
+                    <p style="color: #4b5563; font-size: 0.9rem;">Email: lagharitahir08@gmail.com | Mobile: 03123735457</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- PAGE 4: FACILITIES -->
-    <div id="page-facilities" class="page">
-        <section class="page-header">
-            <h1>Our Facilities</h1>
-            <p>Providing the best environment for student growth</p>
-        </section>
-
+    <!-- PAGE 3: MENU -->
+    <section id="page-menu" class="page-section">
         <div class="container">
-            <div class="grid" id="container-facilities">
-                <!-- Dynamic Facilities rendered here -->
+            <div style="text-align: center; margin-bottom: 25px;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 2.4rem;">Spice N Grill Menu</h2>
+                <p style="color: var(--text-muted)">Order freshly cooked dishes directly to your table or home</p>
             </div>
-        </div>
-    </div>
 
-    <!-- PAGE 5: ADMISSIONS -->
-    <div id="page-admissions" class="page">
-        <section class="page-header">
-            <h1>Admission Application Form (2026 - 2027)</h1>
-            <p>Fill all fields mandatory to complete your application via WhatsApp</p>
-        </section>
+            <!-- Login Prompt if Not Authenticated -->
+            <div id="menu-locked-prompt" class="white-card" style="text-align: center; max-width: 500px; margin: 0 auto; display: none;">
+                <i class="fas fa-lock" style="font-size: 50px; color: var(--gold-accent); margin-bottom: 15px;"></i>
+                <h3 style="color: var(--green-primary); margin-bottom: 10px;">Login Required</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Please login or create an account with your Email & Password to view our full menu and place orders.</p>
+                <button class="btn-green" style="padding: 12px 30px;" onclick="openCustomerAuthModal()">Login / Sign Up Now</button>
+            </div>
 
-        <div class="container">
-            <div class="form-container">
-                <div class="doc-note-box" id="schoolDocNote">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    <div>
-                        <strong>Important Note:</strong> Please submit your child's <strong>B-Form</strong> and <strong>Previous School Leaving Certificate</strong> at the campus during final verification.
+            <div id="menu-content-area">
+                <div class="menu-controls">
+                    <input type="text" id="search-input" class="search-box" placeholder="Search dish name..." onkeyup="filterMenuItems()">
+                    <div class="category-btns">
+                        <button class="cat-btn active" onclick="filterCategory('All')">All Categories</button>
+                        <button class="cat-btn" onclick="filterCategory('Barbecue & Grill')">BBQ & Grill</button>
+                        <button class="cat-btn" onclick="filterCategory('Karahi & Handi')">Karahi & Handi</button>
+                        <button class="cat-btn" onclick="filterCategory('Fast Food & Burgers')">Fast Food</button>
+                        <button class="cat-btn" onclick="filterCategory('Chinese & Rice')">Chinese</button>
+                        <button class="cat-btn" onclick="filterCategory('Beverages & Drinks')">Drinks</button>
+                        <button class="cat-btn" onclick="filterCategory('Desserts')">Desserts</button>
                     </div>
                 </div>
 
-                <form onsubmit="handleFormSubmit(event)">
-                    <!-- Selected Course Display -->
-                    <div class="selected-course-display" id="selectedCourseDisplay">
-                        Applying For Course: Not Selected
-                    </div>
+                <div id="menu-grid-container" class="menu-grid">
+                    <!-- Loaded Dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- PAGE 4: MY ORDERS -->
+    <section id="page-my-orders" class="page-section">
+        <div class="container">
+            <div class="white-card" style="max-width: 850px; margin: 0 auto;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); font-size: 2.2rem; margin-bottom: 15px;"><i class="fas fa-receipt"></i> Your Order History & Status</h2>
+                <p style="color: var(--text-muted); margin-bottom: 25px;">Track your live orders and view past receipts.</p>
+
+                <div id="customer-orders-list">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 5: RESERVATION -->
+    <section id="page-reservation" class="page-section">
+        <div class="container">
+            <div class="white-card" style="max-width: 550px; margin: 0 auto;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); text-align: center; margin-bottom: 10px;">Book A Table</h2>
+                <p style="text-align: center; color: var(--gold-accent); font-weight: bold; margin-bottom: 20px;">
+                    Reservation Holding Fee: Rs. <span id="res-price-display">500</span>
+                </p>
+                <form id="bookingForm">
                     <div class="form-group">
-                        <label>Student Full Name <span class="req">*</span></label>
-                        <input type="text" id="studentName" placeholder="Enter student's name" required>
+                        <label>Your Name</label>
+                        <input type="text" id="bk-name" class="form-control" placeholder="Enter Full Name" required>
                     </div>
-
                     <div class="form-group">
-                        <label>Father's Name <span class="req">*</span></label>
-                        <input type="text" id="fatherName" placeholder="Enter father's name" required>
+                        <label>Phone Number / WhatsApp</label>
+                        <input type="tel" id="bk-phone" class="form-control" placeholder="03XXXXXXXXX" required>
                     </div>
-
                     <div class="form-group">
-                        <label>Student Age (Years) <span class="req">*</span></label>
-                        <input type="number" id="studentAge" placeholder="e.g. 8" min="3" max="25" required>
+                        <label>Guests Count</label>
+                        <input type="number" id="bk-guests" class="form-control" placeholder="e.g. 4 Persons" required>
                     </div>
-
                     <div class="form-group">
-                        <label>Previous Class Passed <span class="req">*</span></label>
-                        <input type="text" id="passedClass" placeholder="e.g. Class 4 / New Admission" required>
+                        <label>Date & Time</label>
+                        <input type="datetime-local" id="bk-time" class="form-control" required>
                     </div>
-
-                    <div class="form-group">
-                        <label>Parent / Guardian Phone Number <span class="req">*</span></label>
-                        <input type="tel" id="parentPhone" placeholder="03123525881" required>
-                    </div>
-
-                    <!-- Only Residential Address Required -->
-                    <div class="form-group">
-                        <label>Residential Address <span class="req">*</span></label>
-                        <textarea id="studentAddress" rows="3" placeholder="Enter your complete house address..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit">Submit Admission Inquiry via WhatsApp</button>
+                    <button type="submit" class="btn-green" style="width: 100%; padding: 14px; justify-content: center; background: #25d366;">
+                        <i class="fab fa-whatsapp"></i> Reserve Table via WhatsApp
+                    </button>
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- PAGE 6: CONTACT -->
-    <div id="page-contact" class="page">
-        <section class="page-header">
-            <h1>Contact Us & Visit Campus</h1>
-            <p>We are ready to guide you for your child's bright future</p>
-        </section>
-
+    <!-- PAGE 6: REVIEWS -->
+    <section id="page-reviews" class="page-section">
         <div class="container">
-            <div class="contact-box">
-                <h3 style="color: var(--primary-color); margin-bottom: 10px;">Direct Admission Helpline</h3>
-                <span id="display-contact-phones">
-                    <a href="tel:03123525881" class="phone-link">📞 03123525881</a>
-                    <a href="tel:03103215175" class="phone-link">📞 03103215175</a>
-                </span>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <h3><i class="fa-solid fa-map-location-dot"></i> Campus Address</h3>
-                    <p id="display-campus-address"><strong>Beacon Heights Schooling System & Academy</strong><br>
-                    House 01, Near Marhaba Hall,<br>
-                    Doctor Rana Rathore Street, Scheme No. 2,<br>
-                    Satellite Town, Mirpurkhas, Sindh, Pakistan.</p>
-                </div>
-                <div class="card">
-                    <h3><i class="fa-solid fa-clock"></i> Campus Timings</h3>
-                    <p><strong>Morning School:</strong> <span id="display-school-time">07:30 AM - 01:30 PM</span><br>
-                    <strong>Evening Academy:</strong> <span id="display-academy-time">03:00 PM - 08:00 PM</span></p>
-                </div>
-            </div>
-
-            <!-- Google Map -->
-            <div class="map-container">
-                <iframe 
-                    src="https://maps.google.com/maps?q=Satellite%20Town%20Mirpurkhas%20Sindh&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </div>
-
-    <!-- PAGE 7: ADMIN PANEL -->
-    <div id="page-admin" class="page">
-        <section class="page-header" style="background: #2c3e50;">
-            <h1><i class="fa-solid fa-user-shield"></i> Admin Panel Control Center</h1>
-            <p>Edit offer banners, course pricing, timings, address, facilities or add/delete courses</p>
-            
-            <!-- Quick Logout Header Button (Only Visible When Logged In) -->
-            <div id="admin-header-logout" style="display: none;">
-                <button class="btn-logout-header" onclick="logoutAdmin()">
-                    <i class="fa-solid fa-right-from-bracket"></i> Logout Admin Panel
-                </button>
-            </div>
-        </section>
-
-        <div class="container">
-            <!-- LOGIN SECTION -->
-            <div id="admin-login-box" class="admin-card" style="max-width: 450px; margin: 0 auto;">
-                <h3 style="color: #2c3e50; text-align: center; margin-bottom: 15px;"><i class="fa-solid fa-lock"></i> Admin Authentication</h3>
-                <div class="form-group">
-                    <label>Enter Admin Password:</label>
-                    <input type="password" id="adminPasswordInput" placeholder="Type admin password">
-                </div>
-                <button class="btn-save-admin" style="width: 100%; font-size: 1rem;" onclick="loginAdmin()">Login to Dashboard</button>
-            </div>
-
-            <!-- DASHBOARD CONTROLS (HIDDEN BY DEFAULT UNLESS LOGGED IN) -->
-            <div id="admin-dashboard-box" style="display: none;">
+            <div class="white-card" style="max-width: 750px; margin: 0 auto;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); text-align: center; margin-bottom: 20px;">Customer Reviews</h2>
                 
-                <!-- 1. GENERAL SITE INFO & ADDRESS EDIT -->
-                <div class="admin-card">
-                    <h3>📢 Edit Banner Offer, Address, Phone & Timings</h3>
-                    <br>
-                    <div class="form-group">
-                        <label>Top Announcement Bar Offer Text:</label>
-                        <input type="text" id="adminOfferInput">
-                    </div>
-                    <div class="form-group">
-                        <label>Campus Address (HTML Allowed, e.g. &lt;br&gt; for new line):</label>
-                        <textarea id="adminAddressInput" rows="3"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Primary Phone Number (e.g. 03123525881):</label>
-                        <input type="text" id="adminPhoneInput">
-                    </div>
-                    <div class="grid">
-                        <div class="form-group">
-                            <label>Morning School Timings:</label>
-                            <input type="text" id="adminSchoolTimeInput">
+                <div id="reviews-list">
+                    <div class="review-card">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <strong>Ali Raza</strong>
+                            <span style="color: var(--gold-accent);"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
                         </div>
-                        <div class="form-group">
-                            <label>Evening Academy Timings:</label>
-                            <input type="text" id="adminAcademyTimeInput">
-                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Best Chicken Karahi and BBQ in city! Excellent service by Spice N Grill team.</p>
                     </div>
-                    <button class="btn-save-admin" onclick="saveAdminGeneralInfo()">Save Banner, Address & Info Changes</button>
                 </div>
 
-                <!-- 2. MANAGE FACILITIES SECTION -->
-                <div class="admin-card">
-                    <h3>🏫 Manage Facilities (Add / Edit / Delete)</h3>
-                    <br>
-                    <!-- Add New Facility Form -->
-                    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #ddd;">
-                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">➕ Add New Facility</h4>
-                        <div class="grid">
-                            <div class="form-group">
-                                <label>Facility Title:</label>
-                                <input type="text" id="newFacilityTitle" placeholder="e.g. Science Lab">
-                            </div>
-                            <div class="form-group">
-                                <label>FontAwesome Icon Class:</label>
-                                <input type="text" id="newFacilityIcon" placeholder="e.g. fa-solid fa-microscope">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Description:</label>
-                            <textarea id="newFacilityDesc" rows="2" placeholder="Facility details..."></textarea>
-                        </div>
-                        <button class="btn-save-admin" onclick="addNewFacility()">Add Facility</button>
+                <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border-color);">
+
+                <h3>Leave a Review</h3>
+                <div style="margin-top: 15px;">
+                    <input type="text" id="rev-name" class="form-control" placeholder="Your Name" style="margin-bottom: 10px;">
+                    <textarea id="rev-msg" class="form-control" placeholder="Your Feedback..." rows="3" style="margin-bottom: 10px;"></textarea>
+                    <button class="btn-green" onclick="addReview()">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 7: CONTACT -->
+    <section id="page-contact" class="page-section">
+        <div class="container">
+            <div class="white-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <h2 style="font-family: var(--font-title); color: var(--green-primary); margin-bottom: 10px;">Contact Management</h2>
+                <p style="color: var(--text-muted); margin-bottom: 25px;">Direct Owner Contact & Support</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                    <a href="tel:03123735457" style="color: var(--text-dark); text-decoration: none; font-size: 1.1rem; font-weight: 600;">
+                        <i class="fas fa-phone-alt" style="color: var(--green-primary); margin-right: 10px;"></i> 03123735457
+                    </a>
+                    <a href="https://wa.me/923123735457" target="_blank" style="color: var(--text-dark); text-decoration: none; font-size: 1.1rem; font-weight: 600;">
+                        <i class="fab fa-whatsapp" style="color: #25d366; margin-right: 10px;"></i> Chat on WhatsApp
+                    </a>
+                    <a href="mailto:lagharitahir08@gmail.com" style="color: var(--text-dark); text-decoration: none; font-size: 1.1rem; font-weight: 600;">
+                        <i class="fas fa-envelope" style="color: var(--green-primary); margin-right: 10px;"></i> lagharitahir08@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 8: ADMIN PANEL -->
+    <section id="page-admin" class="page-section">
+        <div class="container">
+            <div class="white-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 style="font-family: var(--font-title); color: var(--green-primary);">Admin Dashboard (Muhammad Tahir)</h2>
+                    <button class="btn-green" style="background: #dc2626;" onclick="logoutAdmin()">Logout</button>
+                </div>
+
+                <!-- ADMIN ORDER MANAGEMENT -->
+                <div style="background: var(--bg-white); padding: 20px; border-radius: 12px; margin-bottom: 25px;">
+                    <h3 style="margin-bottom: 15px; color: var(--green-primary);"><i class="fas fa-tasks"></i> Manage Customer Orders</h3>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                            <thead>
+                                <tr style="background: var(--green-primary); color: #fff;">
+                                    <th style="padding: 10px;">Order ID</th>
+                                    <th style="padding: 10px;">Customer</th>
+                                    <th style="padding: 10px;">Details</th>
+                                    <th style="padding: 10px;">Type</th>
+                                    <th style="padding: 10px;">Total</th>
+                                    <th style="padding: 10px;">Status</th>
+                                    <th style="padding: 10px;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-orders-table-body">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
                     </div>
-
-                    <!-- Existing Facilities List -->
-                    <h4 style="color: var(--primary-color); margin-bottom: 10px;">📝 Existing Facilities List</h4>
-                    <div id="admin-facilities-manage-grid" class="grid"></div>
                 </div>
 
-                <!-- 3. ADD NEW COURSE -->
-                <div class="admin-card">
-                    <h3>➕ Add New Course / Class</h3>
-                    <br>
-                    <div class="grid">
-                        <div class="form-group">
-                            <label>Course Title:</label>
-                            <input type="text" id="newCourseTitle" placeholder="e.g. Class 11 Pre-Medical">
-                        </div>
-                        <div class="form-group">
-                            <label>Category Section:</label>
-                            <select id="newCourseCategory">
-                                <option value="schooling">Schooling System</option>
-                                <option value="highsec">Higher Secondary</option>
-                                <option value="academy">Evening Academy</option>
-                                <option value="skills">IT & Skill Courses</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Monthly Fee Amount Text:</label>
-                            <input type="text" id="newCourseFee" placeholder="e.g. PKR 2,500 / Month">
-                        </div>
-                        <div class="form-group">
-                            <label>Original Fee (If Discounted):</label>
-                            <input type="text" id="newCourseOriginalFee" placeholder="e.g. PKR 5,000 (Optional)">
+                <!-- Manage Reservation Price -->
+                <div style="background: var(--bg-white); padding: 20px; border-radius: 12px; margin-bottom: 25px;">
+                    <h3 style="margin-bottom: 10px; color: var(--green-primary);">Manage Table Reservation Price</h3>
+                    <div style="display: flex; gap: 10px; max-width: 400px;">
+                        <input type="number" id="adm-res-price" class="form-control" placeholder="Reservation Price (PKR)" value="500">
+                        <button class="btn-green" onclick="updateReservationPrice()">Save Price</button>
+                    </div>
+                </div>
+
+                <!-- Add New Item Form -->
+                <div style="background: var(--bg-white); padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 15px; color: var(--green-primary);">Add New Menu Item</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; align-items: center;">
+                        <input type="text" id="adm-name" class="form-control" placeholder="Item Name">
+                        <input type="number" id="adm-price" class="form-control" placeholder="Price (PKR)">
+                        <select id="adm-cat" class="form-control">
+                            <option value="Barbecue & Grill">Barbecue & Grill</option>
+                            <option value="Karahi & Handi">Karahi & Handi</option>
+                            <option value="Fast Food & Burgers">Fast Food & Burgers</option>
+                            <option value="Chinese & Rice">Chinese & Rice</option>
+                            <option value="Beverages & Drinks">Beverages & Drinks</option>
+                            <option value="Desserts">Desserts</option>
+                        </select>
+                        <div>
+                            <label for="adm-file-input" class="file-upload-btn" style="display: block; width: 100%;">
+                                <i class="fas fa-image"></i> Choose Image
+                            </label>
+                            <input type="file" id="adm-file-input" accept="image/*" style="display: none;" onchange="previewNewImage(this)">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Course Description:</label>
-                        <textarea id="newCourseDesc" rows="2" placeholder="Short description of the course..."></textarea>
+                    <div id="new-img-preview-container" style="margin-top: 10px; display: none;">
+                        <img id="new-img-preview" src="" style="height: 80px; border-radius: 8px; border: 1px solid var(--border-color);">
                     </div>
-                    <button class="btn-save-admin" onclick="addNewCourse()">Add Course to Website</button>
+                    <button class="btn-green" style="margin-top: 15px;" onclick="addNewMenuItem()">Upload & Add Item</button>
                 </div>
 
-                <!-- 4. MANAGE & EDIT ALL COURSES -->
-                <div class="admin-card">
-                    <h3>📝 Edit or Delete Existing Courses</h3>
-                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Modify prices, titles, or descriptions directly below. Changes update in real-time.</p>
-                    <div id="admin-courses-manage-grid" class="grid"></div>
+                <h3>Full Item Management (Edit All Details)</h3>
+                <div style="max-height: 450px; overflow-y: auto; margin-top: 15px;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="background: var(--green-primary); color: #fff;">
+                                <th style="padding: 10px;">ID</th>
+                                <th style="padding: 10px;">Image</th>
+                                <th style="padding: 10px;">Item Name</th>
+                                <th style="padding: 10px;">Category</th>
+                                <th style="padding: 10px;">Price (PKR)</th>
+                                <th style="padding: 10px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-table-body">
+                            <!-- Filled dynamically -->
+                        </tbody>
+                    </table>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- MAIN BOTTOM MANUAL LOGOUT BUTTON -->
-                <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
-                    <button class="btn-delete-admin" style="width: auto; padding: 12px 30px; font-weight: bold; background: #c0392b; font-size: 1rem;" onclick="logoutAdmin()">
-                        <i class="fa-solid fa-right-from-bracket"></i> Logout Admin Panel
-                    </button>
+    <!-- CUSTOMER AUTH MODAL -->
+    <div id="customerAuthModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3 id="auth-modal-title" style="color: var(--green-primary); margin-bottom: 10px; text-align: center;">Customer Login</h3>
+            <form id="customerAuthForm">
+                <div class="form-group" id="name-field-group" style="display: none;">
+                    <label>Full Name</label>
+                    <input type="text" id="auth-name" class="form-control" placeholder="Enter Full Name">
                 </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="auth-email" class="form-control" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="auth-password" class="form-control" placeholder="Enter Password" required>
+                </div>
+                <button type="submit" id="auth-submit-btn" class="btn-green" style="width: 100%; justify-content: center; padding: 12px; margin-bottom: 15px;">Login</button>
+                <div style="text-align: center;">
+                    <a id="auth-toggle-link" onclick="toggleAuthMode()" style="color: var(--gold-accent); text-decoration: underline; font-size: 0.85rem; cursor: pointer;">Don't have an account? Sign Up</a>
+                </div>
+            </form>
+            <button class="btn-green" style="position: absolute; top: 15px; right: 15px; background: transparent; color: var(--text-dark); padding: 5px 10px;" onclick="closeCustomerAuthModal()"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- ADMIN PASSWORD MODAL -->
+    <div id="adminModal" class="modal-overlay">
+        <div class="modal-box" style="text-align: center;">
+            <h3 style="color: var(--green-primary); margin-bottom: 10px;">Admin Access Only</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Enter Admin Passcode</p>
+            <input type="password" id="adminPassInput" class="form-control" placeholder="Enter Passcode" style="text-align: center; margin-bottom: 15px;">
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-green" style="width: 100%; justify-content: center;" onclick="verifyAdminPass()">Login</button>
+                <button class="btn-green" style="width: 100%; background: #6b7280; justify-content: center;" onclick="closeAdminModal()">Cancel</button>
             </div>
         </div>
     </div>
 
-    <!-- Floating WhatsApp Contact Button -->
-    <a href="https://wa.me/923123525881?text=Hi%2C%20I%20want%20information%20about%20Beacon%20Heights%20Free%20Admission%20Offer." target="_blank" class="whatsapp-btn">
-        <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i> WhatsApp Us
-    </a>
+    <!-- EDIT ITEM MODAL -->
+    <div id="editItemModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3 style="color: var(--green-primary); margin-bottom: 15px;"><i class="fas fa-edit"></i> Edit Menu Item Details</h3>
+            <input type="hidden" id="edit-item-id">
+            
+            <div class="form-group">
+                <label>Item Name</label>
+                <input type="text" id="edit-item-name" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label>Price (PKR)</label>
+                <input type="number" id="edit-item-price" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+                <select id="edit-item-cat" class="form-control">
+                    <option value="Barbecue & Grill">Barbecue & Grill</option>
+                    <option value="Karahi & Handi">Karahi & Handi</option>
+                    <option value="Fast Food & Burgers">Fast Food & Burgers</option>
+                    <option value="Chinese & Rice">Chinese & Rice</option>
+                    <option value="Beverages & Drinks">Beverages & Drinks</option>
+                    <option value="Desserts">Desserts</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Update Image</label>
+                <label for="edit-file-input" class="file-upload-btn" style="display: block;">
+                    <i class="fas fa-upload"></i> Change Image From Gallery
+                </label>
+                <input type="file" id="edit-file-input" accept="image/*" style="display: none;" onchange="previewEditImage(this)">
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 15px;">
+                <img id="edit-img-preview" src="" style="max-height: 100px; border-radius: 8px; border: 1px solid var(--border-color);">
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-green" style="width: 100%; justify-content: center;" onclick="saveFullUpdatedItem()">Save All Changes</button>
+                <button class="btn-green" style="width: 100%; background: #6b7280; justify-content: center;" onclick="closeEditItemModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART MODAL (WITH ITEM SELECTION CHECKBOXES) -->
+    <div id="cartModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3 style="color: var(--green-primary); margin-bottom: 15px;"><i class="fas fa-shopping-cart"></i> Your Food Cart</h3>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 0.85rem;">
+                <label style="cursor: pointer; font-weight: 600;"><input type="checkbox" id="select-all-cart" class="custom-checkbox" checked onchange="toggleSelectAllCart(this)"> Select All Items</label>
+                <span style="color: var(--text-muted);" id="cart-selected-count">0 items selected</span>
+            </div>
+
+            <div id="cart-items-container" style="max-height: 250px; overflow-y: auto; margin-bottom: 15px;">
+                <!-- Filled dynamically -->
+            </div>
+
+            <div style="background: var(--bg-white); padding: 12px; border-radius: 8px; margin-bottom: 15px;">
+                <div style="display: flex; gap: 8px; margin-bottom: 10px;">
+                    <input type="text" id="promo-code-input" class="form-control" placeholder="Promo Code (Try: TAHIR10)" style="padding: 8px;">
+                    <button class="btn-green" style="padding: 8px 15px; font-size: 0.8rem;" onclick="applyPromoCode()">Apply</button>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.05rem;">
+                    <span>Selected Items Bill:</span>
+                    <span>Rs. <span id="cart-subtotal-display">0</span></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Delivery Option</label>
+                <select id="cart-delivery-type" class="form-control">
+                    <option value="Home Delivery">Home Delivery</option>
+                    <option value="Self Pickup / Takeaway">Self Pickup / Takeaway</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Full Address / Table No.</label>
+                <textarea id="cart-address" class="form-control" placeholder="Enter delivery address or table number" rows="2"></textarea>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-green" style="width: 100%; justify-content: center;" onclick="checkoutCart()"><i class="fab fa-whatsapp"></i> Checkout Selected Items</button>
+                <button class="btn-green" style="background: #6b7280; justify-content: center;" onclick="closeCartModal()">Close</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Beacon Heights (Becon Heights) Schooling System & Academy.</p>
-        <p style="font-size: 0.8rem; margin-top: 5px;" id="display-footer-address">House 01, Doctor Rana Rathore Street, Scheme 2, Satellite Town, Mirpurkhas | Call: <span id="display-footer-phone">03123525881</span></p>
+        <div class="container">
+            <p>&copy; 2026 Spice N Grill. Owned & Managed by Muhammad Tahir.</p>
+        </div>
     </footer>
 
-    <!-- OFFICIAL SCREEN POPUP MODAL HTML STRUCTURE -->
-    <div id="officialModalOverlay" class="official-modal-overlay">
-        <div class="official-modal-box">
-            <div id="modalIcon" class="official-modal-icon"><i class="fa-solid fa-circle-info"></i></div>
-            <div id="modalTitle" class="official-modal-title">Notification</div>
-            <div id="modalMsg" class="official-modal-msg">Message text goes here...</div>
-            <div id="modalActions">
-                <button class="official-modal-btn" onclick="closeOfficialModal()">OK</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript For Behavior & Admin System -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        let selectedCourse = "";
-        let confirmCallback = null;
+        let menuDatabase = [];
+        let shoppingCart = [];
+        let activeCategory = 'All';
+        let currentReservationPrice = 500;
+        let selectedBase64Image = '';
+        let selectedEditBase64Image = '';
+        let appliedDiscountPercent = 0;
+        let authMode = 'login'; 
 
-        // Custom Official Screen Notification Dialog System
-        function showOfficialAlert(message, title = "System Notification", iconClass = "fa-solid fa-circle-info") {
-            document.getElementById('modalIcon').innerHTML = `<i class="${iconClass}"></i>`;
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalMsg').innerText = message;
-            document.getElementById('modalActions').innerHTML = `<button class="official-modal-btn" onclick="closeOfficialModal()">OK</button>`;
-            document.getElementById('officialModalOverlay').style.display = 'flex';
-        }
+        // Persistent State
+        let ordersList = JSON.parse(localStorage.getItem('spice_orders')) || [];
+        let currentUser = JSON.parse(localStorage.getItem('spice_currentUser')) || null;
+        let registeredUsers = JSON.parse(localStorage.getItem('spice_users')) || [];
 
-        function showOfficialConfirm(message, title = "Confirmation Required", onConfirm) {
-            confirmCallback = onConfirm;
-            document.getElementById('modalIcon').innerHTML = `<i class="fa-solid fa-triangle-exclamation" style="color: #e74c3c;"></i>`;
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalMsg').innerText = message;
-            document.getElementById('modalActions').innerHTML = `
-                <button class="official-modal-btn" onclick="closeOfficialModal()">Cancel</button>
-                <button class="official-modal-btn danger-btn" onclick="executeConfirm()">Confirm Delete</button>
-            `;
-            document.getElementById('officialModalOverlay').style.display = 'flex';
-        }
-
-        function closeOfficialModal() {
-            document.getElementById('officialModalOverlay').style.display = 'none';
-        }
-
-        function executeConfirm() {
-            closeOfficialModal();
-            if (confirmCallback) confirmCallback();
-        }
-
-        // Default Initial Data
-        const defaultData = {
-            offerText: "SPECIAL OFFER (Session 2026-2027): First 50 Admissions FREE! + Free Uniform + 50% OFF Evening Tuition!",
-            address: "<strong>Beacon Heights Schooling System & Academy</strong><br>House 01, Near Marhaba Hall,<br>Doctor Rana Rathore Street, Scheme No. 2,<br>Satellite Town, Mirpurkhas, Sindh, Pakistan.",
-            phone: "03123525881",
-            schoolTime: "07:30 AM - 01:30 PM",
-            academyTime: "03:00 PM - 08:00 PM",
-            facilities: [
-                { id: 1, icon: "fa-solid fa-tv", title: "Air-Conditioned & Smart Classes", desc: "Clean, airy, and modern classrooms with audio-visual learning tools." },
-                { id: 2, icon: "fa-solid fa-shield-halved", title: "CCTV & Safe Campus", desc: "24/7 security surveillance to ensure complete safety for students and staff." },
-                { id: 3, icon: "fa-solid fa-microscope", title: "Science & Computer Lab", desc: "Fully equipped practical labs for science experiments and computer literacy." }
-            ],
-            courses: [
-                // Schooling
-                { id: 101, cat: "schooling", badge: "Pre-Primary", title: "Playgroup, Nursery & KG", desc: "Activity-based learning, phonics, drawing, and basic numbers in a caring environment.", fee: "PKR 1,500 / Month", origFee: "", bullets: ["Age Group: 3 to 5 Years", "Air-Conditioned Classrooms", "Admission Fee: 100% FREE"], type: "school" },
-                { id: 102, cat: "schooling", badge: "Primary School", title: "Primary (Class 1 to Class 5)", desc: "Strong base in English, Mathematics, Science, General Knowledge, and Islamic Studies.", fee: "PKR 2,000 / Month", origFee: "", bullets: ["Conceptual Learning", "Weekly Assessment Tests", "Free Uniform Offer Included"], type: "school" },
-                { id: 103, cat: "schooling", badge: "Middle School", title: "Middle (Class 6, Class 7 & Class 8)", desc: "Comprehensive middle school education covering core science, mathematics, and language concepts.", fee: "PKR 2,500 / Month", origFee: "", bullets: ["Science & Computer Practical Base", "Spoken English Focus", "Preparation for Board Foundation"], type: "school" },
-
-                // Higher Secondary
-                { id: 201, cat: "highsec", badge: "Higher Secondary", title: "Class 9 (Matric Prep)", desc: "Rigorous academic study for 9th class Science & General groups according to Sindh Board curriculum.", fee: "PKR 3,000 / Month", origFee: "", bullets: ["Physics, Chemistry, Biology / Computer & Math", "Specialized Faculty & Lab Practical Sessions", "Monthly Progress Reports"], type: "school" },
-                { id: 202, cat: "highsec", badge: "Higher Secondary", title: "Class 10 (Matric Board)", desc: "Complete board exam preparation designed to achieve maximum grade scores in Sindh Board Examinations.", fee: "PKR 3,000 / Month", origFee: "", bullets: ["Board Model Papers & Test Series", "Special Practice for Science Numericals", "Practical Exam Training"], type: "school" },
-
-                // Evening Academy
-                { id: 301, cat: "academy", badge: "Evening Coaching", title: "Class 8 Coaching", desc: "Special foundation coaching for Class 8 students before entering high school board studies.", fee: "PKR 1,500 / Month", origFee: "PKR 3,000", bullets: ["Science, Math, English & General Subjects", "Daily Homework Guidance", "Timings: 03:00 PM - 05:00 PM"], type: "other" },
-                { id: 302, cat: "academy", badge: "Evening Coaching", title: "Class 9 Coaching (Matric Prep)", desc: "Thorough preparation of 9th Class Science Subjects according to Sindh Board Exam Syllabus.", fee: "PKR 2,000 / Month", origFee: "PKR 4,000", bullets: ["Physics, Chemistry, Math / Bio, Computer", "Model Papers & Past Papers Revision", "Weekly Test Series"], type: "other" },
-                { id: 303, cat: "academy", badge: "Evening Coaching", title: "Class 10 Coaching (Matric Board)", desc: "Targeted exam preparation for 10th Class students to achieve A+ Grade in Board Examinations.", fee: "PKR 2,000 / Month", origFee: "PKR 4,000", bullets: ["Full Board Syllabus Coverage", "Important Board Questions & Guess Papers", "Special Numerical Practice"], type: "other" },
-                { id: 304, cat: "academy", badge: "Evening Coaching", title: "Class 11 Coaching (FSc 1st Year)", desc: "Expert coaching for Pre-Medical, Pre-Engineering & Computer Science (ICS) students.", fee: "PKR 2,500 / Month", origFee: "PKR 5,000", bullets: ["Advanced Physics, Chemistry, Bio/Math", "Subject Specialist Professors", "Regular Assessment Tests"], type: "other" },
-                { id: 305, cat: "academy", badge: "Evening Coaching", title: "Class 12 Coaching (FSc 2nd Year)", desc: "High-level guidance for 12th Board Exams and University Medical/Engineering Entry Test base preparation.", fee: "PKR 2,500 / Month", origFee: "PKR 5,000", bullets: ["Complete Board Revision & Test Sessions", "Entry Test MCQs Preparation", "Past 10 Years Paper Solving"], type: "other" },
-
-                // Professional Skills
-                { id: 401, cat: "skills", badge: "Short IT Course", title: "CIT (Certificate in Information Technology)", desc: "3 Months basic computer literacy course covering office tools, internet, typing, and OS basics.", fee: "PKR 1,500 / Month", origFee: "", bullets: ["Duration: 3 Months", "MS Word, Excel, PowerPoint, Internet", "Practical Computer Lab Practice"], type: "other" },
-                { id: 402, cat: "skills", badge: "Diploma IT Course", title: "DIT (Diploma in Information Technology)", desc: "6 Months / 1 Year comprehensive IT Diploma covering web fundamentals, graphics, hardware & networking.", fee: "PKR 2,000 / Month", origFee: "", bullets: ["Duration: 6 Months - 1 Year", "Web Design, Graphic Basics, IT Management", "Recognized Course Certificate"], type: "other" },
-                { id: 403, cat: "skills", badge: "Language Course", title: "Spoken English & Grammar", desc: "2 Months short course to boost English speaking fluency, vocabulary, and grammar confidence.", fee: "PKR 1,500 / Month", origFee: "", bullets: ["Duration: 2 Months", "Conversation Practice & Public Speaking", "Suitable for Students & Working People"], type: "other" }
-            ]
+        const specificDishImages = {
+            "Chicken Tikka Boti": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=500&q=80",
+            "Seekh Kabab": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=500&q=80",
+            "Malai Boti": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80",
+            "Beef Behari Kabab": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80",
+            "Mutton Ribs Grill": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=500&q=80",
+            "Chicken Karahi": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=500&q=80",
+            "White Handi": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=500&q=80",
+            "Mutton Shinwari": "https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=500&q=80",
+            "Zinger Burger": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80",
+            "Beef Smash Burger": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=500&q=80",
+            "Club Sandwich": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=500&q=80",
+            "Alfredo Pasta": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=500&q=80",
+            "Chicken Fried Rice": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=500&q=80",
+            "Manchurian": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500&q=80",
+            "Mint Margherita": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500&q=80",
+            "Cold Coffee": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&q=80",
+            "Gulab Jamun": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=80",
+            "Kheer": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&q=80",
+            "Special Ice Cream": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=500&q=80"
         };
 
-        // Data Management via LocalStorage
-        function getSiteData() {
-            const data = localStorage.getItem('beacon_heights_full_data');
-            return data ? JSON.parse(data) : defaultData;
+        const dishCategoryMap = {
+            "Chicken Tikka Boti": "Barbecue & Grill",
+            "Seekh Kabab": "Barbecue & Grill",
+            "Malai Boti": "Barbecue & Grill",
+            "Beef Behari Kabab": "Barbecue & Grill",
+            "Mutton Ribs Grill": "Barbecue & Grill",
+            "Chicken Karahi": "Karahi & Handi",
+            "White Handi": "Karahi & Handi",
+            "Mutton Shinwari": "Karahi & Handi",
+            "Zinger Burger": "Fast Food & Burgers",
+            "Beef Smash Burger": "Fast Food & Burgers",
+            "Club Sandwich": "Fast Food & Burgers",
+            "Alfredo Pasta": "Fast Food & Burgers",
+            "Chicken Fried Rice": "Chinese & Rice",
+            "Manchurian": "Chinese & Rice",
+            "Mint Margherita": "Beverages & Drinks",
+            "Cold Coffee": "Beverages & Drinks",
+            "Gulab Jamun": "Desserts",
+            "Kheer": "Desserts",
+            "Special Ice Cream": "Desserts"
+        };
+
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast-msg';
+            toast.innerHTML = `<span><i class="fas fa-bell" style="color:var(--gold-accent); margin-right:8px;"></i> ${message}</span>
+                               <i class="fas fa-times" style="cursor:pointer;" onclick="this.parentElement.remove()"></i>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => toast.remove(), 500);
+            }, 4000);
         }
 
-        function saveSiteData(data) {
-            localStorage.setItem('beacon_heights_full_data', JSON.stringify(data));
-            renderSite();
+        function generateItems() {
+            let count = 1;
+            let dishNames = Object.keys(specificDishImages);
+
+            dishNames.forEach(dish => {
+                let cat = dishCategoryMap[dish];
+                let price = (Math.floor(Math.random() * 20) + 5) * 100;
+                menuDatabase.push({
+                    id: count,
+                    name: dish,
+                    category: cat,
+                    price: price,
+                    image: specificDishImages[dish],
+                    isHot: (count % 3 === 0)
+                });
+                count++;
+            });
         }
 
-        // Render Public View & Admin Inputs
-        function renderSite() {
-            const data = getSiteData();
+        /* --- RENDER MENU GRID WITH "ADD TO CART" & "ORDER NOW" --- */
+        function renderMenuGrid(items) {
+            const container = document.getElementById('menu-grid-container');
+            container.innerHTML = '';
 
-            // Check Admin Persistent Login State (NO AUTO LOGOUT)
-            const isLog = localStorage.getItem('bh_admin_logged_in') === 'true';
-            if (isLog) {
-                document.getElementById('admin-login-box').style.display = 'none';
-                document.getElementById('admin-dashboard-box').style.display = 'block';
-                document.getElementById('admin-header-logout').style.display = 'block';
-            } else {
-                document.getElementById('admin-login-box').style.display = 'block';
-                document.getElementById('admin-dashboard-box').style.display = 'none';
-                document.getElementById('admin-header-logout').style.display = 'none';
+            items.forEach(item => {
+                container.innerHTML += `
+                    <div class="menu-item">
+                        ${item.isHot ? '<span class="hot-badge">Hot Special</span>' : ''}
+                        <img src="${item.image}" alt="${item.name}" loading="lazy">
+                        <div class="menu-item-details">
+                            <div>
+                                <span class="cat-tag">${item.category}</span>
+                                <h3>${item.name}</h3>
+                            </div>
+                            <div>
+                                <div class="menu-price">Rs. ${item.price}</div>
+                                <div class="action-btn-group">
+                                    <button class="btn-green" style="padding:6px 10px; font-size:0.75rem; flex:1;" onclick="addToCart(${item.id})">
+                                        <i class="fas fa-cart-plus"></i> Add to Cart
+                                    </button>
+                                    <button class="btn-gold" style="padding:6px 10px; font-size:0.75rem; flex:1;" onclick="orderNowSingleItem(${item.id})">
+                                        <i class="fas fa-bolt"></i> Order Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        /* --- CART LOGIC --- */
+        function addToCart(id, silent = false) {
+            if (!currentUser) {
+                showToast('Please login to order or add items to your cart.');
+                openCustomerAuthModal();
+                return false;
+            }
+            let item = menuDatabase.find(i => i.id === id);
+            if(item) {
+                let cartItem = shoppingCart.find(c => c.id === id);
+                if(cartItem) {
+                    cartItem.qty++;
+                } else {
+                    shoppingCart.push({ id: item.id, name: item.name, price: item.price, qty: 1, selected: true });
+                }
+                updateCartBadge();
+                if(!silent) showToast(`${item.name} added to cart!`);
+                return true;
+            }
+            return false;
+        }
+
+        /* DIRECT "ORDER NOW" OPTION */
+        function orderNowSingleItem(id) {
+            let success = addToCart(id, true);
+            if(success) {
+                // Select only this item in cart for quick checkout
+                shoppingCart.forEach(i => i.selected = (i.id === id));
+                openCartModal();
+            }
+        }
+
+        function updateCartBadge() {
+            let totalCount = shoppingCart.reduce((acc, curr) => acc + curr.qty, 0);
+            document.getElementById('cart-count-badge').innerText = totalCount;
+        }
+
+        function openCartModal() {
+            if (!currentUser) {
+                showToast('Please login to view your cart.');
+                openCustomerAuthModal();
+                return;
+            }
+            renderCartItems();
+            document.getElementById('cartModal').style.display = 'flex';
+        }
+
+        function closeCartModal() { document.getElementById('cartModal').style.display = 'none'; }
+
+        function renderCartItems() {
+            const container = document.getElementById('cart-items-container');
+            if(shoppingCart.length === 0) {
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted);">Your cart is empty.</p>`;
+                document.getElementById('cart-subtotal-display').innerText = '0';
+                document.getElementById('cart-selected-count').innerText = '0 items selected';
+                return;
             }
 
-            // Render Dynamic Info
-            document.getElementById('display-offer-text').innerText = data.offerText;
-            document.getElementById('display-campus-address').innerHTML = data.address || defaultData.address;
-            document.getElementById('display-hero-phone').href = "tel:" + data.phone;
-            document.getElementById('display-hero-phone').innerText = "📞 Call: " + data.phone;
-            document.getElementById('display-footer-phone').innerText = data.phone;
-            document.getElementById('display-school-time').innerText = data.schoolTime;
-            document.getElementById('display-academy-time').innerText = data.academyTime;
+            container.innerHTML = '';
+            let total = 0;
+            let selectedCount = 0;
 
-            // Render Facilities
-            const facilitiesGrid = document.getElementById('container-facilities');
-            facilitiesGrid.innerHTML = '';
-            (data.facilities || defaultData.facilities).forEach(f => {
-                facilitiesGrid.innerHTML += `
-                    <div class="card">
-                        <h3><i class="${f.icon}"></i> ${f.title}</h3>
-                        <p>${f.desc}</p>
+            shoppingCart.forEach((item, index) => {
+                if(item.selected) {
+                    total += (item.price * item.qty);
+                    selectedCount += item.qty;
+                }
+
+                container.innerHTML += `
+                    <div style="display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom:1px solid var(--border-color);">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                            <input type="checkbox" class="custom-checkbox" ${item.selected ? 'checked' : ''} onchange="toggleItemSelection(${index}, this.checked)">
+                            <div>
+                                <strong>${item.name}</strong><br>
+                                <small style="color:var(--text-muted);">Rs. ${item.price} x ${item.qty}</small>
+                            </div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <button onclick="changeCartQty(${index}, -1)" style="padding:2px 8px; border:1px solid var(--border-color); background:var(--card-white); border-radius:4px;">-</button>
+                            <span>${item.qty}</span>
+                            <button onclick="changeCartQty(${index}, 1)" style="padding:2px 8px; border:1px solid var(--border-color); background:var(--card-white); border-radius:4px;">+</button>
+                            <button onclick="removeFromCart(${index})" style="color:#dc2626; border:none; background:none; margin-left:5px;"><i class="fas fa-trash"></i></button>
+                        </div>
                     </div>
                 `;
             });
 
-            // Clear Grid Containers
-            const schoolingGrid = document.getElementById('container-schooling');
-            const highsecGrid = document.getElementById('container-highsec');
-            const academyGrid = document.getElementById('container-academy');
-            const skillsGrid = document.getElementById('container-skills');
+            if(appliedDiscountPercent > 0) {
+                total = total - (total * (appliedDiscountPercent / 100));
+            }
 
-            schoolingGrid.innerHTML = '';
-            highsecGrid.innerHTML = '';
-            academyGrid.innerHTML = '';
-            skillsGrid.innerHTML = '';
+            document.getElementById('cart-subtotal-display').innerText = Math.round(total);
+            document.getElementById('cart-selected-count').innerText = `${selectedCount} items selected`;
+            
+            // Check if all selected
+            let allSelected = shoppingCart.length > 0 && shoppingCart.every(i => i.selected);
+            document.getElementById('select-all-cart').checked = allSelected;
+        }
 
-            // Render Courses
-            data.courses.forEach(c => {
-                const bulletList = c.bullets && c.bullets.length ? `<ul class="course-list">${c.bullets.map(b => `<li><i class="fa-solid fa-check-circle"></i> ${b}</li>`).join('')}</ul>` : '';
-                const origPriceHTML = c.origFee ? `<span class="fee-original">${c.origFee}</span> ` : '';
+        function toggleItemSelection(index, isChecked) {
+            shoppingCart[index].selected = isChecked;
+            renderCartItems();
+        }
+
+        function toggleSelectAllCart(masterCheckbox) {
+            let isChecked = masterCheckbox.checked;
+            shoppingCart.forEach(i => i.selected = isChecked);
+            renderCartItems();
+        }
+
+        function changeCartQty(index, delta) {
+            shoppingCart[index].qty += delta;
+            if(shoppingCart[index].qty <= 0) {
+                shoppingCart.splice(index, 1);
+            }
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function removeFromCart(index) {
+            shoppingCart.splice(index, 1);
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function applyPromoCode() {
+            let code = document.getElementById('promo-code-input').value.trim().toUpperCase();
+            if(code === 'TAHIR10') {
+                appliedDiscountPercent = 10;
+                showToast('Promo Code Applied! 10% Discount given.');
+                renderCartItems();
+            } else {
+                showToast('Invalid Promo Code!');
+            }
+        }
+
+        function checkoutCart() {
+            let selectedItems = shoppingCart.filter(i => i.selected);
+
+            if(selectedItems.length === 0) {
+                showToast('Please select at least one item to checkout.');
+                return;
+            }
+
+            let address = document.getElementById('cart-address').value.trim();
+            let delType = document.getElementById('cart-delivery-type').value;
+            if(!address) {
+                showToast('Please enter delivery address or table number.');
+                return;
+            }
+
+            let orderId = 'SNG-' + Math.floor(100000 + Math.random() * 900000);
+            let itemsSummary = selectedItems.map(i => `${i.name} (x${i.qty})`).join(', ');
+            let totalBill = parseInt(document.getElementById('cart-subtotal-display').innerText);
+
+            let newOrder = {
+                id: orderId,
+                customerEmail: currentUser.email,
+                name: currentUser.name || currentUser.email,
+                phone: 'N/A',
+                item: itemsSummary,
+                totalPrice: totalBill,
+                address: address,
+                deliveryType: delType,
+                status: 'Preparing',
+                time: new Date().toLocaleString()
+            };
+
+            ordersList.unshift(newOrder);
+            localStorage.setItem('spice_orders', JSON.stringify(ordersList));
+
+            closeCartModal();
+
+            // WhatsApp Integration
+            let waMsg = `Hello Spice N Grill,%0A%0A*NEW ORDER - ${orderId}*%0A- *Customer:* ${currentUser.name || currentUser.email}%0A- *Items:* ${itemsSummary}%0A- *Delivery Type:* ${delType}%0A- *Address/Table:* ${address}%0A- *Total Bill:* Rs. ${totalBill}`;
+            window.open(`https://wa.me/923123735457?text=${waMsg}`, '_blank');
+
+            // Remove only selected items from shoppingCart
+            shoppingCart = shoppingCart.filter(i => !i.selected);
+            appliedDiscountPercent = 0;
+            updateCartBadge();
+            showToast('Order Placed Successfully!');
+
+            renderCustomerOrders();
+            renderAdminOrdersTable();
+        }
+
+        /* --- AUTH SYSTEM --- */
+        function updateAuthUI() {
+            const authArea = document.getElementById('user-auth-btn-area');
+            const menuContent = document.getElementById('menu-content-area');
+            const menuLocked = document.getElementById('menu-locked-prompt');
+
+            if (currentUser) {
+                authArea.innerHTML = `
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:0.85rem; font-weight:600;"><i class="fas fa-user-circle"></i> ${currentUser.name || currentUser.email}</span>
+                        <button class="btn-green" style="background:#dc2626; padding:6px 12px; font-size:0.75rem;" onclick="logoutCustomer()"><i class="fas fa-sign-out-alt"></i></button>
+                    </div>
+                `;
+                menuContent.style.display = 'block';
+                menuLocked.style.display = 'none';
+            } else {
+                authArea.innerHTML = `<button class="btn-green" onclick="openCustomerAuthModal()"><i class="fas fa-user"></i> Login / Register</button>`;
+                menuContent.style.display = 'none';
+                menuLocked.style.display = 'block';
+            }
+        }
+
+        function openCustomerAuthModal() { document.getElementById('customerAuthModal').style.display = 'flex'; }
+        function closeCustomerAuthModal() { document.getElementById('customerAuthModal').style.display = 'none'; }
+
+        function toggleAuthMode() {
+            authMode = authMode === 'login' ? 'signup' : 'login';
+            document.getElementById('auth-modal-title').innerText = authMode === 'login' ? 'Customer Login' : 'Customer Registration';
+            document.getElementById('name-field-group').style.display = authMode === 'signup' ? 'block' : 'none';
+            document.getElementById('auth-submit-btn').innerText = authMode === 'login' ? 'Login' : 'Sign Up';
+            document.getElementById('auth-toggle-link').innerText = authMode === 'login' ? "Don't have an account? Sign Up" : "Already have an account? Login";
+        }
+
+        document.getElementById('customerAuthForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let email = document.getElementById('auth-email').value.trim();
+            let password = document.getElementById('auth-password').value.trim();
+            let name = document.getElementById('auth-name').value.trim();
+
+            if (authMode === 'signup') {
+                if (!name) { showToast('Please enter your full name'); return; }
+                if (registeredUsers.some(u => u.email === email)) {
+                    showToast('An account with this email already exists!');
+                    return;
+                }
+                let newUser = { name, email, password };
+                registeredUsers.push(newUser);
+                localStorage.setItem('spice_users', JSON.stringify(registeredUsers));
+                currentUser = newUser;
+                localStorage.setItem('spice_currentUser', JSON.stringify(currentUser));
+                showToast(`Welcome, ${name}! Account created successfully.`);
+            } else {
+                let found = registeredUsers.find(u => u.email === email && u.password === password);
+                if (found) {
+                    currentUser = found;
+                    localStorage.setItem('spice_currentUser', JSON.stringify(currentUser));
+                    showToast(`Logged in successfully as ${currentUser.name || currentUser.email}`);
+                } else {
+                    showToast('Invalid Email or Password!');
+                    return;
+                }
+            }
+            closeCustomerAuthModal();
+            updateAuthUI();
+            renderCustomerOrders();
+        });
+
+        function logoutCustomer() {
+            localStorage.removeItem('spice_currentUser');
+            currentUser = null;
+            showToast('Logged out successfully.');
+            updateAuthUI();
+            showPage('home');
+        }
+
+        /* --- MY ORDERS SECTION --- */
+        function renderCustomerOrders() {
+            const container = document.getElementById('customer-orders-list');
+            if (!currentUser) {
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted);">Please login to view your orders.</p>`;
+                return;
+            }
+
+            let myOrders = ordersList.filter(o => o.customerEmail === currentUser.email);
+
+            if (myOrders.length === 0) {
+                container.innerHTML = `<p style="text-align:center; color:var(--text-muted);">You haven't placed any orders yet.</p>`;
+                return;
+            }
+
+            container.innerHTML = '';
+            myOrders.forEach(o => {
+                let badgeClass = o.status === 'Delivered' ? 'badge-delivered' : 'badge-preparing';
+                container.innerHTML += `
+                    <div style="background:var(--bg-white); border:1px solid var(--border-color); border-radius:12px; padding:18px; margin-bottom:15px;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                            <strong style="color:var(--green-primary); font-size:1.05rem;">${o.item}</strong>
+                            <span class="badge ${badgeClass}">${o.status}</span>
+                        </div>
+                        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:5px;">Order ID: ${o.id} | Date: ${o.time}</p>
+                        <p style="font-size:0.9rem; font-weight:600;">Total Amount: Rs. ${o.totalPrice}</p>
+                        <p style="font-size:0.85rem; color:var(--text-dark); margin-top:5px;"><i class="fas fa-map-marker-alt" style="color:var(--gold-accent);"></i> ${o.address} (${o.deliveryType || 'Delivery'})</p>
+                    </div>
+                `;
+            });
+        }
+
+        /* --- ADMIN ORDERS MANAGEMENT --- */
+        function renderAdminOrdersTable() {
+            const tbody = document.getElementById('admin-orders-table-body');
+            tbody.innerHTML = '';
+
+            if(ordersList.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="7" style="padding:15px; text-align:center; color:var(--text-muted);">No orders placed yet.</td></tr>`;
+                return;
+            }
+
+            ordersList.forEach((o) => {
+                let badgeClass = o.status === 'Delivered' ? 'badge-delivered' : 'badge-preparing';
+                tbody.innerHTML += `
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 10px; font-weight:bold;">${o.id}</td>
+                        <td style="padding: 10px;">${o.name}</td>
+                        <td style="padding: 10px;">${o.item}<br><small style="color:var(--text-muted);">${o.address}</small></td>
+                        <td style="padding: 10px; font-size:0.8rem;">${o.deliveryType || 'Delivery'}</td>
+                        <td style="padding: 10px; font-weight:bold;">Rs. ${o.totalPrice}</td>
+                        <td style="padding: 10px;"><span class="badge ${badgeClass}">${o.status}</span></td>
+                        <td style="padding: 10px;">
+                            ${o.status !== 'Delivered' ? 
+                                `<button onclick="markOrderDelivered('${o.id}')" class="btn-green" style="padding:5px 10px; font-size:0.75rem; background:#16a34a;"><i class="fas fa-check"></i> Mark Delivered</button>` : 
+                                `<span style="color:#16a34a; font-weight:bold; font-size:0.8rem;"><i class="fas fa-check-double"></i> Completed</span>`
+                            }
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function markOrderDelivered(orderId) {
+            let order = ordersList.find(o => o.id === orderId);
+            if (order) {
+                order.status = 'Delivered';
+                localStorage.setItem('spice_orders', JSON.stringify(ordersList));
+                showToast(`Order ${orderId} marked as Delivered!`);
+                renderAdminOrdersTable();
+                renderCustomerOrders();
+            }
+        }
+
+        /* --- ADMIN ITEM EDITING --- */
+        function renderAdminTable() {
+            const tbody = document.getElementById('admin-table-body');
+            tbody.innerHTML = '';
+            menuDatabase.forEach(item => {
+                tbody.innerHTML += `
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 10px;">${item.id}</td>
+                        <td style="padding: 10px;">
+                            <img src="${item.image}" style="width: 50px; height: 40px; border-radius: 6px; object-fit: cover;">
+                        </td>
+                        <td style="padding: 10px;"><strong>${item.name}</strong></td>
+                        <td style="padding: 10px;">${item.category}</td>
+                        <td style="padding: 10px; font-weight:bold;">Rs. ${item.price}</td>
+                        <td style="padding: 10px; display: flex; gap: 5px;">
+                            <button onclick="openEditItemModal(${item.id})" style="background:var(--gold-accent); color:#000; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; font-size:0.75rem; font-weight:600;"><i class="fas fa-edit"></i> Edit All Details</button>
+                            <button onclick="deleteItem(${item.id})" style="background:#dc2626; color:#fff; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; font-size:0.75rem;"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function openEditItemModal(id) {
+            let item = menuDatabase.find(i => i.id === id);
+            if(item) {
+                document.getElementById('edit-item-id').value = item.id;
+                document.getElementById('edit-item-name').value = item.name;
+                document.getElementById('edit-item-price').value = item.price;
+                document.getElementById('edit-item-cat').value = item.category;
+                document.getElementById('edit-img-preview').src = item.image;
+                selectedEditBase64Image = item.image;
+                document.getElementById('editItemModal').style.display = 'flex';
+            }
+        }
+
+        function closeEditItemModal() { document.getElementById('editItemModal').style.display = 'none'; }
+
+        function saveFullUpdatedItem() {
+            let id = parseInt(document.getElementById('edit-item-id').value);
+            let item = menuDatabase.find(i => i.id === id);
+            
+            if(item) {
+                let newName = document.getElementById('edit-item-name').value.trim();
+                let newPrice = parseInt(document.getElementById('edit-item-price').value);
+                let newCat = document.getElementById('edit-item-cat').value;
+
+                if(newName && newPrice) {
+                    item.name = newName;
+                    item.price = newPrice;
+                    item.category = newCat;
+                    item.image = selectedEditBase64Image || item.image;
+
+                    showToast('Item details updated successfully!');
+                    closeEditItemModal();
+                    renderAdminTable();
+                    renderMenuGrid(menuDatabase);
+                } else {
+                    showToast('Please fill all required fields.');
+                }
+            }
+        }
+
+        function previewNewImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    selectedBase64Image = e.target.result;
+                    document.getElementById('new-img-preview').src = e.target.result;
+                    document.getElementById('new-img-preview-container').style.display = 'block';
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function previewEditImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    selectedEditBase64Image = e.target.result;
+                    document.getElementById('edit-img-preview').src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function filterCategory(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            applyFilters();
+        }
+
+        function filterMenuItems() { applyFilters(); }
+
+        function applyFilters() {
+            let searchVal = document.getElementById('search-input').value.toLowerCase();
+            let filtered = menuDatabase.filter(item => {
+                let matchesCat = (activeCategory === 'All' || item.category === activeCategory);
+                let matchesSearch = item.name.toLowerCase().includes(searchVal);
+                return matchesCat && matchesSearch;
+            });
+            renderMenuGrid(filtered);
+        }
+
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active-page'));
+            document.getElementById('page-' + pageId).classList.add('active-page');
+
+            document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+            if(document.getElementById('nav-' + pageId)) {
+                document.getElementById('nav-' + pageId).classList.add('active');
+            }
+
+            if(pageId === 'my-orders') renderCustomerOrders();
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleAdminClick() {
+            if (localStorage.getItem('isAdminLoggedIn') === 'true') {
+                showPage('admin');
+                renderAdminTable();
+                renderAdminOrdersTable();
+            } else {
+                openAdminModal();
+            }
+        }
+
+        function openAdminModal() { document.getElementById('adminModal').style.display = 'flex'; }
+        function closeAdminModal() { document.getElementById('adminModal').style.display = 'none'; }
+
+        function verifyAdminPass() {
+            let pass = document.getElementById('adminPassInput').value;
+            if(pass === "M.Tahir123") {
+                localStorage.setItem('isAdminLoggedIn', 'true');
+                closeAdminModal();
+                showPage('admin');
+                renderAdminTable();
+                renderAdminOrdersTable();
+                document.getElementById('adminPassInput').value = '';
+                showToast('Welcome Admin Tahir!');
+            } else {
+                showToast('Wrong Passcode! Access Denied.');
+            }
+        }
+
+        function logoutAdmin() { 
+            localStorage.removeItem('isAdminLoggedIn');
+            showToast('Logged out of Admin Mode.');
+            showPage('home'); 
+        }
+
+        function deleteItem(id) {
+            menuDatabase = menuDatabase.filter(i => i.id !== id);
+            renderAdminTable();
+            renderMenuGrid(menuDatabase);
+            showToast('Item deleted successfully.');
+        }
+
+        function addNewMenuItem() {
+            let name = document.getElementById('adm-name').value;
+            let price = document.getElementById('adm-price').value;
+            let cat = document.getElementById('adm-cat').value;
+            let img = selectedBase64Image || specificDishImages[name] || "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80";
+
+            if(name && price) {
+                menuDatabase.unshift({
+                    id: menuDatabase.length + 1,
+                    name: name,
+                    category: cat,
+                    price: parseInt(price),
+                    image: img,
+                    isHot: true
+                });
+                showToast('New Item Added Successfully!');
+                renderAdminTable();
+                renderMenuGrid(menuDatabase);
                 
-                const cardHTML = `
-                    <div class="card">
-                        <span class="course-badge ${c.cat === 'highsec' ? 'highsec' : c.cat === 'academy' ? 'academy' : c.cat === 'skills' ? 'skill' : ''}">${c.badge}</span>
-                        <h3>${c.title}</h3>
-                        <p>${c.desc}</p>
-                        ${bulletList}
-                        <div class="fee-box">
-                            <small>Monthly Fee</small>
-                            <div class="fee-amount">${origPriceHTML}${c.fee}</div>
-                        </div>
-                        <button class="btn-apply" style="width: 100%; margin-top: 15px;" onclick="applyForCourse('${c.title.replace(/'/g, "\\'")}', '${c.type}')">Apply / Enroll</button>
-                    </div>
-                `;
-
-                if (c.cat === 'schooling') schoolingGrid.innerHTML += cardHTML;
-                else if (c.cat === 'highsec') highsecGrid.innerHTML += cardHTML;
-                else if (c.cat === 'academy') academyGrid.innerHTML += cardHTML;
-                else if (c.cat === 'skills') skillsGrid.innerHTML += cardHTML;
-            });
-
-            // Populate Admin Inputs
-            document.getElementById('adminOfferInput').value = data.offerText;
-            document.getElementById('adminAddressInput').value = data.address || defaultData.address;
-            document.getElementById('adminPhoneInput').value = data.phone;
-            document.getElementById('adminSchoolTimeInput').value = data.schoolTime;
-            document.getElementById('adminAcademyTimeInput').value = data.academyTime;
-
-            // Render Admin Facilities Management Grid
-            const adminFacilitiesGrid = document.getElementById('admin-facilities-manage-grid');
-            adminFacilitiesGrid.innerHTML = '';
-            (data.facilities || defaultData.facilities).forEach(f => {
-                adminFacilitiesGrid.innerHTML += `
-                    <div class="card" style="border-left-color: #27ae60;">
-                        <div class="form-group">
-                            <label>Facility Title:</label>
-                            <input type="text" value="${f.title}" onchange="updateFacilityItem(${f.id}, 'title', this.value)">
-                        </div>
-                        <div class="form-group">
-                            <label>Icon Class (FontAwesome):</label>
-                            <input type="text" value="${f.icon}" onchange="updateFacilityItem(${f.id}, 'icon', this.value)">
-                        </div>
-                        <div class="form-group">
-                            <label>Description:</label>
-                            <textarea rows="2" onchange="updateFacilityItem(${f.id}, 'desc', this.value)">${f.desc}</textarea>
-                        </div>
-                        <button class="btn-delete-admin" onclick="deleteFacilityItem(${f.id})">Delete Facility</button>
-                    </div>
-                `;
-            });
-
-            // Render Admin Courses Management Cards
-            const adminGrid = document.getElementById('admin-courses-manage-grid');
-            adminGrid.innerHTML = '';
-            data.courses.forEach(c => {
-                adminGrid.innerHTML += `
-                    <div class="card" style="border-left-color: #2c3e50;">
-                        <div class="form-group">
-                            <label>Course Title:</label>
-                            <input type="text" value="${c.title}" onchange="updateCourseItem(${c.id}, 'title', this.value)">
-                        </div>
-                        <div class="form-group">
-                            <label>Monthly Fee:</label>
-                            <input type="text" value="${c.fee}" onchange="updateCourseItem(${c.id}, 'fee', this.value)">
-                        </div>
-                        <div class="form-group">
-                            <label>Original Fee (Crossed):</label>
-                            <input type="text" value="${c.origFee || ''}" onchange="updateCourseItem(${c.id}, 'origFee', this.value)">
-                        </div>
-                        <div class="form-group">
-                            <label>Description:</label>
-                            <textarea rows="2" onchange="updateCourseItem(${c.id}, 'desc', this.value)">${c.desc}</textarea>
-                        </div>
-                        <button class="btn-delete-admin" onclick="deleteCourseItem(${c.id})">Delete Course</button>
-                    </div>
-                `;
-            });
-        }
-
-        // Navigation Logic
-        function toggleMobileMenu() {
-            document.getElementById('navMenu').classList.toggle('mobile-active');
-        }
-
-        function switchPage(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active-page'));
-
-            const navButtons = document.querySelectorAll('.nav-links button');
-            navButtons.forEach(btn => btn.classList.remove('active'));
-
-            const targetPage = document.getElementById('page-' + pageId);
-            if (targetPage) targetPage.classList.add('active-page');
-
-            const activeNavBtn = document.getElementById('nav-' + pageId);
-            if (activeNavBtn) activeNavBtn.classList.add('active');
-
-            document.getElementById('navMenu').classList.remove('mobile-active');
-            window.scrollTo(0, 0);
-        }
-
-        function applyForCourse(courseName, type) {
-            selectedCourse = courseName;
-            document.getElementById('selectedCourseDisplay').innerText = "Selected Course / Class: " + courseName;
-            
-            const noteBox = document.getElementById('schoolDocNote');
-            if (type === 'school') {
-                noteBox.style.display = 'flex';
+                document.getElementById('adm-name').value = '';
+                document.getElementById('adm-price').value = '';
+                document.getElementById('new-img-preview-container').style.display = 'none';
+                selectedBase64Image = '';
             } else {
-                noteBox.style.display = 'none';
-            }
-
-            switchPage('admissions');
-        }
-
-        // WhatsApp Form Integration
-        function handleFormSubmit(event) {
-            event.preventDefault();
-
-            if (!selectedCourse) {
-                showOfficialAlert("Please select a Course or Class first from the 'Courses & Fees' page before submitting!", "Action Required", "fa-solid fa-triangle-exclamation");
-                switchPage('courses');
-                return;
-            }
-
-            const name = document.getElementById('studentName').value.trim();
-            const father = document.getElementById('fatherName').value.trim();
-            const age = document.getElementById('studentAge').value.trim();
-            const passed = document.getElementById('passedClass').value.trim();
-            const phone = document.getElementById('parentPhone').value.trim();
-            const address = document.getElementById('studentAddress').value.trim();
-
-            if (!name || !father || !age || !passed || !phone || !address) {
-                showOfficialAlert("Kripya karke tamam details fill karein. Sabhi fields zaroori hain!", "Incomplete Form", "fa-solid fa-triangle-exclamation");
-                return;
-            }
-
-            const message = `*NEW ADMISSION APPLICATION*%0A` +
-                            `----------------------------%0A` +
-                            `*Selected Course:* ${encodeURIComponent(selectedCourse)}%0A` +
-                            `*Student Name:* ${encodeURIComponent(name)}%0A` +
-                            `*Father Name:* ${encodeURIComponent(father)}%0A` +
-                            `*Student Age:* ${encodeURIComponent(age)} Years%0A` +
-                            `*Previous Class:* ${encodeURIComponent(passed)}%0A` +
-                            `*Parent Phone:* ${encodeURIComponent(phone)}%0A` +
-                            `*Address:* ${encodeURIComponent(address)}`;
-
-            const currentData = getSiteData();
-            const sirWhatsAppNumber = "92" + currentData.phone.replace(/[^0-9]/g, ''); 
-            window.open(`https://wa.me/${sirWhatsAppNumber}?text=${message}`, '_blank');
-            
-            showOfficialAlert("Redirecting your application to WhatsApp...", "Success", "fa-solid fa-circle-check");
-            event.target.reset();
-        }
-
-        // Admin Panel Functions
-        function loginAdmin() {
-            const pass = document.getElementById('adminPasswordInput').value;
-            if (pass === "M.Tahir123") {
-                // Save login state in LocalStorage (NO Auto-Logout)
-                localStorage.setItem('bh_admin_logged_in', 'true');
-                renderSite();
-                showOfficialAlert("Admin Login Successful! Welcome to Dashboard.", "Welcome", "fa-solid fa-circle-check");
-            } else {
-                showOfficialAlert("Ghalat Admin Password! Please enter the correct password.", "Access Denied", "fa-solid fa-lock");
+                showToast('Please enter item name and price.');
             }
         }
 
-        // MANUAL LOGOUT ONLY FUNCTION
-        function logoutAdmin() {
-            localStorage.removeItem('bh_admin_logged_in');
-            document.getElementById('adminPasswordInput').value = '';
-            renderSite();
-            switchPage('home');
-            showOfficialAlert("You have logged out from Admin Panel.", "Logged Out", "fa-solid fa-circle-info");
-        }
-
-        function saveAdminGeneralInfo() {
-            const data = getSiteData();
-            data.offerText = document.getElementById('adminOfferInput').value;
-            data.address = document.getElementById('adminAddressInput').value;
-            data.phone = document.getElementById('adminPhoneInput').value;
-            data.schoolTime = document.getElementById('adminSchoolTimeInput').value;
-            data.academyTime = document.getElementById('adminAcademyTimeInput').value;
-
-            saveSiteData(data);
-            showOfficialAlert("Banner Offers, Address, Timing & Phone info successfully saved!", "Saved Successfully", "fa-solid fa-floppy-disk");
-        }
-
-        // Facility Management Functions
-        function addNewFacility() {
-            const title = document.getElementById('newFacilityTitle').value.trim();
-            const icon = document.getElementById('newFacilityIcon').value.trim() || "fa-solid fa-check-circle";
-            const desc = document.getElementById('newFacilityDesc').value.trim();
-
-            if (!title) {
-                showOfficialAlert("Please enter Facility Title!", "Input Error", "fa-solid fa-triangle-exclamation");
-                return;
-            }
-
-            const data = getSiteData();
-            if (!data.facilities) data.facilities = [...defaultData.facilities];
-
-            data.facilities.push({
-                id: Date.now(),
-                icon: icon,
-                title: title,
-                desc: desc || "Modern campus facility."
-            });
-
-            saveSiteData(data);
-
-            document.getElementById('newFacilityTitle').value = '';
-            document.getElementById('newFacilityIcon').value = '';
-            document.getElementById('newFacilityDesc').value = '';
-
-            showOfficialAlert("New facility added successfully!", "Facility Added", "fa-solid fa-circle-check");
-        }
-
-        function updateFacilityItem(id, key, value) {
-            const data = getSiteData();
-            if (!data.facilities) data.facilities = [...defaultData.facilities];
-            const facility = data.facilities.find(f => f.id === id);
-            if (facility) {
-                facility[key] = value;
-                saveSiteData(data);
+        function updateReservationPrice() {
+            let p = document.getElementById('adm-res-price').value;
+            if(p) {
+                currentReservationPrice = p;
+                document.getElementById('res-price-display').innerText = p;
+                showToast('Reservation Price updated successfully!');
             }
         }
 
-        function deleteFacilityItem(id) {
-            showOfficialConfirm("Kya aap is facility ko delete karna chahte hain?", "Delete Confirmation", function() {
-                const data = getSiteData();
-                if (!data.facilities) data.facilities = [...defaultData.facilities];
-                data.facilities = data.facilities.filter(f => f.id !== id);
-                saveSiteData(data);
-                showOfficialAlert("Facility deleted successfully!", "Deleted", "fa-solid fa-trash-can");
-            });
-        }
-
-        function addNewCourse() {
-            const title = document.getElementById('newCourseTitle').value.trim();
-            const cat = document.getElementById('newCourseCategory').value;
-            const fee = document.getElementById('newCourseFee').value.trim();
-            const origFee = document.getElementById('newCourseOriginalFee').value.trim();
-            const desc = document.getElementById('newCourseDesc').value.trim();
-
-            if (!title || !fee) {
-                showOfficialAlert("Please enter both Title and Fee!", "Input Error", "fa-solid fa-triangle-exclamation");
-                return;
-            }
-
-            const data = getSiteData();
-            const badgeMap = { schooling: "School Class", highsec: "Higher Sec", academy: "Evening Coaching", skills: "Skill Course" };
-            
-            data.courses.push({
-                id: Date.now(),
-                cat: cat,
-                badge: badgeMap[cat] || "Course",
-                title: title,
-                desc: desc || "Comprehensive study program.",
-                fee: fee,
-                origFee: origFee,
-                bullets: ["Qualified Faculty", "Regular Tests"],
-                type: (cat === 'schooling' || cat === 'highsec') ? 'school' : 'other'
-            });
-
-            saveSiteData(data);
-
-            // Reset inputs
-            document.getElementById('newCourseTitle').value = '';
-            document.getElementById('newCourseFee').value = '';
-            document.getElementById('newCourseOriginalFee').value = '';
-            document.getElementById('newCourseDesc').value = '';
-
-            showOfficialAlert("New course added successfully!", "Course Added", "fa-solid fa-circle-check");
-        }
-
-        function updateCourseItem(id, key, value) {
-            const data = getSiteData();
-            const course = data.courses.find(c => c.id === id);
-            if (course) {
-                course[key] = value;
-                saveSiteData(data);
+        function addReview() {
+            let name = document.getElementById('rev-name').value;
+            let msg = document.getElementById('rev-msg').value;
+            if(name && msg) {
+                const list = document.getElementById('reviews-list');
+                list.innerHTML = `
+                    <div class="review-card">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <strong>${name}</strong>
+                            <span style="color: var(--gold-accent);"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">${msg}</p>
+                    </div>
+                ` + list.innerHTML;
+                document.getElementById('rev-name').value = '';
+                document.getElementById('rev-msg').value = '';
+                showToast('Thank you for your review!');
             }
         }
 
-        function deleteCourseItem(id) {
-            showOfficialConfirm("Kya aap is course ko delete karna chahte hain?", "Delete Confirmation", function() {
-                const data = getSiteData();
-                data.courses = data.courses.filter(c => c.id !== id);
-                saveSiteData(data);
-                showOfficialAlert("Course deleted successfully!", "Deleted", "fa-solid fa-trash-can");
-            });
-        }
+        function toggleDarkMode() { document.body.classList.toggle('dark-mode'); }
 
-        // Initialize on load
-        window.onload = renderSite;
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let name = document.getElementById('bk-name').value;
+            let phone = document.getElementById('bk-phone').value;
+            let guests = document.getElementById('bk-guests').value;
+            let time = document.getElementById('bk-time').value;
+
+            let msg = `Hello Spice N Grill,%0A%0A*Table Reservation Request*%0A- Name: ${name}%0A- Phone: ${phone}%0A- Guests: ${guests}%0A- Date/Time: ${time}%0A- Holding Fee: Rs. ${currentReservationPrice}`;
+            window.open(`https://wa.me/923123735457?text=${msg}`, '_blank');
+            showToast('Reservation details sent to WhatsApp!');
+        });
+
+        window.onload = function() {
+            generateItems();
+            renderMenuGrid(menuDatabase);
+            updateAuthUI();
+        };
     </script>
 </body>
 </html>
