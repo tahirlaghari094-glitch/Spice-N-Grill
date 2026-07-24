@@ -3,319 +3,1458 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Google Search Console Verification Tag -->
     <meta name="google-site-verification" content="3sEKCoLT8UQ2tGs_njHnhB4eF5AIXaofs1fdXFXuMW0" />
     
-    <!-- SEO & Branding Meta Tags -->
-    <title>MT.Dev - Full-Stack Developer & Game Dev</title>
-    <meta name="title" content="MT.Dev - Full-Stack Developer & Game Dev">
-    <meta name="description" content="MT.Dev offers top-tier Web Development, Mobile Apps, and 2D/3D Game Development services.">
+    <title>Beacon Heights Schooling System & Academy | Becon Heights Mirpurkhas</title>
     
-    <!-- Favicon (icon.png) -->
-    <link rel="icon" type="image/png" href="icon.png">
+    <meta name="description" content="Beacon Heights (Becon Heights) Schooling System & Academy in Mirpurkhas. Session 2026-2027 Admissions Open! First 50 Admissions Free with Free Uniform and 50% Off in Evening Tuition.">
+    <meta name="keywords" content="Beacon Heights, Becon Heights, Beacon Heights School Mirpurkhas, Becon Heights Academy, Schooling System Mirpurkhas, Admissions 2026-2027">
+    <meta name="author" content="Beacon Heights Schooling System">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        function showPage(pageId) {
-            const pages = ['home', 'services', 'about', 'contact'];
-            pages.forEach(id => {
-                const el = document.getElementById(id);
-                if (el) {
-                    if (id === pageId) {
-                        el.classList.remove('hidden');
-                    } else {
-                        el.classList.add('hidden');
-                    }
-                }
-            });
-            // Mobile menu close after selection
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="icon.png">
 
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu) {
-                mobileMenu.classList.toggle('hidden');
-            }
-        }
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Beacon Heights Schooling System & Academy",
+      "alternateName": "Becon Heights Mirpurkhas",
+      "url": "https://beacon-heights-mirpurkhas.netlify.app/",
+      "logo": "https://beacon-heights-mirpurkhas.netlify.app/icon.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-312-3525881",
+        "contactType": "admissions"
+      }
+    }
     </script>
-</head>
-<body class="bg-slate-950 text-white font-sans selection:bg-indigo-500 selection:text-white">
 
-    <!-- Navigation Bar -->
-    <nav class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <div class="flex items-center gap-2 cursor-pointer" onclick="showPage('home')">
-                    <img src="icon.png" alt="MT.Dev Logo" class="w-8 h-8 object-contain rounded-md" onerror="this.style.display='none'">
-                    <div class="text-2xl font-black tracking-wider text-indigo-500">
-                        MT<span class="text-indigo-400">.DEV</span>
+    <style>
+        :root {
+            --primary-color: #0b3c5d;
+            --secondary-color: #328cc1;
+            --accent-color: #e74c3c;
+            --gold-color: #f1c40f;
+            --light-bg: #f8f9fa;
+            --dark-text: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Top Announcement Bar */
+        .offer-bar {
+            background: linear-gradient(90deg, #c0392b, #e74c3c);
+            color: #fff;
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 1001;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .offer-bar span {
+            background: var(--gold-color);
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 5px;
+            animation: blink 1.5s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Header Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .logo-text span { color: var(--secondary-color); }
+        .logo-text small { display: block; font-size: 0.7rem; color: #666; font-weight: normal; }
+
+        /* Navigation Menu Centered & Bold */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-links li button {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            cursor: pointer;
+            padding: 0.5rem 0.8rem;
+            transition: 0.3s;
+        }
+
+        .nav-links li button:hover, 
+        .nav-links li button.active {
+            color: var(--secondary-color);
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .btn-apply {
+            background: var(--accent-color);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .btn-apply:hover {
+            background: #a93226;
+        }
+
+        .btn-admin-nav {
+            background: #2c3e50;
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Page Content Logic */
+        .page {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .page.active-page { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(11, 60, 93, 0.88), rgba(11, 60, 93, 0.88)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1350&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h1 { 
+            font-size: clamp(1.8rem, 4vw, 2.8rem); 
+            margin-bottom: 0.8rem; 
+        }
+
+        .hero p { 
+            font-size: clamp(0.95rem, 2vw, 1.2rem); 
+            max-width: 750px; 
+            margin: 0 auto 1.5rem; 
+        }
+
+        .offer-badge {
+            background: var(--gold-color);
+            color: #000;
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .page-header {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 35px 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 35px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Course Cards Styling */
+        .course-badge {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #0288d1;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            align-self: flex-start;
+        }
+
+        .course-badge.highsec {
+            background: #ede7f6;
+            color: #512da8;
+        }
+
+        .course-badge.academy {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .course-badge.skill {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .course-list {
+            list-style: none;
+            margin: 10px 0;
+        }
+
+        .course-list li {
+            padding: 4px 0;
+            border-bottom: 1px dashed #ddd;
+            font-size: 0.9rem;
+        }
+
+        .course-list li i {
+            color: var(--secondary-color);
+            margin-right: 6px;
+        }
+
+        .fee-box {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .fee-amount {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .fee-original {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 0.85rem;
+            margin-right: 5px;
+        }
+
+        /* Form Styling */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--light-bg);
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.9rem; }
+        .form-group label .req { color: red; }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+
+        .selected-course-display {
+            background: #eef7fc;
+            border: 1px solid #328cc1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #0b3c5d;
+        }
+
+        .doc-note-box {
+            display: none;
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .doc-note-box i {
+            font-size: 1.3rem;
+            color: #856404;
+        }
+
+        .btn-submit {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            width: 100%;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Admin Specific Styling */
+        .admin-card {
+            background: #fff;
+            border: 2px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .btn-save-admin {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-delete-admin {
+            background: #c0392b;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .btn-logout-header {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.2s;
+        }
+
+        .btn-logout-header:hover {
+            background: #c0392b;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Details Highlight */
+        .contact-box {
+            background: #eef7fc;
+            border: 1px solid #b3d7ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .phone-link {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        .map-container {
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 15px;
+            margin-top: 30px;
+            font-size: 0.88rem;
+        }
+
+        /* OFFICIAL CUSTOM SCREEN POPUP MODAL STYLING */
+        .official-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .official-modal-box {
+            background: #ffffff;
+            width: 90%;
+            max-width: 420px;
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            animation: popIn 0.3s ease-out;
+            position: relative;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .official-modal-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .official-modal-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .official-modal-msg {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .official-modal-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .official-modal-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .official-modal-btn.danger-btn {
+            background: #c0392b;
+            margin-left: 10px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .hamburger { display: flex; }
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1.2rem;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                display: none;
+            }
+            .nav-menu.mobile-active { display: flex; }
+            .nav-links { flex-direction: column; width: 100%; gap: 0; }
+            .nav-links li button { width: 100%; padding: 0.7rem; border-bottom: 1px solid #eee; font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Special Offer Announcement Bar -->
+    <div class="offer-bar" id="display-offer-bar">
+        🎉 <strong id="display-offer-text">SPECIAL OFFER (Session 2026-2027): First 50 Admissions FREE! + Free Uniform + 50% OFF Evening Tuition!</strong> <span onclick="switchPage('courses')">View Courses & Apply</span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="logo-container" onclick="switchPage('home')">
+                <img src="icon.png" alt="Beacon Heights Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    BEACON <span>HEIGHTS</span>
+                    <small>Schooling System & Academy</small>
+                </div>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><button id="nav-home" class="active" onclick="switchPage('home')">Home</button></li>
+                    <li><button id="nav-about" onclick="switchPage('about')">About Us</button></li>
+                    <li><button id="nav-courses" onclick="switchPage('courses')">Courses & Fees</button></li>
+                    <li><button id="nav-facilities" onclick="switchPage('facilities')">Facilities</button></li>
+                    <li><button id="nav-contact" onclick="switchPage('contact')">Contact</button></li>
+                    <li><button id="nav-admin" class="btn-admin-nav" onclick="switchPage('admin')"><i class="fa-solid fa-lock"></i> Admin</button></li>
+                </ul>
+            </div>
+
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE 1: HOME -->
+    <div id="page-home" class="page active-page">
+        <section class="hero">
+            <div class="offer-badge">🔥 Admissions Open 2026 - 2027</div>
+            <h1>Beacon Heights Schooling System & Academy</h1>
+            <p>Quality education from Primary to Matric & Expert Evening Academy Coaching in Mirpurkhas.</p>
+            <div style="margin-top: 15px;">
+                <button class="btn-apply" style="background: var(--gold-color); color: #000; font-size: 1rem; padding: 0.8rem 1.8rem; margin-right: 10px;" onclick="switchPage('courses')">View Courses & Enroll</button>
+                <a href="tel:03123525881" id="display-hero-phone" style="background: #fff; color: var(--primary-color); padding: 0.75rem 1.2rem; text-decoration: none; display: inline-block; border-radius: 5px; font-weight: bold;">📞 Call: 03123525881</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="contact-box">
+                <h2 style="color: var(--accent-color); margin-bottom: 10px;">🎁 Special Limited Time Discount</h2>
+                <p style="font-size: 1.1rem; font-weight: 600;" id="display-discount-box">First 50 Student Admissions are 100% FREE with FREE School Uniform and 50% Flat Discount on Evening Academy Tuition Fee!</p>
+            </div>
+
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1.5rem;">Why Choose Beacon Heights?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Free Admission Offer</h3>
+                    <p>First 50 lucky admissions will get 100% Free Admission along with a Free School Uniform set.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-book-open"></i> Evening Academy 50% Off</h3>
+                    <p>Special tuition coaching for Class 8, Matric & Inter students with experienced faculty at 50% discounted fees.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-location-dot"></i> Prime Location</h3>
+                    <p>Located safely in Satellite Town, Mirpurkhas near Marhaba Hall & Doctor Rana Rathore Street.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: COURSES & FEE STRUCTURE -->
+    <div id="page-courses" class="page">
+        <section class="page-header">
+            <h1>All Classes, Coaching & Professional Courses</h1>
+            <p>Select your desired class or course below to proceed with admission.</p>
+        </section>
+
+        <div class="container">
+            <!-- SECTION 1: MORNING SCHOOLING SYSTEM -->
+            <h2 style="color: var(--primary-color); border-bottom: 3px solid var(--secondary-color); padding-bottom: 8px; margin-bottom: 1.5rem;"><i class="fa-solid fa-school"></i> Schooling System</h2>
+            <div class="grid" style="margin-bottom: 2rem;" id="container-schooling">
+                <!-- Dynamic or default items rendered here -->
+            </div>
+
+            <!-- SECTION 2: HIGHER SECONDARY SCHOOLING -->
+            <h2 style="color: var(--primary-color); border-bottom: 3px solid #512da8; padding-bottom: 8px; margin-bottom: 1.5rem;"><i class="fa-solid fa-graduation-cap"></i> Higher Secondary Classes</h2>
+            <div class="grid" style="margin-bottom: 3rem;" id="container-highsec">
+                <!-- Dynamic or default items rendered here -->
+            </div>
+
+            <!-- SECTION 3: EVENING ACADEMY COACHING -->
+            <h2 style="color: var(--primary-color); border-bottom: 3px solid var(--accent-color); padding-bottom: 8px; margin-bottom: 1.5rem;"><i class="fa-solid fa-book-open"></i> Evening Academy Coaching (50% OFF)</h2>
+            <div class="grid" style="margin-bottom: 3rem;" id="container-academy">
+                <!-- Dynamic or default items rendered here -->
+            </div>
+
+            <!-- SECTION 4: PROFESSIONAL SKILL COURSES -->
+            <h2 style="color: var(--primary-color); border-bottom: 3px solid #2e7d32; padding-bottom: 8px; margin-bottom: 1.5rem;"><i class="fa-solid fa-laptop-code"></i> Professional IT & Language Courses</h2>
+            <div class="grid" id="container-skills">
+                <!-- Dynamic or default items rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: ABOUT US -->
+    <div id="page-about" class="page">
+        <section class="page-header">
+            <h1>About Beacon Heights</h1>
+            <p>Delivering high academic standards & ethical values in Mirpurkhas</p>
+        </section>
+
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>To nurture young minds into successful professionals through modern teaching, individual care, and high moral standards.</p>
+                </div>
+                <div class="card">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading schooling and academy network in Mirpurkhas producing top board rankers and future leaders.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: FACILITIES -->
+    <div id="page-facilities" class="page">
+        <section class="page-header">
+            <h1>Our Facilities</h1>
+            <p>Providing the best environment for student growth</p>
+        </section>
+
+        <div class="container">
+            <div class="grid" id="container-facilities">
+                <!-- Dynamic Facilities rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 5: ADMISSIONS -->
+    <div id="page-admissions" class="page">
+        <section class="page-header">
+            <h1>Admission Application Form (2026 - 2027)</h1>
+            <p>Fill all fields mandatory to complete your application via WhatsApp</p>
+        </section>
+
+        <div class="container">
+            <div class="form-container">
+                <div class="doc-note-box" id="schoolDocNote">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div>
+                        <strong>Important Note:</strong> Please submit your child's <strong>B-Form</strong> and <strong>Previous School Leaving Certificate</strong> at the campus during final verification.
                     </div>
                 </div>
+
+                <form onsubmit="handleFormSubmit(event)">
+                    <!-- Selected Course Display -->
+                    <div class="selected-course-display" id="selectedCourseDisplay">
+                        Applying For Course: Not Selected
+                    </div>
+
+                    <div class="form-group">
+                        <label>Student Full Name <span class="req">*</span></label>
+                        <input type="text" id="studentName" placeholder="Enter student's name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Father's Name <span class="req">*</span></label>
+                        <input type="text" id="fatherName" placeholder="Enter father's name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Student Age (Years) <span class="req">*</span></label>
+                        <input type="number" id="studentAge" placeholder="e.g. 8" min="3" max="25" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Previous Class Passed <span class="req">*</span></label>
+                        <input type="text" id="passedClass" placeholder="e.g. Class 4 / New Admission" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Parent / Guardian Phone Number <span class="req">*</span></label>
+                        <input type="tel" id="parentPhone" placeholder="03123525881" required>
+                    </div>
+
+                    <!-- Only Residential Address Required -->
+                    <div class="form-group">
+                        <label>Residential Address <span class="req">*</span></label>
+                        <textarea id="studentAddress" rows="3" placeholder="Enter your complete house address..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Admission Inquiry via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 6: CONTACT -->
+    <div id="page-contact" class="page">
+        <section class="page-header">
+            <h1>Contact Us & Visit Campus</h1>
+            <p>We are ready to guide you for your child's bright future</p>
+        </section>
+
+        <div class="container">
+            <div class="contact-box">
+                <h3 style="color: var(--primary-color); margin-bottom: 10px;">Direct Admission Helpline</h3>
+                <span id="display-contact-phones">
+                    <a href="tel:03123525881" class="phone-link">📞 03123525881</a>
+                    <a href="tel:03103215175" class="phone-link">📞 03103215175</a>
+                </span>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-map-location-dot"></i> Campus Address</h3>
+                    <p id="display-campus-address"><strong>Beacon Heights Schooling System & Academy</strong><br>
+                    House 01, Near Marhaba Hall,<br>
+                    Doctor Rana Rathore Street, Scheme No. 2,<br>
+                    Satellite Town, Mirpurkhas, Sindh, Pakistan.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-clock"></i> Campus Timings</h3>
+                    <p><strong>Morning School:</strong> <span id="display-school-time">07:30 AM - 01:30 PM</span><br>
+                    <strong>Evening Academy:</strong> <span id="display-academy-time">03:00 PM - 08:00 PM</span></p>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-container">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Satellite%20Town%20Mirpurkhas%20Sindh&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 7: ADMIN PANEL -->
+    <div id="page-admin" class="page">
+        <section class="page-header" style="background: #2c3e50;">
+            <h1><i class="fa-solid fa-user-shield"></i> Admin Panel Control Center</h1>
+            <p>Edit offer banners, course pricing, timings, address, facilities or add/delete courses</p>
+            
+            <!-- Quick Logout Header Button (Only Visible When Logged In) -->
+            <div id="admin-header-logout" style="display: none;">
+                <button class="btn-logout-header" onclick="logoutAdmin()">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout Admin Panel
+                </button>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- LOGIN SECTION -->
+            <div id="admin-login-box" class="admin-card" style="max-width: 450px; margin: 0 auto;">
+                <h3 style="color: #2c3e50; text-align: center; margin-bottom: 15px;"><i class="fa-solid fa-lock"></i> Admin Authentication</h3>
+                <div class="form-group">
+                    <label>Enter Admin Password:</label>
+                    <input type="password" id="adminPasswordInput" placeholder="Type admin password">
+                </div>
+                <button class="btn-save-admin" style="width: 100%; font-size: 1rem;" onclick="loginAdmin()">Login to Dashboard</button>
+            </div>
+
+            <!-- DASHBOARD CONTROLS (HIDDEN BY DEFAULT UNLESS LOGGED IN) -->
+            <div id="admin-dashboard-box" style="display: none;">
                 
-                <!-- Desktop Navigation Links -->
-                <ul class="hidden md:flex space-x-8 text-slate-300 font-medium">
-                    <li><button onclick="showPage('home')" class="hover:text-indigo-400 transition">Home</button></li>
-                    <li><button onclick="showPage('services')" class="hover:text-indigo-400 transition">Services</button></li>
-                    <li><button onclick="showPage('about')" class="hover:text-indigo-400 transition">About</button></li>
-                    <li><button onclick="showPage('contact')" class="hover:text-indigo-400 transition">Contact</button></li>
-                </ul>
-
-                <!-- Desktop Call & Hire Buttons -->
-                <div class="hidden sm:flex items-center gap-3">
-                    <a href="tel:03123735457" 
-                       class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-xl font-semibold transition border border-slate-700 flex items-center gap-2 text-sm">
-                        📞 <span>Call Now</span>
-                    </a>
-
-                    <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20want%20to%20hire%20you%20for%20a%20project." 
-                       target="_blank" 
-                       class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-semibold transition shadow-lg shadow-indigo-600/30 text-sm">
-                        Hire Me 🚀
-                    </a>
+                <!-- 1. GENERAL SITE INFO & ADDRESS EDIT -->
+                <div class="admin-card">
+                    <h3>📢 Edit Banner Offer, Address, Phone & Timings</h3>
+                    <br>
+                    <div class="form-group">
+                        <label>Top Announcement Bar Offer Text:</label>
+                        <input type="text" id="adminOfferInput">
+                    </div>
+                    <div class="form-group">
+                        <label>Campus Address (HTML Allowed, e.g. &lt;br&gt; for new line):</label>
+                        <textarea id="adminAddressInput" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Primary Phone Number (e.g. 03123525881):</label>
+                        <input type="text" id="adminPhoneInput">
+                    </div>
+                    <div class="grid">
+                        <div class="form-group">
+                            <label>Morning School Timings:</label>
+                            <input type="text" id="adminSchoolTimeInput">
+                        </div>
+                        <div class="form-group">
+                            <label>Evening Academy Timings:</label>
+                            <input type="text" id="adminAcademyTimeInput">
+                        </div>
+                    </div>
+                    <button class="btn-save-admin" onclick="saveAdminGeneralInfo()">Save Banner, Address & Info Changes</button>
                 </div>
 
-                <!-- Mobile Hamburger Button -->
-                <div class="md:hidden flex items-center gap-2">
-                    <a href="tel:03123735457" class="sm:hidden bg-slate-800 p-2.5 rounded-xl text-slate-200 border border-slate-700">📞</a>
-                    <button onclick="toggleMobileMenu()" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg bg-slate-900 border border-slate-800">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
+                <!-- 2. MANAGE FACILITIES SECTION -->
+                <div class="admin-card">
+                    <h3>🏫 Manage Facilities (Add / Edit / Delete)</h3>
+                    <br>
+                    <!-- Add New Facility Form -->
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 6px; margin-bottom: 20px; border: 1px solid #ddd;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 10px;">➕ Add New Facility</h4>
+                        <div class="grid">
+                            <div class="form-group">
+                                <label>Facility Title:</label>
+                                <input type="text" id="newFacilityTitle" placeholder="e.g. Science Lab">
+                            </div>
+                            <div class="form-group">
+                                <label>FontAwesome Icon Class:</label>
+                                <input type="text" id="newFacilityIcon" placeholder="e.g. fa-solid fa-microscope">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description:</label>
+                            <textarea id="newFacilityDesc" rows="2" placeholder="Facility details..."></textarea>
+                        </div>
+                        <button class="btn-save-admin" onclick="addNewFacility()">Add Facility</button>
+                    </div>
+
+                    <!-- Existing Facilities List -->
+                    <h4 style="color: var(--primary-color); margin-bottom: 10px;">📝 Existing Facilities List</h4>
+                    <div id="admin-facilities-manage-grid" class="grid"></div>
+                </div>
+
+                <!-- 3. ADD NEW COURSE -->
+                <div class="admin-card">
+                    <h3>➕ Add New Course / Class</h3>
+                    <br>
+                    <div class="grid">
+                        <div class="form-group">
+                            <label>Course Title:</label>
+                            <input type="text" id="newCourseTitle" placeholder="e.g. Class 11 Pre-Medical">
+                        </div>
+                        <div class="form-group">
+                            <label>Category Section:</label>
+                            <select id="newCourseCategory">
+                                <option value="schooling">Schooling System</option>
+                                <option value="highsec">Higher Secondary</option>
+                                <option value="academy">Evening Academy</option>
+                                <option value="skills">IT & Skill Courses</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Monthly Fee Amount Text:</label>
+                            <input type="text" id="newCourseFee" placeholder="e.g. PKR 2,500 / Month">
+                        </div>
+                        <div class="form-group">
+                            <label>Original Fee (If Discounted):</label>
+                            <input type="text" id="newCourseOriginalFee" placeholder="e.g. PKR 5,000 (Optional)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Course Description:</label>
+                        <textarea id="newCourseDesc" rows="2" placeholder="Short description of the course..."></textarea>
+                    </div>
+                    <button class="btn-save-admin" onclick="addNewCourse()">Add Course to Website</button>
+                </div>
+
+                <!-- 4. MANAGE & EDIT ALL COURSES -->
+                <div class="admin-card">
+                    <h3>📝 Edit or Delete Existing Courses</h3>
+                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">Modify prices, titles, or descriptions directly below. Changes update in real-time.</p>
+                    <div id="admin-courses-manage-grid" class="grid"></div>
+                </div>
+
+                <!-- MAIN BOTTOM MANUAL LOGOUT BUTTON -->
+                <div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+                    <button class="btn-delete-admin" style="width: auto; padding: 12px 30px; font-weight: bold; background: #c0392b; font-size: 1rem;" onclick="logoutAdmin()">
+                        <i class="fa-solid fa-right-from-bracket"></i> Logout Admin Panel
                     </button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-950/95 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <button onclick="showPage('home')" class="block w-full text-left py-2 px-3 text-slate-300 hover:bg-slate-900 rounded-lg">Home</button>
-            <button onclick="showPage('services')" class="block w-full text-left py-2 px-3 text-slate-300 hover:bg-slate-900 rounded-lg">Services</button>
-            <button onclick="showPage('about')" class="block w-full text-left py-2 px-3 text-slate-300 hover:bg-slate-900 rounded-lg">About</button>
-            <button onclick="showPage('contact')" class="block w-full text-left py-2 px-3 text-slate-300 hover:bg-slate-900 rounded-lg">Contact</button>
-            <div class="pt-2 border-t border-slate-800 flex flex-col gap-2">
-                <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20want%20to%20hire%20you%20for%20a%20project." 
-                   target="_blank" 
-                   class="w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-xl font-semibold transition text-sm">
-                    Hire Me 🚀
-                </a>
-            </div>
-        </div>
-    </nav>
+    <!-- Floating WhatsApp Contact Button -->
+    <a href="https://wa.me/923123525881?text=Hi%2C%20I%20want%20information%20about%20Beacon%20Heights%20Free%20Admission%20Offer." target="_blank" class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i> WhatsApp Us
+    </a>
 
-    <main class="pt-24 min-h-screen">
-        
-        <!-- HOME SECTION -->
-        <section id="home" class="flex flex-col items-center justify-center pt-8 md:pt-12 pb-16 px-4 max-w-6xl mx-auto">
-            <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 px-4 py-2 rounded-full mb-6 shadow-inner text-center">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
-                <span class="text-indigo-300 text-xs sm:text-sm font-medium">Available for High-End Projects & Freelance Work</span>
-            </div>
-
-            <h1 class="text-3xl sm:text-5xl md:text-7xl font-black text-center text-slate-100 leading-tight mb-6 max-w-4xl">
-                Transforming Your Ideas Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-400 to-emerald-400">High-Performance</span> Software
-            </h1>
-
-            <p class="text-slate-400 text-base md:text-xl text-center mb-8 max-w-2xl leading-relaxed">
-                Welcome to <strong class="text-white font-semibold">MT.Dev</strong>. We design & develop modern Websites, Mobile Apps, and 2D/3D Games with speed and precision.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center mb-12">
-                <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20want%20to%20start%20a%20new%20project." 
-                   target="_blank" 
-                   class="w-full sm:w-auto text-center bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white px-8 py-4 rounded-2xl font-bold text-base md:text-lg transition shadow-xl shadow-indigo-600/25 flex items-center justify-center gap-2">
-                    Start a Project 💬
-                </a>
-                <button onclick="showPage('about')" class="w-full sm:w-auto text-center bg-slate-900 border border-slate-700 hover:bg-slate-800 text-slate-200 px-8 py-4 rounded-2xl font-bold text-base md:text-lg transition">
-                    Learn More About MT.Dev →
-                </button>
-            </div>
-
-            <!-- Stats Grid -->
-            <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-900/50 border border-slate-800 p-4 sm:p-6 rounded-3xl backdrop-blur">
-                <div class="text-center p-2 sm:p-4">
-                    <h3 class="text-2xl sm:text-4xl font-black text-indigo-400">5+</h3>
-                    <p class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Years Experience</p>
-                </div>
-                <div class="text-center p-2 sm:p-4 border-l border-slate-800">
-                    <h3 class="text-2xl sm:text-4xl font-black text-cyan-400">50+</h3>
-                    <p class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Projects Completed</p>
-                </div>
-                <div class="text-center p-2 sm:p-4 border-l md:border-l border-slate-800">
-                    <h3 class="text-2xl sm:text-4xl font-black text-emerald-400">100%</h3>
-                    <p class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Client Satisfaction</p>
-                </div>
-                <div class="text-center p-2 sm:p-4 border-l border-slate-800">
-                    <h3 class="text-2xl sm:text-4xl font-black text-purple-400">24/7</h3>
-                    <p class="text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Dedicated Support</p>
-                </div>
-            </div>
-
-            <!-- Feature Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 w-full mt-8 sm:mt-12">
-                <div onclick="showPage('services')" class="cursor-pointer bg-slate-900/40 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
-                    <div class="text-3xl mb-3">🌐</div>
-                    <h4 class="font-bold text-lg mb-1">Web Development</h4>
-                    <p class="text-slate-400 text-xs">Fast, responsive & scalable Python/JS web apps.</p>
-                </div>
-                <div onclick="showPage('services')" class="cursor-pointer bg-slate-900/40 border border-slate-800 p-6 rounded-2xl hover:border-emerald-500/50 transition">
-                    <div class="text-3xl mb-3">📱</div>
-                    <h4 class="font-bold text-lg mb-1">Mobile Apps</h4>
-                    <p class="text-slate-400 text-xs">Cross-platform Android & iOS apps with smooth UI.</p>
-                </div>
-                <div onclick="showPage('services')" class="cursor-pointer bg-slate-900/40 border border-slate-800 p-6 rounded-2xl hover:border-purple-500/50 transition sm:col-span-2 md:col-span-1">
-                    <div class="text-3xl mb-3">🎮</div>
-                    <h4 class="font-bold text-lg mb-1">Game Development</h4>
-                    <p class="text-slate-400 text-xs">Engaging 2D & 3D games with fluid controls.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVICES SECTION -->
-        <section id="services" class="hidden max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-            <div class="text-center mb-10 sm:mb-16">
-                <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">MT.Dev Professional <span class="text-indigo-500">Services</span></h2>
-                <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">Select a service below to directly start a project discussion with MT.Dev on WhatsApp.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-indigo-500/50 transition flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6">🌐</div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Web Development</h3>
-                        <p class="text-slate-400 leading-relaxed text-xs sm:text-sm mb-6">Custom websites, e-commerce platforms, SaaS web applications, and backends.</p>
-                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
-                            <li>✔ Modern UI / UX Design</li>
-                            <li>✔ Fast Loading Speed</li>
-                            <li>✔ SEO Optimized & Mobile Friendly</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20am%20interested%20in%20your%20Web%20Development%20service." target="_blank" class="w-full text-center bg-indigo-600/20 hover:bg-indigo-600 text-indigo-300 hover:text-white border border-indigo-500/30 font-semibold py-3 rounded-xl transition text-sm">Get This Service 💬</a>
-                </div>
-
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6">📱</div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3">App Development</h3>
-                        <p class="text-slate-400 leading-relaxed text-xs sm:text-sm mb-6">Cross-platform iOS & Android mobile apps with smooth navigation and UI.</p>
-                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
-                            <li>✔ Android & iOS Support</li>
-                            <li>✔ Smooth Performance</li>
-                            <li>✔ Backend API Integration</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20am%20interested%20in%20your%20App%20Development%20service." target="_blank" class="w-full text-center bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/30 font-semibold py-3 rounded-xl transition text-sm">Get This Service 💬</a>
-                </div>
-
-                <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-purple-500/50 transition flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-purple-500/10 rounded-xl flex items-center justify-center text-2xl sm:text-3xl mb-4 sm:mb-6">🎮</div>
-                        <h3 class="text-xl sm:text-2xl font-bold mb-3">Game Development</h3>
-                        <p class="text-slate-400 leading-relaxed text-xs sm:text-sm mb-6">2D and 3D games with engaging mechanics and smooth controls.</p>
-                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
-                            <li>✔ Custom Gameplay Mechanics</li>
-                            <li>✔ 2D & 3D Interactive Graphics</li>
-                            <li>✔ Mobile & Web Playable</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20am%20interested%20in%20your%20Game%20Development%20service." target="_blank" class="w-full text-center bg-purple-600/20 hover:bg-purple-600 text-purple-300 hover:text-white border border-purple-500/30 font-semibold py-3 rounded-xl transition text-sm">Get This Service 💬</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT SECTION -->
-        <section id="about" class="hidden max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-            <div class="text-center mb-10 sm:mb-14">
-                <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest bg-indigo-500/10 px-4 py-1.5 rounded-full border border-indigo-500/20">Behind The Code</span>
-                <h2 class="text-3xl sm:text-5xl font-black mt-3">About <span class="text-indigo-500">MT.Dev</span></h2>
-                <p class="text-slate-400 max-w-2xl mx-auto mt-2 text-sm sm:text-base">Passionate development studio focused on building clean code and delightful user experiences.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center mb-16">
-                <div class="space-y-6 bg-slate-900/50 border border-slate-800 p-6 sm:p-8 rounded-3xl backdrop-blur">
-                    <h3 class="text-xl sm:text-2xl font-bold text-slate-100">Full-Stack Software Engineering</h3>
-                    <p class="text-slate-400 leading-relaxed text-xs sm:text-sm">At <strong class="text-white">MT.Dev</strong>, we specialize in web architecture, mobile apps, and game development.</p>
-
-                    <div class="space-y-4 pt-2">
-                        <div>
-                            <div class="flex justify-between text-xs font-semibold mb-1">
-                                <span>Python & Backend</span>
-                                <span class="text-indigo-400">95%</span>
-                            </div>
-                            <div class="w-full bg-slate-800 rounded-full h-2"><div class="bg-indigo-500 h-2 rounded-full w-[95%]"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs font-semibold mb-1">
-                                <span>Frontend (React, Tailwind)</span>
-                                <span class="text-cyan-400">90%</span>
-                            </div>
-                            <div class="w-full bg-slate-800 rounded-full h-2"><div class="bg-cyan-400 h-2 rounded-full w-[90%]"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs font-semibold mb-1">
-                                <span>Mobile App Development</span>
-                                <span class="text-emerald-400">88%</span>
-                            </div>
-                            <div class="w-full bg-slate-800 rounded-full h-2"><div class="bg-emerald-400 h-2 rounded-full w-[88%]"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <h3 class="text-xl sm:text-2xl font-bold text-slate-100 mb-4 sm:mb-6">How MT.Dev Works</h3>
-                    <div class="flex gap-4 p-4 sm:p-5 bg-slate-900/60 border border-slate-800 rounded-2xl">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-500/10 text-indigo-400 font-bold rounded-xl flex items-center justify-center shrink-0 text-lg sm:text-xl">01</div>
-                        <div>
-                            <h4 class="font-bold text-slate-200 text-sm sm:text-base">Requirement & Planning</h4>
-                            <p class="text-slate-400 text-xs mt-1">Understanding client goals and project milestones.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 p-4 sm:p-5 bg-slate-900/60 border border-slate-800 rounded-2xl">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/10 text-cyan-400 font-bold rounded-xl flex items-center justify-center shrink-0 text-lg sm:text-xl">02</div>
-                        <div>
-                            <h4 class="font-bold text-slate-200 text-sm sm:text-base">Design & Development</h4>
-                            <p class="text-slate-400 text-xs mt-1">Building modern UI and robust code.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="hidden max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Let's Build Something <span class="text-indigo-500">Great</span></h2>
-            <p class="text-slate-400 mb-8 sm:mb-12 text-sm sm:text-base">Connect with MT.Dev via Call, WhatsApp, or Email.</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-                <a href="tel:03123735457" class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center hover:border-indigo-500 transition">
-                    <div class="text-3xl sm:text-4xl mb-3">📞</div>
-                    <p class="text-xs text-slate-500">Direct Call</p>
-                    <p class="font-bold text-slate-200 mt-1 text-sm sm:text-base">03123735457</p>
-                </a>
-                <a href="https://wa.me/923123735457?text=Hi%20MT.Dev,%20I%20want%20to%20discuss%20a%20new%20project." target="_blank" class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center hover:border-emerald-500 transition">
-                    <div class="text-3xl sm:text-4xl mb-3">💬</div>
-                    <p class="text-xs text-slate-500">WhatsApp Chat</p>
-                    <p class="font-bold text-slate-200 mt-1 text-sm sm:text-base">03123735457</p>
-                </a>
-                <a href="mailto:lagharitahir08@gmail.com" class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col items-center hover:border-purple-500 transition">
-                    <div class="text-3xl sm:text-4xl mb-3">📧</div>
-                    <p class="text-xs text-slate-500">Email MT.Dev</p>
-                    <p class="font-bold text-slate-200 mt-1 text-xs sm:text-sm break-all">lagharitahir08@gmail.com</p>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="border-t border-slate-900 py-8 text-center text-slate-600 text-xs sm:text-sm">
-        <p>© 2026 MT.Dev. All rights reserved.</p>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Beacon Heights (Becon Heights) Schooling System & Academy.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;" id="display-footer-address">House 01, Doctor Rana Rathore Street, Scheme 2, Satellite Town, Mirpurkhas | Call: <span id="display-footer-phone">03123525881</span></p>
     </footer>
 
+    <!-- OFFICIAL SCREEN POPUP MODAL HTML STRUCTURE -->
+    <div id="officialModalOverlay" class="official-modal-overlay">
+        <div class="official-modal-box">
+            <div id="modalIcon" class="official-modal-icon"><i class="fa-solid fa-circle-info"></i></div>
+            <div id="modalTitle" class="official-modal-title">Notification</div>
+            <div id="modalMsg" class="official-modal-msg">Message text goes here...</div>
+            <div id="modalActions">
+                <button class="official-modal-btn" onclick="closeOfficialModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript For Behavior & Admin System -->
+    <script>
+        let selectedCourse = "";
+        let confirmCallback = null;
+
+        // Custom Official Screen Notification Dialog System
+        function showOfficialAlert(message, title = "System Notification", iconClass = "fa-solid fa-circle-info") {
+            document.getElementById('modalIcon').innerHTML = `<i class="${iconClass}"></i>`;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalMsg').innerText = message;
+            document.getElementById('modalActions').innerHTML = `<button class="official-modal-btn" onclick="closeOfficialModal()">OK</button>`;
+            document.getElementById('officialModalOverlay').style.display = 'flex';
+        }
+
+        function showOfficialConfirm(message, title = "Confirmation Required", onConfirm) {
+            confirmCallback = onConfirm;
+            document.getElementById('modalIcon').innerHTML = `<i class="fa-solid fa-triangle-exclamation" style="color: #e74c3c;"></i>`;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalMsg').innerText = message;
+            document.getElementById('modalActions').innerHTML = `
+                <button class="official-modal-btn" onclick="closeOfficialModal()">Cancel</button>
+                <button class="official-modal-btn danger-btn" onclick="executeConfirm()">Confirm Delete</button>
+            `;
+            document.getElementById('officialModalOverlay').style.display = 'flex';
+        }
+
+        function closeOfficialModal() {
+            document.getElementById('officialModalOverlay').style.display = 'none';
+        }
+
+        function executeConfirm() {
+            closeOfficialModal();
+            if (confirmCallback) confirmCallback();
+        }
+
+        // Default Initial Data
+        const defaultData = {
+            offerText: "SPECIAL OFFER (Session 2026-2027): First 50 Admissions FREE! + Free Uniform + 50% OFF Evening Tuition!",
+            address: "<strong>Beacon Heights Schooling System & Academy</strong><br>House 01, Near Marhaba Hall,<br>Doctor Rana Rathore Street, Scheme No. 2,<br>Satellite Town, Mirpurkhas, Sindh, Pakistan.",
+            phone: "03123525881",
+            schoolTime: "07:30 AM - 01:30 PM",
+            academyTime: "03:00 PM - 08:00 PM",
+            facilities: [
+                { id: 1, icon: "fa-solid fa-tv", title: "Air-Conditioned & Smart Classes", desc: "Clean, airy, and modern classrooms with audio-visual learning tools." },
+                { id: 2, icon: "fa-solid fa-shield-halved", title: "CCTV & Safe Campus", desc: "24/7 security surveillance to ensure complete safety for students and staff." },
+                { id: 3, icon: "fa-solid fa-microscope", title: "Science & Computer Lab", desc: "Fully equipped practical labs for science experiments and computer literacy." }
+            ],
+            courses: [
+                // Schooling
+                { id: 101, cat: "schooling", badge: "Pre-Primary", title: "Playgroup, Nursery & KG", desc: "Activity-based learning, phonics, drawing, and basic numbers in a caring environment.", fee: "PKR 1,500 / Month", origFee: "", bullets: ["Age Group: 3 to 5 Years", "Air-Conditioned Classrooms", "Admission Fee: 100% FREE"], type: "school" },
+                { id: 102, cat: "schooling", badge: "Primary School", title: "Primary (Class 1 to Class 5)", desc: "Strong base in English, Mathematics, Science, General Knowledge, and Islamic Studies.", fee: "PKR 2,000 / Month", origFee: "", bullets: ["Conceptual Learning", "Weekly Assessment Tests", "Free Uniform Offer Included"], type: "school" },
+                { id: 103, cat: "schooling", badge: "Middle School", title: "Middle (Class 6, Class 7 & Class 8)", desc: "Comprehensive middle school education covering core science, mathematics, and language concepts.", fee: "PKR 2,500 / Month", origFee: "", bullets: ["Science & Computer Practical Base", "Spoken English Focus", "Preparation for Board Foundation"], type: "school" },
+
+                // Higher Secondary
+                { id: 201, cat: "highsec", badge: "Higher Secondary", title: "Class 9 (Matric Prep)", desc: "Rigorous academic study for 9th class Science & General groups according to Sindh Board curriculum.", fee: "PKR 3,000 / Month", origFee: "", bullets: ["Physics, Chemistry, Biology / Computer & Math", "Specialized Faculty & Lab Practical Sessions", "Monthly Progress Reports"], type: "school" },
+                { id: 202, cat: "highsec", badge: "Higher Secondary", title: "Class 10 (Matric Board)", desc: "Complete board exam preparation designed to achieve maximum grade scores in Sindh Board Examinations.", fee: "PKR 3,000 / Month", origFee: "", bullets: ["Board Model Papers & Test Series", "Special Practice for Science Numericals", "Practical Exam Training"], type: "school" },
+
+                // Evening Academy
+                { id: 301, cat: "academy", badge: "Evening Coaching", title: "Class 8 Coaching", desc: "Special foundation coaching for Class 8 students before entering high school board studies.", fee: "PKR 1,500 / Month", origFee: "PKR 3,000", bullets: ["Science, Math, English & General Subjects", "Daily Homework Guidance", "Timings: 03:00 PM - 05:00 PM"], type: "other" },
+                { id: 302, cat: "academy", badge: "Evening Coaching", title: "Class 9 Coaching (Matric Prep)", desc: "Thorough preparation of 9th Class Science Subjects according to Sindh Board Exam Syllabus.", fee: "PKR 2,000 / Month", origFee: "PKR 4,000", bullets: ["Physics, Chemistry, Math / Bio, Computer", "Model Papers & Past Papers Revision", "Weekly Test Series"], type: "other" },
+                { id: 303, cat: "academy", badge: "Evening Coaching", title: "Class 10 Coaching (Matric Board)", desc: "Targeted exam preparation for 10th Class students to achieve A+ Grade in Board Examinations.", fee: "PKR 2,000 / Month", origFee: "PKR 4,000", bullets: ["Full Board Syllabus Coverage", "Important Board Questions & Guess Papers", "Special Numerical Practice"], type: "other" },
+                { id: 304, cat: "academy", badge: "Evening Coaching", title: "Class 11 Coaching (FSc 1st Year)", desc: "Expert coaching for Pre-Medical, Pre-Engineering & Computer Science (ICS) students.", fee: "PKR 2,500 / Month", origFee: "PKR 5,000", bullets: ["Advanced Physics, Chemistry, Bio/Math", "Subject Specialist Professors", "Regular Assessment Tests"], type: "other" },
+                { id: 305, cat: "academy", badge: "Evening Coaching", title: "Class 12 Coaching (FSc 2nd Year)", desc: "High-level guidance for 12th Board Exams and University Medical/Engineering Entry Test base preparation.", fee: "PKR 2,500 / Month", origFee: "PKR 5,000", bullets: ["Complete Board Revision & Test Sessions", "Entry Test MCQs Preparation", "Past 10 Years Paper Solving"], type: "other" },
+
+                // Professional Skills
+                { id: 401, cat: "skills", badge: "Short IT Course", title: "CIT (Certificate in Information Technology)", desc: "3 Months basic computer literacy course covering office tools, internet, typing, and OS basics.", fee: "PKR 1,500 / Month", origFee: "", bullets: ["Duration: 3 Months", "MS Word, Excel, PowerPoint, Internet", "Practical Computer Lab Practice"], type: "other" },
+                { id: 402, cat: "skills", badge: "Diploma IT Course", title: "DIT (Diploma in Information Technology)", desc: "6 Months / 1 Year comprehensive IT Diploma covering web fundamentals, graphics, hardware & networking.", fee: "PKR 2,000 / Month", origFee: "", bullets: ["Duration: 6 Months - 1 Year", "Web Design, Graphic Basics, IT Management", "Recognized Course Certificate"], type: "other" },
+                { id: 403, cat: "skills", badge: "Language Course", title: "Spoken English & Grammar", desc: "2 Months short course to boost English speaking fluency, vocabulary, and grammar confidence.", fee: "PKR 1,500 / Month", origFee: "", bullets: ["Duration: 2 Months", "Conversation Practice & Public Speaking", "Suitable for Students & Working People"], type: "other" }
+            ]
+        };
+
+        // Data Management via LocalStorage
+        function getSiteData() {
+            const data = localStorage.getItem('beacon_heights_full_data');
+            return data ? JSON.parse(data) : defaultData;
+        }
+
+        function saveSiteData(data) {
+            localStorage.setItem('beacon_heights_full_data', JSON.stringify(data));
+            renderSite();
+        }
+
+        // Render Public View & Admin Inputs
+        function renderSite() {
+            const data = getSiteData();
+
+            // Check Admin Persistent Login State (NO AUTO LOGOUT)
+            const isLog = localStorage.getItem('bh_admin_logged_in') === 'true';
+            if (isLog) {
+                document.getElementById('admin-login-box').style.display = 'none';
+                document.getElementById('admin-dashboard-box').style.display = 'block';
+                document.getElementById('admin-header-logout').style.display = 'block';
+            } else {
+                document.getElementById('admin-login-box').style.display = 'block';
+                document.getElementById('admin-dashboard-box').style.display = 'none';
+                document.getElementById('admin-header-logout').style.display = 'none';
+            }
+
+            // Render Dynamic Info
+            document.getElementById('display-offer-text').innerText = data.offerText;
+            document.getElementById('display-campus-address').innerHTML = data.address || defaultData.address;
+            document.getElementById('display-hero-phone').href = "tel:" + data.phone;
+            document.getElementById('display-hero-phone').innerText = "📞 Call: " + data.phone;
+            document.getElementById('display-footer-phone').innerText = data.phone;
+            document.getElementById('display-school-time').innerText = data.schoolTime;
+            document.getElementById('display-academy-time').innerText = data.academyTime;
+
+            // Render Facilities
+            const facilitiesGrid = document.getElementById('container-facilities');
+            facilitiesGrid.innerHTML = '';
+            (data.facilities || defaultData.facilities).forEach(f => {
+                facilitiesGrid.innerHTML += `
+                    <div class="card">
+                        <h3><i class="${f.icon}"></i> ${f.title}</h3>
+                        <p>${f.desc}</p>
+                    </div>
+                `;
+            });
+
+            // Clear Grid Containers
+            const schoolingGrid = document.getElementById('container-schooling');
+            const highsecGrid = document.getElementById('container-highsec');
+            const academyGrid = document.getElementById('container-academy');
+            const skillsGrid = document.getElementById('container-skills');
+
+            schoolingGrid.innerHTML = '';
+            highsecGrid.innerHTML = '';
+            academyGrid.innerHTML = '';
+            skillsGrid.innerHTML = '';
+
+            // Render Courses
+            data.courses.forEach(c => {
+                const bulletList = c.bullets && c.bullets.length ? `<ul class="course-list">${c.bullets.map(b => `<li><i class="fa-solid fa-check-circle"></i> ${b}</li>`).join('')}</ul>` : '';
+                const origPriceHTML = c.origFee ? `<span class="fee-original">${c.origFee}</span> ` : '';
+                
+                const cardHTML = `
+                    <div class="card">
+                        <span class="course-badge ${c.cat === 'highsec' ? 'highsec' : c.cat === 'academy' ? 'academy' : c.cat === 'skills' ? 'skill' : ''}">${c.badge}</span>
+                        <h3>${c.title}</h3>
+                        <p>${c.desc}</p>
+                        ${bulletList}
+                        <div class="fee-box">
+                            <small>Monthly Fee</small>
+                            <div class="fee-amount">${origPriceHTML}${c.fee}</div>
+                        </div>
+                        <button class="btn-apply" style="width: 100%; margin-top: 15px;" onclick="applyForCourse('${c.title.replace(/'/g, "\\'")}', '${c.type}')">Apply / Enroll</button>
+                    </div>
+                `;
+
+                if (c.cat === 'schooling') schoolingGrid.innerHTML += cardHTML;
+                else if (c.cat === 'highsec') highsecGrid.innerHTML += cardHTML;
+                else if (c.cat === 'academy') academyGrid.innerHTML += cardHTML;
+                else if (c.cat === 'skills') skillsGrid.innerHTML += cardHTML;
+            });
+
+            // Populate Admin Inputs
+            document.getElementById('adminOfferInput').value = data.offerText;
+            document.getElementById('adminAddressInput').value = data.address || defaultData.address;
+            document.getElementById('adminPhoneInput').value = data.phone;
+            document.getElementById('adminSchoolTimeInput').value = data.schoolTime;
+            document.getElementById('adminAcademyTimeInput').value = data.academyTime;
+
+            // Render Admin Facilities Management Grid
+            const adminFacilitiesGrid = document.getElementById('admin-facilities-manage-grid');
+            adminFacilitiesGrid.innerHTML = '';
+            (data.facilities || defaultData.facilities).forEach(f => {
+                adminFacilitiesGrid.innerHTML += `
+                    <div class="card" style="border-left-color: #27ae60;">
+                        <div class="form-group">
+                            <label>Facility Title:</label>
+                            <input type="text" value="${f.title}" onchange="updateFacilityItem(${f.id}, 'title', this.value)">
+                        </div>
+                        <div class="form-group">
+                            <label>Icon Class (FontAwesome):</label>
+                            <input type="text" value="${f.icon}" onchange="updateFacilityItem(${f.id}, 'icon', this.value)">
+                        </div>
+                        <div class="form-group">
+                            <label>Description:</label>
+                            <textarea rows="2" onchange="updateFacilityItem(${f.id}, 'desc', this.value)">${f.desc}</textarea>
+                        </div>
+                        <button class="btn-delete-admin" onclick="deleteFacilityItem(${f.id})">Delete Facility</button>
+                    </div>
+                `;
+            });
+
+            // Render Admin Courses Management Cards
+            const adminGrid = document.getElementById('admin-courses-manage-grid');
+            adminGrid.innerHTML = '';
+            data.courses.forEach(c => {
+                adminGrid.innerHTML += `
+                    <div class="card" style="border-left-color: #2c3e50;">
+                        <div class="form-group">
+                            <label>Course Title:</label>
+                            <input type="text" value="${c.title}" onchange="updateCourseItem(${c.id}, 'title', this.value)">
+                        </div>
+                        <div class="form-group">
+                            <label>Monthly Fee:</label>
+                            <input type="text" value="${c.fee}" onchange="updateCourseItem(${c.id}, 'fee', this.value)">
+                        </div>
+                        <div class="form-group">
+                            <label>Original Fee (Crossed):</label>
+                            <input type="text" value="${c.origFee || ''}" onchange="updateCourseItem(${c.id}, 'origFee', this.value)">
+                        </div>
+                        <div class="form-group">
+                            <label>Description:</label>
+                            <textarea rows="2" onchange="updateCourseItem(${c.id}, 'desc', this.value)">${c.desc}</textarea>
+                        </div>
+                        <button class="btn-delete-admin" onclick="deleteCourseItem(${c.id})">Delete Course</button>
+                    </div>
+                `;
+            });
+        }
+
+        // Navigation Logic
+        function toggleMobileMenu() {
+            document.getElementById('navMenu').classList.toggle('mobile-active');
+        }
+
+        function switchPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active-page'));
+
+            const navButtons = document.querySelectorAll('.nav-links button');
+            navButtons.forEach(btn => btn.classList.remove('active'));
+
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) targetPage.classList.add('active-page');
+
+            const activeNavBtn = document.getElementById('nav-' + pageId);
+            if (activeNavBtn) activeNavBtn.classList.add('active');
+
+            document.getElementById('navMenu').classList.remove('mobile-active');
+            window.scrollTo(0, 0);
+        }
+
+        function applyForCourse(courseName, type) {
+            selectedCourse = courseName;
+            document.getElementById('selectedCourseDisplay').innerText = "Selected Course / Class: " + courseName;
+            
+            const noteBox = document.getElementById('schoolDocNote');
+            if (type === 'school') {
+                noteBox.style.display = 'flex';
+            } else {
+                noteBox.style.display = 'none';
+            }
+
+            switchPage('admissions');
+        }
+
+        // WhatsApp Form Integration
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            if (!selectedCourse) {
+                showOfficialAlert("Please select a Course or Class first from the 'Courses & Fees' page before submitting!", "Action Required", "fa-solid fa-triangle-exclamation");
+                switchPage('courses');
+                return;
+            }
+
+            const name = document.getElementById('studentName').value.trim();
+            const father = document.getElementById('fatherName').value.trim();
+            const age = document.getElementById('studentAge').value.trim();
+            const passed = document.getElementById('passedClass').value.trim();
+            const phone = document.getElementById('parentPhone').value.trim();
+            const address = document.getElementById('studentAddress').value.trim();
+
+            if (!name || !father || !age || !passed || !phone || !address) {
+                showOfficialAlert("Kripya karke tamam details fill karein. Sabhi fields zaroori hain!", "Incomplete Form", "fa-solid fa-triangle-exclamation");
+                return;
+            }
+
+            const message = `*NEW ADMISSION APPLICATION*%0A` +
+                            `----------------------------%0A` +
+                            `*Selected Course:* ${encodeURIComponent(selectedCourse)}%0A` +
+                            `*Student Name:* ${encodeURIComponent(name)}%0A` +
+                            `*Father Name:* ${encodeURIComponent(father)}%0A` +
+                            `*Student Age:* ${encodeURIComponent(age)} Years%0A` +
+                            `*Previous Class:* ${encodeURIComponent(passed)}%0A` +
+                            `*Parent Phone:* ${encodeURIComponent(phone)}%0A` +
+                            `*Address:* ${encodeURIComponent(address)}`;
+
+            const currentData = getSiteData();
+            const sirWhatsAppNumber = "92" + currentData.phone.replace(/[^0-9]/g, ''); 
+            window.open(`https://wa.me/${sirWhatsAppNumber}?text=${message}`, '_blank');
+            
+            showOfficialAlert("Redirecting your application to WhatsApp...", "Success", "fa-solid fa-circle-check");
+            event.target.reset();
+        }
+
+        // Admin Panel Functions
+        function loginAdmin() {
+            const pass = document.getElementById('adminPasswordInput').value;
+            if (pass === "M.Tahir123") {
+                // Save login state in LocalStorage (NO Auto-Logout)
+                localStorage.setItem('bh_admin_logged_in', 'true');
+                renderSite();
+                showOfficialAlert("Admin Login Successful! Welcome to Dashboard.", "Welcome", "fa-solid fa-circle-check");
+            } else {
+                showOfficialAlert("Ghalat Admin Password! Please enter the correct password.", "Access Denied", "fa-solid fa-lock");
+            }
+        }
+
+        // MANUAL LOGOUT ONLY FUNCTION
+        function logoutAdmin() {
+            localStorage.removeItem('bh_admin_logged_in');
+            document.getElementById('adminPasswordInput').value = '';
+            renderSite();
+            switchPage('home');
+            showOfficialAlert("You have logged out from Admin Panel.", "Logged Out", "fa-solid fa-circle-info");
+        }
+
+        function saveAdminGeneralInfo() {
+            const data = getSiteData();
+            data.offerText = document.getElementById('adminOfferInput').value;
+            data.address = document.getElementById('adminAddressInput').value;
+            data.phone = document.getElementById('adminPhoneInput').value;
+            data.schoolTime = document.getElementById('adminSchoolTimeInput').value;
+            data.academyTime = document.getElementById('adminAcademyTimeInput').value;
+
+            saveSiteData(data);
+            showOfficialAlert("Banner Offers, Address, Timing & Phone info successfully saved!", "Saved Successfully", "fa-solid fa-floppy-disk");
+        }
+
+        // Facility Management Functions
+        function addNewFacility() {
+            const title = document.getElementById('newFacilityTitle').value.trim();
+            const icon = document.getElementById('newFacilityIcon').value.trim() || "fa-solid fa-check-circle";
+            const desc = document.getElementById('newFacilityDesc').value.trim();
+
+            if (!title) {
+                showOfficialAlert("Please enter Facility Title!", "Input Error", "fa-solid fa-triangle-exclamation");
+                return;
+            }
+
+            const data = getSiteData();
+            if (!data.facilities) data.facilities = [...defaultData.facilities];
+
+            data.facilities.push({
+                id: Date.now(),
+                icon: icon,
+                title: title,
+                desc: desc || "Modern campus facility."
+            });
+
+            saveSiteData(data);
+
+            document.getElementById('newFacilityTitle').value = '';
+            document.getElementById('newFacilityIcon').value = '';
+            document.getElementById('newFacilityDesc').value = '';
+
+            showOfficialAlert("New facility added successfully!", "Facility Added", "fa-solid fa-circle-check");
+        }
+
+        function updateFacilityItem(id, key, value) {
+            const data = getSiteData();
+            if (!data.facilities) data.facilities = [...defaultData.facilities];
+            const facility = data.facilities.find(f => f.id === id);
+            if (facility) {
+                facility[key] = value;
+                saveSiteData(data);
+            }
+        }
+
+        function deleteFacilityItem(id) {
+            showOfficialConfirm("Kya aap is facility ko delete karna chahte hain?", "Delete Confirmation", function() {
+                const data = getSiteData();
+                if (!data.facilities) data.facilities = [...defaultData.facilities];
+                data.facilities = data.facilities.filter(f => f.id !== id);
+                saveSiteData(data);
+                showOfficialAlert("Facility deleted successfully!", "Deleted", "fa-solid fa-trash-can");
+            });
+        }
+
+        function addNewCourse() {
+            const title = document.getElementById('newCourseTitle').value.trim();
+            const cat = document.getElementById('newCourseCategory').value;
+            const fee = document.getElementById('newCourseFee').value.trim();
+            const origFee = document.getElementById('newCourseOriginalFee').value.trim();
+            const desc = document.getElementById('newCourseDesc').value.trim();
+
+            if (!title || !fee) {
+                showOfficialAlert("Please enter both Title and Fee!", "Input Error", "fa-solid fa-triangle-exclamation");
+                return;
+            }
+
+            const data = getSiteData();
+            const badgeMap = { schooling: "School Class", highsec: "Higher Sec", academy: "Evening Coaching", skills: "Skill Course" };
+            
+            data.courses.push({
+                id: Date.now(),
+                cat: cat,
+                badge: badgeMap[cat] || "Course",
+                title: title,
+                desc: desc || "Comprehensive study program.",
+                fee: fee,
+                origFee: origFee,
+                bullets: ["Qualified Faculty", "Regular Tests"],
+                type: (cat === 'schooling' || cat === 'highsec') ? 'school' : 'other'
+            });
+
+            saveSiteData(data);
+
+            // Reset inputs
+            document.getElementById('newCourseTitle').value = '';
+            document.getElementById('newCourseFee').value = '';
+            document.getElementById('newCourseOriginalFee').value = '';
+            document.getElementById('newCourseDesc').value = '';
+
+            showOfficialAlert("New course added successfully!", "Course Added", "fa-solid fa-circle-check");
+        }
+
+        function updateCourseItem(id, key, value) {
+            const data = getSiteData();
+            const course = data.courses.find(c => c.id === id);
+            if (course) {
+                course[key] = value;
+                saveSiteData(data);
+            }
+        }
+
+        function deleteCourseItem(id) {
+            showOfficialConfirm("Kya aap is course ko delete karna chahte hain?", "Delete Confirmation", function() {
+                const data = getSiteData();
+                data.courses = data.courses.filter(c => c.id !== id);
+                saveSiteData(data);
+                showOfficialAlert("Course deleted successfully!", "Deleted", "fa-solid fa-trash-can");
+            });
+        }
+
+        // Initialize on load
+        window.onload = renderSite;
+    </script>
 </body>
 </html>
